@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/php-psr-cache
+/usr/share/doc/php-psr-cache/changelog.Debian.gz
+/usr/share/doc/php-psr-cache/copyright
+/usr/share/php
+/usr/share/php/Psr
+/usr/share/php/Psr/Cache
+/usr/share/php/Psr/Cache/CacheException.php
+/usr/share/php/Psr/Cache/CacheItemInterface.php
+/usr/share/php/Psr/Cache/CacheItemPoolInterface.php
+/usr/share/php/Psr/Cache/InvalidArgumentException.php
+/usr/share/php/Psr/Cache/autoload.php

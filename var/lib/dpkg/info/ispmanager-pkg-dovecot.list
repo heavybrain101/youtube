@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/local
+/usr/local/mgr5
+/usr/local/mgr5/etc
+/usr/local/mgr5/etc/conf.d
+/usr/local/mgr5/etc/conf.d/dovecot.conf
+/usr/share
+/usr/share/doc
+/usr/share/doc/ispmanager-pkg-dovecot
+/usr/share/doc/ispmanager-pkg-dovecot/changelog.Debian.gz
+/usr/share/doc/ispmanager-pkg-dovecot/copyright

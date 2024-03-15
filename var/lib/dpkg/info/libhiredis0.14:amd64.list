@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libhiredis.so.0.14
+/usr/share
+/usr/share/doc
+/usr/share/doc/libhiredis0.14
+/usr/share/doc/libhiredis0.14/changelog.Debian.gz
+/usr/share/doc/libhiredis0.14/copyright

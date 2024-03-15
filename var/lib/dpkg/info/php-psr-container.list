@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/php-psr-container
+/usr/share/doc/php-psr-container/changelog.Debian.gz
+/usr/share/doc/php-psr-container/copyright
+/usr/share/php
+/usr/share/php/Psr
+/usr/share/php/Psr/Container
+/usr/share/php/Psr/Container/ContainerExceptionInterface.php
+/usr/share/php/Psr/Container/ContainerInterface.php
+/usr/share/php/Psr/Container/NotFoundExceptionInterface.php
+/usr/share/php/Psr/Container/autoload.php

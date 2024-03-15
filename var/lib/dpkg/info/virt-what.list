@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/virt-what-cpuid-helper
+/usr/sbin
+/usr/sbin/virt-what
+/usr/share
+/usr/share/doc
+/usr/share/doc/virt-what
+/usr/share/doc/virt-what/changelog.Debian.gz
+/usr/share/doc/virt-what/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/virt-what.1.gz

@@ -1,0 +1,16 @@
+/.
+/etc
+/etc/apache2
+/etc/apache2/mods-available
+/etc/apache2/mods-available/mpm_itk.load
+/usr
+/usr/lib
+/usr/lib/apache2
+/usr/lib/apache2/modules
+/usr/lib/apache2/modules/mpm_itk.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libapache2-mpm-itk
+/usr/share/doc/libapache2-mpm-itk/copyright
+/usr/share/doc/libapache2-mpm-itk/README.Debian
+/usr/share/doc/libapache2-mpm-itk/changelog.Debian.gz

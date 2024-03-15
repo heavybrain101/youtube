@@ -1,0 +1,4 @@
+52d0e65a6dc668f32c817a921a124545  lib/systemd/system/php-fpm56.service
+2885d7a0d9e366c63f12d41770813024  opt/php56/sbin/php-fpm
+c17ffad09e0997c46044c9a8db13d41b  opt/php56/share/man/man8/php-fpm.8
+95f67dd81600e0ab0e5c5acc15c2cb5a  usr/share/doc/isp-php56-fpm/changelog.Debian.gz

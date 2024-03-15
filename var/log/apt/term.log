@@ -1,0 +1,449 @@
+
+Log started: 2024-03-01  05:16:28
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-01T02:18:38.583311Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-01T02:18:38.586427Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Fri 2024-03-01 05:18:45 MSK; 84ms ago
+    Process: 771288 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 771312 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 771312 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 01 05:18:45 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 01 05:18:45 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 01 05:18:45 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 01 05:18:45 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 01 05:18:45 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 01 05:18:45 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-01  05:18:46
+
+Log started: 2024-03-02  05:11:06
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-02T02:12:03.444958Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-02T02:12:03.449753Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Sat 2024-03-02 05:12:47 MSK; 89ms ago
+    Process: 1083522 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 1083532 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 1083532 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 02 05:12:47 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 02 05:12:47 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 02 05:12:47 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 02 05:12:47 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 02 05:12:47 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 02 05:12:47 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-02  05:12:48
+
+Log started: 2024-03-03  05:27:45
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-03T02:32:01.804073Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-03T02:32:01.829933Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+/var/lib/dpkg/info/mysql-server-8.0.postinst: line 21: 1249869 Killed                  mysqld --user=mysql --daemonize --socket="$tmpdir/mysqld.sock" --pid-file="$tmpdir/mysqld.pid" --skip-networking
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (start-pre) since Sun 2024-03-03 05:36:12 MSK; 204ms ago
+Cntrl PID: 1250219 (mysql-systemd-s)
+      Tasks: 1 (limit: 1050)
+     Memory: 5.2M
+     CGroup: /system.slice/mysql.service
+             ├─1250219 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─1250226 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             └─1250227 mysqld --verbose --help --innodb-read-only
+
+Mar 03 05:36:12 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 03 05:36:12 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 03 05:36:12 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 03 05:36:12 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 2.
+Mar 03 05:36:12 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 03 05:36:12 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-03  05:36:14
+
+Log started: 2024-03-04  07:15:55
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-04T04:18:25.664860Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-04T04:18:25.665464Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (start-pre) since Mon 2024-03-04 07:21:03 MSK; 193ms ago
+Cntrl PID: 1350826 (mysql-systemd-s)
+      Tasks: 6 (limit: 1050)
+     Memory: 3.0M
+     CGroup: /system.slice/mysql.service
+             ├─1350826 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─1350834 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             └─1350835 mysqld --verbose --help --innodb-read-only
+
+Mar 04 07:21:03 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 04 07:21:03 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 04 07:21:03 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-04  07:21:06
+
+Log started: 2024-03-05  05:44:29
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-05T02:46:05.174424Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-05T02:46:05.175746Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Tue 2024-03-05 05:46:36 MSK; 65ms ago
+    Process: 1437312 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 1437320 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 1437320 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 05 05:46:36 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 05 05:46:36 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 05 05:46:36 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 05 05:46:36 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 05 05:46:36 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 05 05:46:36 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-05  05:46:37
+
+Log started: 2024-03-06  05:12:09
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-06T02:12:18.437760Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-06T02:12:18.438161Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Wed 2024-03-06 05:12:22 MSK; 65ms ago
+    Process: 1610060 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 1610068 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 1610068 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 06 05:12:22 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 06 05:12:22 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 06 05:12:22 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-06  05:12:23
+
+Log started: 2024-03-07  05:18:15
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-07T02:20:07.915892Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-07T02:20:07.916778Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Thu 2024-03-07 05:20:13 MSK; 66ms ago
+    Process: 1909676 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 1909694 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 1909694 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 07 05:20:13 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 07 05:20:13 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 07 05:20:13 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 07 05:20:13 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 07 05:20:13 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 07 05:20:13 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-07  05:20:14
+
+Log started: 2024-03-08  05:11:05
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-08T02:11:12.761434Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-08T02:11:12.766026Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Fri 2024-03-08 05:11:20 MSK; 46ms ago
+    Process: 2138590 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 2138598 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 2138598 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 08 05:11:20 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 08 05:11:20 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 08 05:11:21 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 08 05:11:21 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 08 05:11:21 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-08  05:11:21
+
+Log started: 2024-03-09  05:13:18
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-09T02:14:36.968138Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-09T02:14:36.968718Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Sat 2024-03-09 05:14:50 MSK; 60ms ago
+    Process: 2401673 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 2401689 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 2401689 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 09 05:14:50 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 09 05:14:50 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 09 05:14:50 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 09 05:14:51 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 09 05:14:51 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 09 05:14:51 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-09  05:14:51
+
+Log started: 2024-03-10  05:14:14
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+/var/lib/dpkg/info/mysql-server-8.0.postinst: line 21: 2576220 Killed                  mysqld --user=mysql --daemonize --socket="$tmpdir/mysqld.sock" --pid-file="$tmpdir/mysqld.pid" --skip-networking
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (start-pre) since Sun 2024-03-10 05:16:09 MSK; 14ms ago
+Cntrl PID: 2576392 (mysql-systemd-s)
+      Tasks: 0 (limit: 1050)
+     Memory: 0B
+     CGroup: /system.slice/mysql.service
+             └─2576392 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+
+Mar 10 05:16:09 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-10  05:16:10
+
+Log started: 2024-03-11  05:18:18
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-11T02:19:08.213748Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-11T02:19:08.220146Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Mon 2024-03-11 05:19:15 MSK; 75ms ago
+    Process: 2748397 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 2748413 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 2748413 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 11 05:19:15 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 11 05:19:15 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 11 05:19:15 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 11 05:19:15 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 11 05:19:15 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 11 05:19:15 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-11  05:19:16
+
+Log started: 2024-03-12  05:28:57
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+/var/lib/dpkg/info/mysql-server-8.0.postinst: line 21: 2921454 Killed                  mysqld --user=mysql --daemonize --socket="$tmpdir/mysqld.sock" --pid-file="$tmpdir/mysqld.pid" --skip-networking
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (start-pre) since Tue 2024-03-12 05:33:43 MSK; 61ms ago
+Cntrl PID: 2921710 (mysql-systemd-s)
+      Tasks: 0 (limit: 1050)
+     Memory: 0B
+     CGroup: /system.slice/mysql.service
+             ├─2921710 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─2921711 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─2921712 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─2921713 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─2921714 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             └─2921715 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+
+Mar 12 05:33:43 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 12 05:33:43 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 12 05:33:43 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 12 05:33:43 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 3.
+Mar 12 05:33:43 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 12 05:33:43 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-12  05:33:44
+
+Log started: 2024-03-13  06:00:19
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-13T03:10:38.488503Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-13T03:10:38.492040Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (start-pre) since Wed 2024-03-13 06:16:18 MSK; 178ms ago
+Cntrl PID: 48677 (mysql-systemd-s)
+      Tasks: 1 (limit: 1050)
+     Memory: 1.6M
+     CGroup: /system.slice/mysql.service
+             ├─48677 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─48679 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─48680 /bin/bash /usr/share/mysql/mysql-systemd-start pre
+             ├─48681 my_print_defaults mysqld
+             ├─48682 sed -n s/^--datadir=//p
+             └─48683 tail -n 1
+
+Mar 13 06:16:18 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 13 06:16:18 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 13 06:16:18 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+Mar 13 06:16:19 ipankratov101.fvds.ru systemd[1]: mysql.service: Control process exited, code=killed, status=15/TERM
+Mar 13 06:16:19 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 13 06:16:19 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 13 06:16:19 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-13  06:16:21
+
+Log started: 2024-03-14  05:41:10
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+chown: changing ownership of '/var/lib/mysql/mysqld_tmp_file_case_insensitive_test.lower-test': No such file or directory
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-14  05:45:10
+
+Log started: 2024-03-15  05:14:28
+Setting up mysql-server-8.0 (8.0.36-0ubuntu0.20.04.1) ...
+mysqld will log errors to /var/log/mysql/error.log
+2024-03-15T02:15:35.889384Z 0 [ERROR] [MY-011065] [Server] Unable to determine if daemon is running: No such file or directory (rc=0).
+2024-03-15T02:15:35.891581Z 0 [ERROR] [MY-010946] [Server] Failed to start mysqld daemon. Check mysqld error log.
+Warning: Unable to start the server.
+Job for mysql.service failed because a fatal signal was delivered to the control process.
+See "systemctl status mysql.service" and "journalctl -xe" for details.
+invoke-rc.d: initscript mysql, action "start" failed.
+● mysql.service - MySQL Community Server
+     Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/mysql.service.d
+             └─nofile.conf
+     Active: activating (auto-restart) (Result: signal) since Fri 2024-03-15 05:16:11 MSK; 97ms ago
+    Process: 185211 ExecStartPre=/usr/share/mysql/mysql-systemd-start pre (code=exited, status=0/SUCCESS)
+    Process: 185229 ExecStart=/usr/sbin/mysqld (code=killed, signal=KILL)
+   Main PID: 185229 (code=killed, signal=KILL)
+     Status: "Server startup in progress"
+
+Mar 15 05:16:11 ipankratov101.fvds.ru systemd[1]: mysql.service: Main process exited, code=killed, status=9/KILL
+Mar 15 05:16:11 ipankratov101.fvds.ru systemd[1]: mysql.service: Failed with result 'signal'.
+Mar 15 05:16:11 ipankratov101.fvds.ru systemd[1]: Failed to start MySQL Community Server.
+Mar 15 05:16:12 ipankratov101.fvds.ru systemd[1]: mysql.service: Scheduled restart job, restart counter is at 1.
+Mar 15 05:16:12 ipankratov101.fvds.ru systemd[1]: Stopped MySQL Community Server.
+Mar 15 05:16:12 ipankratov101.fvds.ru systemd[1]: Starting MySQL Community Server...
+dpkg: error processing package mysql-server-8.0 (--configure):
+ installed mysql-server-8.0 package post-installation script subprocess returned error exit status 1
+Errors were encountered while processing:
+ mysql-server-8.0
+Log ended: 2024-03-15  05:16:14

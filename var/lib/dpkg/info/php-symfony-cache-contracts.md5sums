@@ -1,0 +1,8 @@
+4c8d8df7a0f6e9ffd35558f6c007145d  usr/share/doc/php-symfony-cache-contracts/changelog.Debian.gz
+3e8000d1a778b1e5805cfeaccaac58e5  usr/share/doc/php-symfony-cache-contracts/copyright
+509393af63d79f1230c8e4d20e81f47b  usr/share/php/Symfony/Contracts/Cache/CacheInterface.php
+e4da584222cf823dedb6b384fc89ebf2  usr/share/php/Symfony/Contracts/Cache/CacheTrait.php
+a06d9dedfce2b71a4cb6dbadef51a491  usr/share/php/Symfony/Contracts/Cache/CallbackInterface.php
+89a1d49024576920e9a6ffe0536fae8e  usr/share/php/Symfony/Contracts/Cache/ItemInterface.php
+d3cd8766c6a1eb9eeae106ef8e613466  usr/share/php/Symfony/Contracts/Cache/TagAwareCacheInterface.php
+73419070755c12e0ede19cf673cd9e45  usr/share/php/Symfony/Contracts/Cache/autoload.php

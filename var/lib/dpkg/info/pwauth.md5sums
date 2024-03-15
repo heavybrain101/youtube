@@ -1,0 +1,7 @@
+4842cd4de7fe18487410f9199431f7e9  usr/sbin/pwauth
+675dea9bdad9f0ccef9258e69b37c57a  usr/share/doc/pwauth/FORM_AUTH
+a89b59d69cbb725badef758e85a64270  usr/share/doc/pwauth/README.Debian
+4650ef5ac048c6abe456d8954ce87047  usr/share/doc/pwauth/changelog.Debian.gz
+4c86acd733827cf20ba8abb9e7246d02  usr/share/doc/pwauth/copyright
+4e105835b37383e09915ef5a55d3ca75  usr/share/lintian/overrides/pwauth
+abc7bc5da9a7dc98380da2d9e4a650f7  usr/share/man/man8/pwauth.8.gz

@@ -1,0 +1,11 @@
+/etc/cron.d/roundcube-core
+/etc/cron.daily/roundcube-core
+/etc/default/roundcube-core
+/etc/logrotate.d/roundcube-core
+/etc/roundcube/apache.conf
+/etc/roundcube/debian-db-roundcube.php
+/etc/roundcube/defaults.inc.php
+/etc/roundcube/htaccess
+/etc/roundcube/lighttpd.conf
+/etc/roundcube/mimetypes.php
+/etc/roundcube/plugins/jqueryui/config.inc.php

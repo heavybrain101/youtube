@@ -1,0 +1,2 @@
+[Fri Mar 15 00:01:18.897481 2024] [mpm_prefork:notice] [pid 764] AH00163: Apache/2.4.41 (Ubuntu) mpm-itk/2.4.7-04 OpenSSL/1.1.1f configured -- resuming normal operations
+[Fri Mar 15 00:01:18.897545 2024] [core:notice] [pid 764] AH00094: Command line: '/usr/sbin/apache2'

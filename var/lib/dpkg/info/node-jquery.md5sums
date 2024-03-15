@@ -1,0 +1,7 @@
+0c7593132ca6b0229ccb0157b04e5788  usr/lib/nodejs/jquery/dist/jquery.js
+b1e0a332d00fe99dbcf4ba9562c70616  usr/lib/nodejs/jquery/dist/jquery.min.js
+ecb30fcd8b89210aae5773d442dc8045  usr/lib/nodejs/jquery/dist/jquery.min.map
+b6a9d9077dbd66275dea8601a7e4ecbb  usr/lib/nodejs/jquery/package.json
+0e47483f3297453fc1a090e761f523c0  usr/share/doc/node-jquery/changelog.Debian.gz
+772e47fe3171af813aeb613f283d362d  usr/share/doc/node-jquery/copyright
+9869543ff8a51829bf5bb802a8ef611e  usr/share/lintian/overrides/node-jquery

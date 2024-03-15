@@ -1,0 +1,6 @@
+756aedca8de9d88ec856732a99fd4af6  usr/bin/mlock
+7d7717952fdf55198f4e75925292385c  usr/share/doc/mlock/NEWS.Debian.gz
+661de9cef1122027ad3da1fff7f66fdb  usr/share/doc/mlock/changelog.Debian.gz
+2c9d2db065081069a4b6e1afe43e642a  usr/share/doc/mlock/copyright
+196e5f4008be05ec17ea0057da5f7ed8  usr/share/lintian/overrides/mlock
+a2cfbb7138245006f2eaa127c318a00f  usr/share/man/man1/mlock.1.gz

@@ -1,0 +1,31 @@
+{
+ "v1": {
+  "datasource": "DataSourceNone",
+  "init": {
+   "errors": [],
+   "finished": 1660532150.7159839,
+   "start": 1660532150.2543924
+  },
+  "init-local": {
+   "errors": [],
+   "finished": 1660532148.3705754,
+   "start": 1660532148.2553034
+  },
+  "modules-config": {
+   "errors": [],
+   "finished": 1660532152.3475955,
+   "start": 1660532152.125583
+  },
+  "modules-final": {
+   "errors": [],
+   "finished": 1660532162.094598,
+   "start": 1660532161.836714
+  },
+  "modules-init": {
+   "errors": [],
+   "finished": null,
+   "start": null
+  },
+  "stage": null
+ }
+}

@@ -1,0 +1,149 @@
+#!/bin/bash
+# postinst script for coremanager
+#
+# see: dh_installdeb(1)
+
+#set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+COREDIR=/usr/local/mgr5
+CONFNAME=proftpd.conf
+. ${COREDIR}/lib/pkgsh/core_pkg_funcs.sh
+. ${COREDIR}/lib/pkgsh/ispmgr_pkg_funcs.sh
+
+CONFDIR=/etc/proftpd
+CONFFILE=${CONFDIR}/proftpd.conf
+
+case "$1" in
+    configure)
+	if [ -z ${2} ]; then
+		if [ "#${ISPCONVERT}" = "#yes" ]; then
+			PATHLIST="proftpd.conf"
+			PARAMLIST="FTP"
+			PathConvert ${COREDIR}/etc/conf.d/proftpd.conf
+			ParamConvert ${COREDIR}/etc/conf.d/proftpd.conf
+			MakeConfigLink proftpd
+			ReloadMgr ${ISPMGR}
+		else
+			test -f ${CONFFILE}.orig || cp -f ${CONFFILE} ${CONFFILE}.orig
+			# Comment all anonymous
+			sed -i -r "/^\s*<Anonymous/,/^\s*<\/Anonymous>/ s/^/#/" ${CONFFILE}
+	
+			if [ ! -f ${CONFDIR}/proftpd.passwd ]; then
+				touch ${CONFDIR}/proftpd.passwd
+				chown proftpd:nogroup ${CONFDIR}/proftpd.passwd
+				chmod 640 ${CONFDIR}/proftpd.passwd
+			fi
+	
+			if ! grep -qP "^\s*AuthUserFile" ${CONFFILE} ; then
+				echo "AuthUserFile ${CONFDIR}/proftpd.passwd" >> ${CONFFILE}
+			fi
+			if ! grep -qP "^\s*AuthOrder" ${CONFFILE} ; then
+				echo "AuthOrder mod_auth_file.c" >> ${CONFFILE}
+			fi
+			if ! grep -qP "^\s*RequireValidShell" ${CONFFILE} ; then
+				echo "RequireValidShell off" >> ${CONFFILE}
+			fi
+			if ! grep -qP "^\s*DefaultRoot" ${CONFFILE} ; then
+				echo "DefaultRoot ~" >> ${CONFFILE}
+			fi
+
+			# TLS
+#			if [ -f /etc/proftpd/modules.conf ]; then
+#				grep -qE 'LoadModule\s+mod_tls.c' /etc/proftpd/modules.conf || echo "LoadModule mod_tls.c" >> /etc/proftpd/modules.conf
+#			fi
+			if [[ $(lsb_release -s -c) =~ jammy|focal|buster|bullseye ]]; then
+				keylen=2048
+			fi
+			CreateCert /etc/ssl/private/proftpd.key /etc/ssl/certs/proftpd.crt ${keylen}
+			if [ -f /etc/proftpd/tls.conf ]; then
+				sed -i -r 's/^#(TLSEngine\s+)(.+)/\1on/' ${CONFDIR}/tls.conf
+				if [ "$(lsb_release -s -c)" = "wheezy" ]; then
+					sed -i -r 's/^#(TLSProtocol\s+)(.+)/\1TLSv1/' ${CONFDIR}/tls.conf
+				else
+					sed -i -r 's/^#(TLSProtocol\s+)(.+)/\1TLSv1 TLSv1.1 TLSv1.2/' ${CONFDIR}/tls.conf
+				fi
+				sed -i -r 's|^#(TLSRSACertificateFile\s+)(.+)|\1/etc/ssl/certs/proftpd.crt|' ${CONFDIR}/tls.conf
+				sed -i -r 's|^#(TLSRSACertificateKeyFile\s+)(.+)|\1/etc/ssl/private/proftpd.key|' ${CONFDIR}/tls.conf
+				if [[ $(lsb_release -s -c) =~ jammy|bionic|focal|buster|bullseye ]]; then
+					sed -i -r 's/^#(TLSOptions\s+)(.+)/\1NoSessionReuseRequired/' ${CONFDIR}/tls.conf
+				fi
+				if [ -f /etc/lsb-release ] && grep -iq ubuntu /etc/lsb-release ; then
+					# Do not change TLSCipherSuite in ubuntu
+					:
+				else
+					if [ "$(lsb_release -s -c)" != "wheezy" ]; then
+						if ! grep -qE 'TLSCipherSuite' /etc/proftpd/tls.conf ; then
+							sed -i '/IfModule mod_tls.c/a TLSCipherSuite ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM:!SSLv3' ${CONFDIR}/tls.conf
+						else
+							sed -i -r 's|^#(TLSCipherSuite\s+)(.+)|\1ALL:!aNULL:!ADH:!eNULL:!LOW:!EXP:RC4+RSA:+HIGH:+MEDIUM:!SSLv3|' ${CONFDIR}/tls.conf
+						fi
+					fi
+				fi
+				sed -i -r 's|#(Include\s+/etc/proftpd/tls.conf)|\1|' ${CONFFILE}
+			fi
+	
+			if [ "${ISPMGR}" = "ispmgrnode" ]; then
+				sed -i -r '/^\s*TransferLog/d' ${CONFFILE}
+				printf  "TransferLog\t${COREDIR}/var/xferlog" >> ${CONFFILE}
+				echo "path ftp_log ${COREDIR}/var/xferlog" >> ${COREDIR}/etc/conf.d/proftpd.conf
+			fi
+	
+			export RESTART_DELAY=2
+			DisableService pure-ftpd
+			DisableService vsftpd
+			EnableService proftpd
+			test -f ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME} || ln -sf ../conf.d/proftpd.conf ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME}
+			ReloadMgr ${ISPMGR}
+			${ISPMGRCTL} -R ftp.reconfigure >/dev/null 2>&1 || :
+
+			ServiceAddmon proftpd
+
+			# Afterinstall
+			AfterinstallModule ${ISPMGR} ftp
+		fi
+	else
+		if [[ $(lsb_release -s -c) =~ jammy|focal|buster|bullseye ]]; then
+			if AddFix "fix_ISP-1653_proftpd_key_len" && [ "$(ssh-keygen -lf /etc/ssl/private/proftpd.key | awk '{print $1;}')" = "1024" ]; then
+				CreateCert /etc/ssl/private/proftpd.key /etc/ssl/certs/proftpd.crt 2048
+				PROFTPD_RELOAD="true"
+			fi
+		fi
+		if [[ $(lsb_release -s -c) =~ jammy|bionic|focal|buster ]]; then
+			if AddFix "fix_ISP-1653_proftpd_session_reuse"; then
+				sed -i -r 's/^#(TLSOptions\s+)(.+)/\1NoSessionReuseRequired/' ${CONFDIR}/tls.conf
+				PROFTPD_RELOAD="true"
+			fi
+		fi
+		if [ "${PROFTPD_RELOAD}" = "true" ]; then
+			ReloadService proftpd
+		fi
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+
+
+exit 0

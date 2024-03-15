@@ -1,0 +1,5 @@
+7a5e8213af9ba2872e07f5a81a6e9944  usr/lib/dovecot/pop3
+ecf1f5dd3bc4fa2953d686d76f723384  usr/lib/dovecot/pop3-login
+9841cae62a5dddf708bdf5c4c64cd87f  usr/share/doc/dovecot-pop3d/copyright
+fad04c55df9b7430a59c81561b35d3ff  usr/share/dovecot/conf.d/20-pop3.conf
+4763a4c26ee206955632ae2068d5f555  usr/share/lintian/overrides/dovecot-pop3d

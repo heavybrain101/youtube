@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$1" in
+	configure)
+		systemctl daemon-reload >/dev/null 2>&1 || :
+		systemctl try-restart ispmanager-ddos
+	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+	*)
+		echo "postinst called with unknown argument \`$1'" >&2
+		exit 1
+	;;
+esac

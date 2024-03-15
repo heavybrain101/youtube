@@ -1,0 +1,11 @@
+ab4f113bdc5008e597b136e509108168  usr/bin/geoiplookup
+cbeee278c99712f84246e9678b54a993  usr/bin/geoiplookup6
+2eb87a3d4efd0424d4f261fe4e62264a  usr/lib/geoip/geoip-generator
+1c526d54b767a90d1482c740a55b006e  usr/lib/geoip/geoip-generator-asn
+ffef2182440c8034de4449b8d84024ca  usr/lib/geoip/geolite2-to-legacy-csv.sh
+01bb8dde95763ba8b961f0bd07d99da0  usr/lib/geoip/v4-to-v6-layout.pl
+e347988a3c9eb82024f35abe7e912876  usr/share/doc/geoip-bin/copyright
+f68b677b50232f4d894e12f03ac05c73  usr/share/geoip/countryInfo.txt
+9fdfbfab03b8d6f4a5ab124605befd7f  usr/share/lintian/overrides/geoip-bin
+8c517b46153dfc5fd3475604c3edd273  usr/share/man/man1/geoiplookup.1.gz
+549a079107f916bd050d3263f625dffc  usr/share/man/man1/geoiplookup6.1.gz

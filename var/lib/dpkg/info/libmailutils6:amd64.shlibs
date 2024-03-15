@@ -1,0 +1,14 @@
+libmailutils 6 libmailutils6
+libmuaux 6 libmailutils6
+libmu_auth 6 libmailutils6
+libmu_dbm 6 libmailutils6
+libmu_dotmail 6 libmailutils6
+libmu_imap 6 libmailutils6
+libmu_maildir 6 libmailutils6
+libmu_mailer 6 libmailutils6
+libmu_mbox 6 libmailutils6
+libmu_mh 6 libmailutils6
+libmu_pop 6 libmailutils6
+libmu_py 6 libmailutils6
+libmu_scm 6 libmailutils6
+libmu_sieve 6 libmailutils6

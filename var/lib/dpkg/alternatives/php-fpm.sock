@@ -1,0 +1,6 @@
+auto
+/run/php/php-fpm.sock
+
+/run/php/php7.4-fpm.sock
+74
+

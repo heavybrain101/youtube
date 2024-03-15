@@ -1,0 +1,3 @@
+/usr/local/mgr5/etc/conf.d/php.conf
+/etc/cron.daily/phpsess_cron
+/etc/cron.daily/phpsess_cron

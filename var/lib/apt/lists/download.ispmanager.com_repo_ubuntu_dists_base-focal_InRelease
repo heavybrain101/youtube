@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: base-focal
+Label: ISPsystem base-focal repo
+Suite: unstable
+Codename: base-focal
+Date: Tue, 23 Jan 2024 12:37:15 UTC
+Architectures: amd64 i386
+Components: main
+Description: ISPsystem base-focal repo
+MD5Sum:
+ 576edce16c301ebc11b2389ebab14241 67285 main/binary-amd64/Packages
+ 60dda256a29ce036ca8247be213b322f 13571 main/binary-amd64/Packages.gz
+ 823f33b4df6b3c158bc75158424ac6e6 145 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
+ ddfcab00d057ebaee9d30241245e7e38 144 main/binary-i386/Release
+SHA1:
+ 47443e154c1348fbaa85be87d39d0262a0ff4bef 67285 main/binary-amd64/Packages
+ b5d71f686ae52a4af0ab0cbf82bfc47f123f2043 13571 main/binary-amd64/Packages.gz
+ 1fe2e156d1d6582119f5d853d057fcff19a63fc7 145 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
+ 7ac84efb706046c78d2dc24a59e12950fa53f8a4 144 main/binary-i386/Release
+SHA256:
+ 720bb4f74341d0704f2fbef534139be8b0dfa564e259b9ae8a33aa676b7f60aa 67285 main/binary-amd64/Packages
+ 5b16f17bce41691989bdd4157c565d08df7b664a8030d932cfbe1208ea9b050f 13571 main/binary-amd64/Packages.gz
+ 698ffc1731e10933d2affa4851bd454ae0307834f95ade6822fa1d19829dea29 145 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
+ 5a3c22a54ebf230cf7e8ab2e7d4be2756f7624e64af60b8896b56f1501b5e516 144 main/binary-i386/Release
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEElY1cexkrCBWQYVV7c88Lx4EPiZYFAmWvsvwACgkQc88Lx4EP
+iZbyuwf+NHHkb98DSfDPo4BQvWlv0jpKtEzCoIvjwzOftTTp916cozxQUxgv7wPp
+fTHUXJGWZGxC5sIFtrE52xcKv1aeh5/jc8MoFECZssDNvhlOCpU11XLnj1hs10vw
+9uXpfWi3JtpquXqVjTQbSQey3zQdXfkiRDHwhiMruvznvKXYsCrnbKdroBnPDJRb
+yzdjbvotuYSKJrLnWw6t8JHDphdyr8308eS07ZsEANq/+COWC3gaPnORB4IXfn3u
+GJdSFbj3pUKTv1GGc+YzF4xE8gdu7g3XEa34/U1n5yogP1YHzps/3H89xCQaLxEH
+OO4LzQpsN/XE76EirCqFROAWI+0Mbw==
+=TKv6
+-----END PGP SIGNATURE-----

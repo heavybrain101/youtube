@@ -1,0 +1,14 @@
+libbase 5.385.1 coremanager
+libdns 5.385.1 coremanager
+libipdb 5.385.1 coremanager
+libipmgr2 5.385.1 coremanager
+libispapi 5.385.1 coremanager
+libispcgi 5.385.1 coremanager
+libispmgrbackup 5.385.1 coremanager
+libmgr 5.385.1 coremanager
+libmgrdb 5.385.1 coremanager
+libmysql 5.385.1 coremanager
+libparser 5.385.1 coremanager
+libpostgresql 5.385.1 coremanager
+libscheduler 5.385.1 coremanager
+libsqlite 5.385.1 coremanager

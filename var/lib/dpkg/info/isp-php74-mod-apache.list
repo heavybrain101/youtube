@@ -1,0 +1,16 @@
+/.
+/etc
+/etc/apache2
+/etc/apache2/mods-available
+/etc/apache2/mods-available/php74.load
+/opt
+/opt/php74
+/opt/php74/lib
+/opt/php74/lib/apache2
+/opt/php74/lib/apache2/modules
+/opt/php74/lib/apache2/modules/libphp7.so
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/isp-php74-mod-apache
+/usr/share/doc/isp-php74-mod-apache/changelog.Debian.gz

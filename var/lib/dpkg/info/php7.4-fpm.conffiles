@@ -1,0 +1,5 @@
+/etc/apache2/conf-available/php7.4-fpm.conf
+/etc/init.d/php7.4-fpm
+/etc/logrotate.d/php7.4-fpm
+/etc/php/7.4/fpm/php-fpm.conf
+/etc/php/7.4/fpm/pool.d/www.conf

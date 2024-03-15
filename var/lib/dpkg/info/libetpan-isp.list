@@ -1,0 +1,11 @@
+/.
+/opt
+/opt/ispsystem
+/opt/ispsystem/lib
+/opt/ispsystem/lib/libetpan.so.17.0.0
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libetpan-isp
+/usr/share/doc/libetpan-isp/changelog.Debian.gz
+/opt/ispsystem/lib/libetpan.so.17

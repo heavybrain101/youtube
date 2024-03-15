@@ -1,0 +1,515 @@
+2024-03-14T21:21:16.912242Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T21:21:16.912945Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 169730
+2024-03-14T21:21:16.915983Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T21:21:16.916007Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T21:21:16.996225Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T21:21:26.718959Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T21:30:23.122676Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T21:30:23.124355Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 170223
+2024-03-14T21:30:23.127410Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T21:30:23.127434Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T21:30:23.154585Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T21:30:27.998010Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T21:54:40.003328Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-14T21:55:46.999060Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T21:55:46.999558Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 171423
+2024-03-14T21:55:47.002832Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T21:55:47.002850Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T21:55:47.071370Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T21:55:53.430395Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T22:02:03.869606Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T22:02:03.876316Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 171749
+2024-03-14T22:02:03.878869Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T22:02:03.878890Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T22:02:03.956262Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T22:02:12.067394Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T22:10:34.377323Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T22:10:34.378021Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 172379
+2024-03-14T22:10:34.381896Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T22:10:34.381920Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T22:10:34.418897Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T22:10:40.051265Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T22:16:45.835093Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-14T22:42:17.323959Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T22:42:17.333092Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 173995
+2024-03-14T22:42:17.335680Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T22:42:17.335701Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T22:42:17.420784Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T22:42:22.511702Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T22:56:58.355108Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-14T23:08:10.230941Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T23:08:10.246201Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 175095
+2024-03-14T23:08:10.248727Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T23:08:10.248750Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T23:08:10.332414Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T23:08:15.824964Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T23:12:33.692206Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-14T23:35:16.023353Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T23:35:16.028489Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 176215
+2024-03-14T23:35:16.031518Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T23:35:16.031539Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T23:35:16.058701Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T23:35:20.485734Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T23:46:00.673915Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-14T23:46:00.680608Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 176939
+2024-03-14T23:46:00.682898Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-14T23:46:00.682914Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-14T23:46:00.741888Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-14T23:46:05.757126Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-14T23:55:37.182103Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T00:04:14.572058Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T00:04:14.572455Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 177885
+2024-03-15T00:04:14.575100Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T00:04:14.575119Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T00:04:14.597156Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T00:04:19.729627Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T00:07:49.220242Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T00:53:24.434283Z 4 [ERROR] [MY-013178] [Server] Execution of server-side SQL statement 'ALTER TABLE user MODIFY ssl_type enum('','ANY','X509', 'SPECIFIED') NOT NULL; ' failed with error code = 3664, error message = 'Failed to delete SDI 'mysql.user' in tablespace 'mysql'.'.
+2024-03-15T00:53:25.795159Z 0 [ERROR] [MY-013380] [Server] Failed to upgrade server.
+2024-03-15T00:53:25.870448Z 0 [ERROR] [MY-010119] [Server] Aborting
+2024-03-15T00:53:28.609846Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.36-0ubuntu0.20.04.1)  (Ubuntu).
+2024-03-15T00:53:30.518681Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T00:53:30.518747Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 180685
+2024-03-15T00:53:30.528987Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T00:53:30.529007Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T00:53:30.612796Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T00:53:43.088577Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T00:59:22.305657Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T01:10:28.746269Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T01:10:28.746606Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 181431
+2024-03-15T01:10:28.748497Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T01:10:28.748513Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T01:10:28.766008Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T01:10:32.698561Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T01:18:43.582415Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T01:24:07.349382Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T01:24:07.349886Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 181880
+2024-03-15T01:24:07.352024Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T01:24:07.352040Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T01:24:07.400757Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T01:24:13.282910Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T01:27:45.660718Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T01:57:05.029774Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T01:57:05.047028Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 183330
+2024-03-15T01:57:05.049310Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T01:57:05.049331Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T01:57:05.128771Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T01:57:13.805045Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:07:07.858101Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T02:07:07.860660Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 183979
+2024-03-15T02:07:07.863290Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T02:07:07.863317Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T02:07:08.000511Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T02:07:34.318713Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:14:19.967242Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T02:14:19.967706Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 184881
+2024-03-15T02:14:19.970196Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T02:14:19.970212Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T02:14:19.998729Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T02:14:38.581441Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:14:59.451420Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T02:14:59.451996Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 185059
+2024-03-15T02:14:59.455131Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T02:14:59.455158Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T02:14:59.515198Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T02:15:20.358596Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:15:38.865734Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T02:15:38.866255Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 185229
+2024-03-15T02:15:38.869476Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T02:15:38.869501Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T02:15:38.919659Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T02:15:53.619085Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:16:13.191295Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T02:16:13.191621Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 185287
+2024-03-15T02:16:13.194027Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T02:16:13.194046Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T02:16:13.222302Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T02:16:18.664012Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:28:11.662815Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T02:50:34.113419Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T02:50:34.114396Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 186598
+2024-03-15T02:50:34.117428Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T02:50:34.117451Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T02:50:34.149102Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T02:50:38.618789Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T02:53:19.772393Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T03:01:18.886505Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T03:01:18.886882Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 187028
+2024-03-15T03:01:18.889356Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T03:01:18.889376Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T03:01:18.908963Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T03:01:23.683254Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T03:05:00.579107Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T03:10:20.588918Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T03:10:20.589253Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 187438
+2024-03-15T03:10:20.591344Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T03:10:20.591360Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T03:10:20.606765Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T03:10:24.177103Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T03:26:37.374549Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T03:26:37.375189Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 188040
+2024-03-15T03:26:37.378730Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T03:26:37.378750Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T03:26:37.489071Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T03:26:44.277801Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T03:40:31.782605Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T03:40:31.783106Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 188679
+2024-03-15T03:40:31.787223Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T03:40:31.787244Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T03:40:31.816969Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T03:40:36.187179Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T03:45:39.249061Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T03:45:39.249416Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 188943
+2024-03-15T03:45:39.252853Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T03:45:39.252873Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T03:45:39.338993Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T03:45:45.165816Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T03:53:26.743693Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T03:53:26.758625Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 189356
+2024-03-15T03:53:26.760801Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T03:53:26.760817Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T03:53:26.896028Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T03:53:41.624896Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T04:07:27.245498Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T04:07:27.249663Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 190795
+2024-03-15T04:07:27.256815Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T04:07:27.256835Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T04:07:27.335840Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T04:07:36.359946Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T04:17:00.797166Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T04:21:54.993529Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T04:21:54.993870Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 192010
+2024-03-15T04:21:54.996284Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T04:21:54.996309Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T04:21:55.015486Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T04:21:58.497869Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T04:28:40.445556Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T04:31:25.433491Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T04:31:25.434149Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 192770
+2024-03-15T04:31:25.436561Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T04:31:25.436625Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T04:31:25.469969Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T04:31:28.962073Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:00:43.691593Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:00:43.692014Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 194192
+2024-03-15T05:00:43.694925Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:00:43.694941Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:00:43.724466Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:00:46.948462Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:08:00.762841Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T05:10:44.324725Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:10:44.326241Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 194633
+2024-03-15T05:10:44.328567Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:10:44.328693Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:10:44.347280Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:10:48.619742Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:17:28.164502Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:17:28.164870Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 194905
+2024-03-15T05:17:28.167571Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:17:28.167593Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:17:28.191801Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:17:32.263296Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:20:50.939985Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T05:25:26.227433Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:25:26.227734Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 195207
+2024-03-15T05:25:26.231347Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:25:26.231367Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:25:26.249190Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:25:28.982185Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:31:26.448317Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:31:26.448757Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 195519
+2024-03-15T05:31:26.450541Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:31:26.450556Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:31:26.467323Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:31:29.574087Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:34:46.928307Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:34:46.928749Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 195783
+2024-03-15T05:34:46.931043Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:34:46.931058Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:34:46.952627Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:34:49.742148Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:41:05.117441Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:41:05.123702Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 196201
+2024-03-15T05:41:05.125849Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:41:05.125870Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:41:05.153711Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:41:07.758132Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:45:20.290167Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:45:20.290446Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 196513
+2024-03-15T05:45:20.292386Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:45:20.292403Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:45:20.306858Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:45:22.792999Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T05:50:14.931689Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T05:55:50.778823Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T05:55:50.780131Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 197040
+2024-03-15T05:55:50.782180Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T05:55:50.782196Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T05:55:50.795658Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T05:55:53.381569Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T06:03:57.911664Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T06:10:47.940174Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T06:10:47.940746Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 197936
+2024-03-15T06:10:47.943228Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T06:10:47.943244Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T06:10:47.965368Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T06:10:50.640132Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T06:14:56.606783Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T06:42:10.582753Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T06:42:10.583275Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 199065
+2024-03-15T06:42:10.586085Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T06:42:10.586100Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T06:42:10.611614Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T06:42:13.304913Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T06:43:42.718717Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T06:51:50.571393Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T06:51:50.571687Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 199394
+2024-03-15T06:51:50.573627Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T06:51:50.573646Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T06:51:50.589020Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T06:51:53.258777Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T06:54:14.504039Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T07:00:19.360107Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:00:19.360398Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 199740
+2024-03-15T07:00:19.362332Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:00:19.362346Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:00:19.376808Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:00:22.181366Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:05:45.160454Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:05:45.164662Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 199925
+2024-03-15T07:05:45.166631Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:05:45.166650Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:05:45.193540Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:05:47.918039Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:20:44.711391Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:20:44.715593Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 200524
+2024-03-15T07:20:44.717389Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:20:44.717404Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:20:44.762726Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:20:47.869395Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:22:48.452190Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T07:29:39.861166Z 4 [ERROR] [MY-013178] [Server] Execution of server-side SQL statement 'ALTER TABLE user MODIFY ssl_type enum('','ANY','X509', 'SPECIFIED') NOT NULL; ' failed with error code = 3664, error message = 'Failed to delete SDI 'mysql.user' in tablespace 'mysql'.'.
+2024-03-15T07:29:39.877046Z 0 [ERROR] [MY-013380] [Server] Failed to upgrade server.
+2024-03-15T07:29:39.877502Z 0 [ERROR] [MY-010119] [Server] Aborting
+2024-03-15T07:29:41.646057Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.36-0ubuntu0.20.04.1)  (Ubuntu).
+2024-03-15T07:29:42.934974Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:29:42.935063Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 200836
+2024-03-15T07:29:42.938165Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:29:42.938181Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:29:42.961868Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:29:46.342566Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:33:38.698115Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T07:40:43.606751Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:40:43.607104Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 201334
+2024-03-15T07:40:43.609023Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:40:43.609039Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:40:43.624196Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:40:47.545465Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:43:42.067858Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T07:47:11.363053Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:47:11.363504Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 201587
+2024-03-15T07:47:11.365696Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:47:11.365711Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:47:11.385028Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:47:14.169697Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:49:34.843945Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T07:55:18.315114Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T07:55:18.315654Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 201949
+2024-03-15T07:55:18.319330Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T07:55:18.319354Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T07:55:18.338412Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T07:55:22.192997Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T07:59:58.333351Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T08:00:47.433014Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T08:00:47.433342Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 202215
+2024-03-15T08:00:47.435854Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T08:00:47.435873Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T08:00:47.452224Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T08:00:50.302700Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T08:02:55.943782Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T08:10:07.668119Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T08:10:07.668401Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 202761
+2024-03-15T08:10:07.670727Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T08:10:07.670743Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T08:10:07.686431Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T08:10:10.797143Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T08:15:37.743074Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T08:15:37.743521Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 203031
+2024-03-15T08:15:37.745618Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T08:15:37.745637Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T08:15:37.771454Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T08:15:40.773951Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T08:24:52.265216Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T08:40:10.307445Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T08:40:10.308062Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 204172
+2024-03-15T08:40:10.310840Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T08:40:10.310857Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T08:40:10.356651Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T08:40:23.805056Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T08:44:20.402517Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T08:51:26.308766Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T08:51:26.309067Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 204801
+2024-03-15T08:51:26.311549Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T08:51:26.311573Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T08:51:26.331394Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T08:51:30.062373Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T09:03:39.551054Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T09:05:36.257348Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T09:05:36.257749Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 205346
+2024-03-15T09:05:36.260630Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T09:05:36.260649Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T09:05:36.284877Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T09:05:39.809115Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T09:18:56.070009Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T09:20:11.757831Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T09:20:11.758204Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 206042
+2024-03-15T09:20:11.760476Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T09:20:11.760493Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T09:20:11.781527Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T09:20:19.291986Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T09:30:27.001558Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T09:30:27.001856Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 206591
+2024-03-15T09:30:27.004055Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T09:30:27.004072Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T09:30:27.021796Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T09:30:29.747940Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T09:41:03.861621Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T09:41:03.868235Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 207161
+2024-03-15T09:41:03.870576Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T09:41:03.870593Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T09:41:03.992732Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T09:41:08.840697Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T09:50:34.265498Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T09:50:34.266844Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 207627
+2024-03-15T09:50:34.269011Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T09:50:34.269028Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T09:50:34.298299Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T09:50:39.650681Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T10:01:14.121168Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T10:01:14.121483Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 208217
+2024-03-15T10:01:14.123539Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T10:01:14.123555Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T10:01:14.139032Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T10:01:18.173770Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T10:05:59.165374Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T10:10:35.989115Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T10:10:35.989498Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 208676
+2024-03-15T10:10:35.992104Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T10:10:35.992121Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T10:10:36.010335Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T10:10:38.857732Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T10:18:13.783126Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T10:18:13.783430Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 208965
+2024-03-15T10:18:13.785464Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T10:18:13.785490Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T10:18:13.807835Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T10:18:16.416418Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T10:24:59.962131Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T10:24:59.962536Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 209200
+2024-03-15T10:24:59.965093Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T10:24:59.965116Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T10:25:00.009402Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T10:25:05.631249Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T10:37:00.414164Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T10:40:48.483476Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T10:40:48.484704Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 209851
+2024-03-15T10:40:48.492500Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T10:40:48.492525Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T10:40:48.561766Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T10:40:55.061701Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T10:49:46.703177Z 4 [System] [MY-013381] [Server] Server upgrade from '80035' to '80036' started.
+2024-03-15T10:57:00.617109Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T10:57:00.625477Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 210471
+2024-03-15T10:57:00.629323Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T10:57:00.629350Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T10:57:00.761212Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T10:57:15.791942Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:01:09.165671Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:01:09.166182Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 211104
+2024-03-15T11:01:09.169472Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:01:09.169494Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:01:09.198774Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:04:27.698603Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:05:16.288398Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:05:16.288743Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 211452
+2024-03-15T11:05:16.291310Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:05:16.291345Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:05:16.322113Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:07:56.687271Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:09:15.154480Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:09:15.156937Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 211650
+2024-03-15T11:09:15.159172Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:09:15.159191Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:09:15.211755Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:11:55.311611Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:11:55.312570Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 211807
+2024-03-15T11:11:55.317944Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:11:55.317967Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:11:55.370089Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:16:11.981675Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:16:11.982897Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 212072
+2024-03-15T11:16:11.986539Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:16:11.986567Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:16:12.031929Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:20:50.115329Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:20:50.121441Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 212341
+2024-03-15T11:20:50.123983Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:20:50.123999Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:20:50.154037Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:25:38.382119Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:25:38.383201Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 212591
+2024-03-15T11:25:38.385843Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:25:38.385866Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:25:38.450892Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:31:23.537606Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:31:23.538306Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 212860
+2024-03-15T11:31:23.541167Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:31:23.541189Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:31:23.573628Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:35:15.206428Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:35:46.991268Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:35:46.991635Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 213201
+2024-03-15T11:35:46.994326Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:35:46.994347Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:35:47.023364Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:40:38.355549Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:40:38.356260Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 213504
+2024-03-15T11:40:38.358924Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:40:38.358945Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:40:38.388799Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:40:51.364069Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:45:17.062585Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:45:17.063466Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 213733
+2024-03-15T11:45:17.066630Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:45:17.066774Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:45:17.105678Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:48:14.795587Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:50:14.118977Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:50:14.119443Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 213987
+2024-03-15T11:50:14.122206Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:50:14.122225Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:50:14.148240Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:52:12.328533Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:55:07.777876Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:55:07.785761Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 214189
+2024-03-15T11:55:07.788297Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:55:07.788317Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:55:07.854670Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:55:21.149089Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T11:58:56.909700Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T11:58:56.910138Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 214330
+2024-03-15T11:58:56.912503Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T11:58:56.912524Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T11:58:56.932141Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T11:59:36.311082Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T12:00:30.981746Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T12:00:30.982173Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 214484
+2024-03-15T12:00:30.984878Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T12:00:30.984901Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T12:00:31.007379Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-03-15T12:03:31.869456Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-03-15T12:05:29.123722Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2024-03-15T12:05:29.130859Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.36-0ubuntu0.20.04.1) starting as process 214736
+2024-03-15T12:05:29.137162Z 0 [Warning] [MY-013242] [Server] --character-set-server: 'utf8' is currently an alias for the character set UTF8MB3, but will be an alias for UTF8MB4 in a future release. Please consider using UTF8MB4 in order to be unambiguous.
+2024-03-15T12:05:29.137187Z 0 [Warning] [MY-013244] [Server] --collation-server: 'utf8mb3_general_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead.
+2024-03-15T12:05:29.210135Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.

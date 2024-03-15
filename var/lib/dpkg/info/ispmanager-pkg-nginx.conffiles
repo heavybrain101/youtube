@@ -1,0 +1,3 @@
+/usr/local/mgr5/etc/conf.d/nginx.conf
+/etc/nginx/vhosts-includes/letsencrypt.conf
+/etc/nginx/vhosts-includes/letsencrypt.conf

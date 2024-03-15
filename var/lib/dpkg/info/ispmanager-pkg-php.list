@@ -1,0 +1,17 @@
+/.
+/etc
+/etc/cron.daily
+/etc/cron.daily/phpsess_cron
+/usr
+/usr/local
+/usr/local/mgr5
+/usr/local/mgr5/etc
+/usr/local/mgr5/etc/conf.d
+/usr/local/mgr5/etc/conf.d/php.conf
+/usr/local/mgr5/sbin
+/usr/local/mgr5/sbin/phpsess_clean.sh
+/usr/share
+/usr/share/doc
+/usr/share/doc/ispmanager-pkg-php
+/usr/share/doc/ispmanager-pkg-php/changelog.Debian.gz
+/usr/share/doc/ispmanager-pkg-php/copyright

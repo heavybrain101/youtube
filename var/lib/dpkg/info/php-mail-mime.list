@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/php-mail-mime
+/usr/share/doc/php-mail-mime/changelog.Debian.gz
+/usr/share/doc/php-mail-mime/copyright
+/usr/share/doc/php-mail-mime/package.xml.gz
+/usr/share/php
+/usr/share/php/.registry
+/usr/share/php/.registry/mail_mime.reg
+/usr/share/php/Mail
+/usr/share/php/Mail/mime.php
+/usr/share/php/Mail/mimePart.php

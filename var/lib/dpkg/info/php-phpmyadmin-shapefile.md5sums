@@ -1,0 +1,8 @@
+abe5a7d445edde626d5c310b79adea85  usr/share/doc/php-phpmyadmin-shapefile/CONTRIBUTING.md
+a53a57f00faa84f58c2f0e44ab23b92f  usr/share/doc/php-phpmyadmin-shapefile/README.md
+8b8e50ee1d26ecfced0e15d6a7481966  usr/share/doc/php-phpmyadmin-shapefile/changelog.Debian.gz
+582a24311fb2bac7fa00a69896562f9e  usr/share/doc/php-phpmyadmin-shapefile/copyright
+66f7bbc01bbb6b1e5764fd272f5a3b70  usr/share/php/PhpMyAdmin/ShapeFile/ShapeFile.php
+c30674da162cc94bb5ca26220e3cf862  usr/share/php/PhpMyAdmin/ShapeFile/ShapeRecord.php
+3f6c2fbc3c6870b9138ac1087c035752  usr/share/php/PhpMyAdmin/ShapeFile/Util.php
+e1d58462155cc5fb8348e29705e6ed5c  usr/share/php/PhpMyAdmin/ShapeFile/autoload.php

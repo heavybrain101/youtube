@@ -1,0 +1,5 @@
+260c3cecefdb630bb70de79248bb8c3c  usr/local/lsws/conf/vhosts-includes/roundcube-openlitespeed.conf
+aa8db26ba454ce29f9460ba128fd01ad  usr/local/mgr5/sbin/pkg_configure_roundcube.py
+ed8193f990b812914249f9989ebb5a48  usr/share/doc/ispmanager-pkg-roundcube/changelog.Debian.gz
+a7a2251c65daf300df4800740006ee2e  usr/share/doc/ispmanager-pkg-roundcube/copyright
+5e57016a642c77a4d9a9f39d8bed1ef9  usr/share/roundcube/plugins/autologin/autologin.php

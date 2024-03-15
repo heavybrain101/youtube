@@ -1,0 +1,407 @@
+#########
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# This file was generated dynamically from
+# non-split config (/etc/exim4/exim4.conf.localmacros
+# and /etc/exim4/exim4.conf.template).
+# The config files are supplemented with package installation/configuration
+# settings managed by debconf. This data is stored in
+# /etc/exim4/update-exim4.conf.conf
+# Any changes you make here will be lost.
+# See /usr/share/doc/exim4-base/README.Debian.gz and update-exim4.conf(8)
+# for instructions of customization.
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+# WARNING WARNING WARNING
+#########
+SA_SPAMD_USER = __ISP_SPAMD_USER__
+SA_SCORE_REJECT = 50
+SA_ABUSE_ADDR = The System Administrator
+log_selector =  \
+        +all_parents \
+        +lost_incoming_connection \
+        +received_sender \
+        +received_recipients \
+        +tls_cipher +tls_peerdn +tls_sni \
+        +smtp_confirmation \
+        +smtp_syntax_error \
+        +smtp_protocol_error
+  
+tls_advertise_hosts = *
+tls_certificate = ${if exists{/etc/exim4/ssl/${tls_sni}.crt}{/etc/exim4/ssl/${tls_sni}.crt}{/etc/exim4/ssl/exim.crt}}
+tls_privatekey = ${if exists{/etc/exim4/ssl/${tls_sni}.key}{/etc/exim4/ssl/${tls_sni}.key}{/etc/exim4/ssl/exim.key}}
+daemon_smtp_ports = 25 : 465 : 587
+tls_on_connect_ports = 465
+
+.ifdef SA_ENABLE
+spamd_address = 127.0.0.1 783
+.endif
+
+trusted_groups = mgrsecure
+trusted_users = www-data
+
+keep_environment =
+
+domainlist local_domains = lsearch;/etc/exim4/domains
+domainlist dummy_domains =
+hostlist relay_from_hosts = 127.0.0.1 : 78.24.223.119
+
+domainlist relay_to_domains = lsearch;/etc/exim4/domains
+exim_user = Debian-exim
+exim_group = Debian-exim
+
+.ifdef VIRUS_SCAN
+av_scanner = clamd:__CLAMAV_SOCKET__
+.endif
+
+never_users = root
+host_lookup = *
+rfc1413_hosts = *
+rfc1413_query_timeout = 0s
+ignore_bounce_errors_after = 2d
+timeout_frozen_after = 7d
+acl_smtp_rcpt = acl_check_rcpt
+acl_smtp_data = acl_check_data
+acl_not_smtp = acl_check_not_smtp
+.ifdef DKIM_ENABLE
+acl_smtp_dkim = acl_check_dkim
+.endif
+
+begin acl
+
+	acl_check_not_smtp:
+		warn	condition	= ${if match_local_part{$sender_ident}{lsearch;/etc/exim4/ratelimits} {yes}{no}}
+				set	acl_c9	= $sender_ident
+		warn	condition	= ${if match_local_part{$sender_address}{lsearch;/etc/exim4/ratelimits} {yes}{no}}
+				set acl_c9	= $sender_address
+                deny	set	acl_c8 = ${lookup{$acl_c9}lsearch*{/etc/exim4/ratelimits}}
+                                condition	= ${if and{{!eq{$acl_c9}{}}{>{$acl_c8}{0}}}{yes}{no}}
+				ratelimit	= $acl_c8 / 1h / strict / $acl_c9
+				message		= Sender rate overlimit - $sender_rate / $sender_rate_period / $acl_c9
+.ifdef DEFAULT_RATELIMIT
+		warn    set acl_c7	= $sender_ident
+		warn    condition	= ${if eq{$acl_c7}{} {yes}{no}}
+				set acl_c7	= $sender_address
+		deny    condition	= ${if and{{!eq{$acl_c7}{}}{eq{$acl_c8}{}}}{yes}{no}}
+				ratelimit	= DEFAULT_RATELIMIT / 1h / strict / $acl_c7
+				message		= Sender rate overlimit - $sender_rate / $sender_rate_period / $acl_c7
+.endif
+
+		accept
+	
+	acl_check_rcpt:
+
+.ifdef VIRUS_SCAN
+		warn
+		    set acl_m3 = no
+		warn
+		    condition = ${lookup{$domain}lsearch{__CLAMAV_WHITELIST__} {yes}{no}}
+		    set acl_m3 = ok
+.endif
+
+		accept	hosts = +relay_from_hosts
+				!authenticated = *
+                set acl_m6 = whitelisted
+
+		accept	domains = +local_domains : +relay_to_domains
+				condition = ${lookup{$sender_address}wildlsearch{/etc/exim4/whitelist}{yes}{no}}
+				set acl_m6 = whitelisted
+				logwrite = Accepted from $sender_address to $local_part@$domain by whitelist.
+
+		accept	domains = +local_domains : +relay_to_domains
+				hosts = net-lsearch;/etc/exim4/whitelist
+				set acl_m6 = whitelisted
+				logwrite = Accepted from $sender_address to $local_part@$domain by whitelist.
+
+		deny	condition = ${lookup{$sender_address}wildlsearch{/etc/exim4/blacklist}{yes}{no}}
+				set acl_m6 = blacklisted
+				logwrite = Rejected from $sender_address to $local_part@$domain by blacklist.
+
+		deny	hosts = net-lsearch;/etc/exim4/blacklist
+				set acl_m6 = blacklisted
+				logwrite = Rejected from $sender_address to $local_part@$domain by blacklist.
+		
+		deny	message       = Restricted characters in address
+				domains       = +local_domains
+				local_parts   = ^[.] : ^.*[@%!/|]
+
+		deny    message       = Restricted characters in address
+				domains       = !+local_domains
+				local_parts   = ^[./|] : ^.*[@%!] : ^.*/\\.\\./
+
+		accept  local_parts   = postmaster
+				verify        = recipient
+				domains       = +local_domains
+
+		require verify        = sender
+
+		warn	authenticated = *
+				set acl_c0	= group${extract{2}{:}{${lookup{$authenticated_id}lsearch{/etc/exim4/passwd}}}}
+				set acl_c1	= ${lookup{$authenticated_id}lsearch*{/etc/exim4/ratelimits}}
+				ratelimit	= ${lookup{$acl_c0}lsearch*{/etc/exim4/ratelimits}} / 1h / strict / $acl_c0
+				ratelimit	= $acl_c1 / 1h / strict / $authenticated_id
+				log_message	= Sender rate overlimit - $sender_rate / $sender_rate_period / $authenticated_id
+				condition	= ${if match_local_part{$authenticated_id}{lsearch;/etc/exim4/ratelimits} {yes}{no}}
+		deny	authenticated = *
+				set acl_c1	= ${lookup{$authenticated_id}lsearch*{/etc/exim4/ratelimits}}
+				ratelimit	= $acl_c1 / 1h / leaky / $authenticated_id
+				message		= Sender rate overlimit - $sender_rate / $sender_rate_period / $authenticated_id
+				condition	= ${if match_local_part{$authenticated_id}{lsearch;/etc/exim4/ratelimits} {yes}{no}}
+		warn	authenticated = *
+				set acl_c0	= group${extract{2}{:}{${lookup{$authenticated_id}lsearch{/etc/exim4/passwd}}}}
+				ratelimit	= ${lookup{$acl_c0}lsearch*{/etc/exim4/ratelimits}} / 1h / strict / $acl_c0
+				log_message	= Sender rate overlimit - $sender_rate / $sender_rate_period / $acl_c0
+				condition	= ${if match_local_part{$acl_c0}{lsearch;/etc/exim4/ratelimits} {yes}{no}}
+		deny	authenticated = *
+				set acl_c0	= group${extract{2}{:}{${lookup{$authenticated_id}lsearch{/etc/exim4/passwd}}}}
+				ratelimit	= ${lookup{$acl_c0}lsearch*{/etc/exim4/ratelimits}} / 1h / leaky / $acl_c0
+				message		= Sender rate overlimit - $sender_rate / $sender_rate_period / $acl_c0
+				condition	= ${if match_local_part{$acl_c0}{lsearch;/etc/exim4/ratelimits} {yes}{no}}
+.ifdef DEFAULT_RATELIMIT
+		deny	authenticated = *
+				ratelimit	= DEFAULT_RATELIMIT / 1h / strict / $authenticated_id
+				message		= Sender rate overlimit - $sender_rate / $sender_rate_period / $authenticated_id
+				condition	= ${if or{{eq{$acl_c1}{}}{eq{$acl_c0}{}}}{yes}{no}}
+.endif
+
+		accept  hosts         = +relay_from_hosts
+				!authenticated = *
+				control       = submission/sender_retain
+
+		accept  authenticated = *
+				condition     = ${if eq{${extract{5}{:}{${lookup{$authenticated_id}lsearch{/etc/exim4/passwd}}}}}{no} {yes}{no}}
+				condition     = ${if eq{${extract{3}{:}{${lookup{${domain:$authenticated_id}}lsearch{/etc/exim4/domains}}}}}{no} {yes}{no}}
+				control       = submission/domain=
+
+		deny    message       = rejected because $sender_host_address is in a black list at $dnslist_domain\\n$dnslist_text
+				dnslists      = ${readfile {/etc/exim4/dnsbllist}{:}}
+
+		require message       = relay not permitted
+				domains       = +local_domains : +relay_to_domains
+
+		require verify        = recipient
+
+.ifdef POSTGREY_SOCKET
+		defer log_message = greylisted host $sender_host_address
+			set acl_m0  = request=smtpd_access_policy\nprotocol_state=RCPT\nprotocol_name=${uc:$received_protocol}\nhelo_name=$sender_helo_name\nclient_address=$sender_host_address\nclient_name=$sender_host_name\nsender=$sender_address\nrecipient=$local_part@$domain\ninstance=$sender_host_address/$sender_address/$local_part@$domain\n\n
+			set acl_m0  = ${sg{${readsocket{POSTGREY_SOCKET}{$acl_m0}{5s}{}{action=DUNNO}}}{action=}{}}
+			message     = ${sg{$acl_m0}{^\\w+\\s*}{}}
+			condition   = ${if eq{${uc:${substr{0}{5}{$acl_m0}}}}{DEFER}{true}{false}}
+.endif
+
+		accept
+
+        acl_check_data:
+
+            accept
+                condition = ${if >{$load_average}{3000} {yes}{no}}
+                logwrite = Accept message without spamd and antivirus check because LA > 3.
+
+.ifdef VIRUS_SCAN
+        accept
+            condition = ${if >{$message_body_size}{2M} {yes}{no}}
+            logwrite = Accept message without antivirus check because body size $message_body_size not critical
+
+        warn
+            condition = ${if eq{$acl_m3}{no} {yes}{no}}
+            add_header = X-Scanned-By: ${extract{1}{/}{${readsocket{__CLAMAV_SOCKET__}{VERSION}{1s}{} {unscanned}}}}; $tod_full\n
+
+        deny
+            message = This message contains virus ($malware_name)
+            hosts   = *
+            malware = * / defer_ok
+            log_message = Rejected: this message contains virus ($malware_name)
+            condition = ${if eq{$acl_m3}{no}{yes}{no}}
+.endif
+.ifdef SA_ENABLE
+        warn
+            !authenticated = *
+            hosts = !127.0.0.1/24
+            condition = ${if < {$message_size}{1K}}
+            spam       = SA_SPAMD_USER:true
+            add_header = X-Spam_score: $spam_score\n\
+                   X-Spam_score_int: $spam_score_int\n\
+                   X-Spam_bar: $spam_bar\n\
+                   X-Spam_report: $spam_report
+
+        warn
+            !authenticated = *
+            hosts = !+relay_from_hosts
+            spam       = SA_SPAMD_USER:true/defer_ok
+            add_header = X-Spam_score: $spam_score\n\
+                    X-Spam_score_int: $spam_score_int\n\
+                    X-Spam_bar: $spam_bar\n\
+                    X-Spam_report: $spam_report
+            set acl_m4 = $spam_score_int
+            condition = ${if and{{<{$message_size}{100K}}{<{$acl_m4}{SA_SCORE_REJECT}}} {yes}{no}}
+            logwrite = From $sender_address to $recipients X-Spam_score: $acl_m4.
+
+        deny
+        	condition = ${if and{{>{$message_size}{10K}}{!eq{$acl_m4}{}}{>{$acl_m4}{SA_SCORE_REJECT}}} {yes}{no}}
+            message = Content analisis tool detect spam (from $sender_address to $recipients). Contact SA_ABUSE_ADDR.
+.endif
+
+		accept
+
+.ifdef DKIM_ENABLE
+	acl_check_dkim:
+
+        warn
+            dkim_status = fail
+            logwrite = DKIM test failed: $dkim_verify_reason
+            add_header = X-DKIM-FAIL: DKIM test failed: (address=$sender_address domain=$dkim_cur_signer), signature is bad.
+
+        warn
+            dkim_status = invalid
+            add_header = :at_start:Authentication-Results: $dkim_cur_signer ($dkim_verify_status); $dkim_verify_reason
+            logwrite = DKIM test passed (address=$sender_address domain=$dkim_cur_signer), but signature is invalid.
+
+        accept
+            dkim_status = pass
+            add_header = :at_start:Authentication-Results: dkim=$dkim_verify_status, header.i=@$dkim_cur_signer
+            logwrite = DKIM test passed (address=$sender_address domain=$dkim_cur_signer), good signature.
+
+	accept
+.endif
+
+begin routers
+	dnslookup:
+		driver = dnslookup
+		domains = !+dummy_domains
+		transport = remote_smtp
+		ignore_target_hosts = 0.0.0.0 : 127.0.0.0/8
+		self = pass
+		no_more
+
+	disabled_domains:
+		driver = redirect
+		condition = ${extract{3}{:}{${lookup{$domain}lsearch{/etc/exim4/domains}}}}
+		allow_fail = yes
+		data = :fail: Domain disabled
+		no_more
+
+	disabled_users:
+		driver = redirect
+		condition = ${extract{5}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}
+		allow_fail = yes
+		data = :fail: User disabled
+		no_more
+
+	local_domains:
+		driver = redirect
+		condition = ${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}{no}{yes}}
+		data = ${quote_local_part:$local_part}@${extract{1}{:}{${lookup{$domain}lsearch{/etc/exim4/domains}}}}
+		cannot_route_message = Unknown user
+		redirect_router = dnslookup
+		no_more
+
+	aliases:
+		driver = redirect
+		data = ${extract{1}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/aliases}}}}
+		condition = ${if exists{/etc/exim4/aliases} {yes} {no} }
+		redirect_router = dnslookup
+		pipe_transport = address_pipe
+
+	procmail:
+		no_verify
+		driver = accept
+		transport = dovecot_deliver_pipe
+		transport_home_directory = ${extract{4}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}
+		condition = ${lookup {$local_part@$domain} lsearch {/etc/exim4/passwd} {yes} {no} }
+
+	local_users:
+		driver = accept
+		transport = local_delivery
+		condition = ${lookup {$local_part@$domain} lsearch {/etc/exim4/passwd} {yes} {no} }
+
+	catchall_for_domains:
+		driver = redirect
+		headers_add = X-redirected: yes
+		data = ${extract{2}{:}{${lookup{$domain}lsearch{/etc/exim4/domains}}}}
+		file_transport = local_delivery
+		redirect_router = dnslookup
+
+	unknown_users:
+		driver = redirect
+		allow_fail = yes
+		data = :fail: Unknown user
+		no_more
+
+begin transports
+
+	remote_smtp:
+		driver = smtp
+
+.ifdef DKIM_ENABLE
+		dkim_domain = $sender_address_domain
+		dkim_selector = ${if exists{/etc/exim4/ssl/$sender_address_domain.txt}{${extract{1}{.}{${readfile{/etc/exim4/ssl/${lookup {$sender_address_domain.txt} dsearch {/etc/exim4/ssl}}}}}}}{dkim}}
+		dkim_private_key = ${if exists{__ISP_DKIM_KEYS__/$sender_address_domain.private}{__ISP_DKIM_KEYS__/${lookup {$sender_address_domain.private} dsearch {__ISP_DKIM_KEYS__}}}{0}}
+.endif
+
+		interface = <;${lookup{$sender_address_domain}lsearch{/etc/exim4/domainips}}
+  
+	local_delivery:
+		driver = appendfile
+		maildir_format = true
+		maildir_use_size_file = true
+		create_directory = true
+		directory_mode = 700
+		directory = ${extract{4}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}/.maildir
+		delivery_date_add
+		envelope_to_add
+		return_path_add
+		mode = 0660
+		quota = ${extract{3}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}M
+		quota_warn_threshold = 75%
+		use_lockfile = no
+		no_mode_fail_narrower
+		user = ${extract{1}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}
+		group = ${extract{2}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}
+						  
+	address_pipe:
+		driver = pipe
+		ignore_status
+		return_output
+		use_shell
+
+	dovecot_deliver_pipe:
+		driver = pipe
+		environment = "HOME=$home"
+		command = "/usr/local/mgr5/sbin/dovecot_lda"
+		return_path_add
+		delivery_date_add
+		envelope_to_add
+		check_string = "From "
+		escape_string = ">From "
+		user = ${extract{1}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}
+		group = ${extract{2}{:}{${lookup{$local_part@$domain}lsearch{/etc/exim4/passwd}}}}
+
+begin retry
+*		*		F,2h,15m; G,16h,1h,1.5; F,4d,6h
+
+begin rewrite
+
+begin authenticators
+
+       auth_plain:
+               driver = dovecot
+               public_name = PLAIN
+               server_socket = /var/run/dovecot/auth-client
+               server_set_id = $auth1
+
+       auth_login:
+       	       driver = dovecot
+       	       public_name = LOGIN
+       	       server_socket = /var/run/dovecot/auth-client
+       	       server_set_id = $auth1
+
+       auth_cram_md5:
+               driver = dovecot
+               public_name = CRAM-MD5
+               server_socket = /var/run/dovecot/auth-client
+       	       server_set_id = $auth1

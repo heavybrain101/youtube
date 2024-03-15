@@ -1,0 +1,5 @@
+/etc/awstats/awstats.conf
+/etc/awstats/awstats.conf.local
+/etc/cron.d/awstats
+/etc/default/awstats
+/etc/logrotate.d/httpd-prerotate/awstats/prerotate.sh

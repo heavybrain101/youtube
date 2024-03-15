@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/share
+/usr/share/bug
+/usr/share/bug/roundcube-mysql
+/usr/share/bug/roundcube-mysql/control
+/usr/share/doc
+/usr/share/doc/roundcube-mysql
+/usr/share/doc/roundcube-mysql/changelog.Debian.gz
+/usr/share/doc/roundcube-mysql/copyright

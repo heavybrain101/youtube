@@ -1,0 +1,16 @@
+/.
+/etc
+/etc/apache2
+/etc/apache2/mods-available
+/etc/apache2/mods-available/php81.load
+/opt
+/opt/php81
+/opt/php81/lib
+/opt/php81/lib/apache2
+/opt/php81/lib/apache2/modules
+/opt/php81/lib/apache2/modules/libphp.so
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/isp-php81-mod-apache
+/usr/share/doc/isp-php81-mod-apache/changelog.Debian.gz

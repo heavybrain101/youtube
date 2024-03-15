@@ -1,0 +1,10 @@
+16d29be42363a79b633099e8417b49ed  usr/lib/python3/dist-packages/requests_kerberos-0.12.0.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/requests_kerberos-0.12.0.egg-info/dependency_links.txt
+e66c476447f4d912dc9a710f35db978c  usr/lib/python3/dist-packages/requests_kerberos-0.12.0.egg-info/requires.txt
+2390948fad12fc64b72b95aa580de627  usr/lib/python3/dist-packages/requests_kerberos-0.12.0.egg-info/top_level.txt
+54c73e4a8909f95b247c1ef42ffe94a2  usr/lib/python3/dist-packages/requests_kerberos/__init__.py
+e0f7c4f7f63b25996ffaf3bfef3657ac  usr/lib/python3/dist-packages/requests_kerberos/compat.py
+69fb5b91af36137fe10913a3c4810b43  usr/lib/python3/dist-packages/requests_kerberos/exceptions.py
+3e00eeeae3262ce61334ceada1ae938f  usr/lib/python3/dist-packages/requests_kerberos/kerberos_.py
+5a05cddb2d1182e6c64f57122c759c7c  usr/share/doc/python3-requests-kerberos/changelog.Debian.gz
+7ba9af43f1a55bad2bd5f9b9553221fa  usr/share/doc/python3-requests-kerberos/copyright

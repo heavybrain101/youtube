@@ -1,0 +1,3 @@
+/usr/local/mgr5/etc/conf.d/awstats.conf
+/etc/apache2/conf.d/awstats-apache.conf
+/etc/nginx/vhosts-includes/awstats-nginx.conf

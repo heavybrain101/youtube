@@ -1,0 +1,6 @@
+/etc
+/etc/init.d
+/etc/init.d/plymouth
+/etc/init.d/plymouth-log
+/etc/logrotate.d
+/etc/logrotate.d/bootlog

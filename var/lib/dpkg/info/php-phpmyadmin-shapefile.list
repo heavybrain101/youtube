@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/php-phpmyadmin-shapefile
+/usr/share/doc/php-phpmyadmin-shapefile/CONTRIBUTING.md
+/usr/share/doc/php-phpmyadmin-shapefile/README.md
+/usr/share/doc/php-phpmyadmin-shapefile/changelog.Debian.gz
+/usr/share/doc/php-phpmyadmin-shapefile/copyright
+/usr/share/php
+/usr/share/php/PhpMyAdmin
+/usr/share/php/PhpMyAdmin/ShapeFile
+/usr/share/php/PhpMyAdmin/ShapeFile/ShapeFile.php
+/usr/share/php/PhpMyAdmin/ShapeFile/ShapeRecord.php
+/usr/share/php/PhpMyAdmin/ShapeFile/Util.php
+/usr/share/php/PhpMyAdmin/ShapeFile/autoload.php

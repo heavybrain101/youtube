@@ -1,0 +1,5 @@
+d2795a2c4074a5f08b98ff41d91ef67c  usr/lib/x86_64-linux-gnu/virt-what-cpuid-helper
+029311e99e3878eba178d41d9e245d32  usr/sbin/virt-what
+c3837d03159cca7030abdd9fa3deb570  usr/share/doc/virt-what/changelog.Debian.gz
+2fd85571a913f5fa4a51531ff36fb435  usr/share/doc/virt-what/copyright
+f378aee3eeafe491fce4780303ec57e2  usr/share/man/man1/virt-what.1.gz

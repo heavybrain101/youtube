@@ -1,0 +1,149 @@
+#!/bin/bash
+# postinst script for coremanager
+#
+# see: dh_installdeb(1)
+
+#set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+COREDIR=/usr/local/mgr5
+CONFNAME=myadmin.conf
+. ${COREDIR}/lib/pkgsh/core_pkg_funcs.sh
+. ${COREDIR}/lib/pkgsh/ispmgr_pkg_funcs.sh
+
+CONFDIR=/etc/phpmyadmin
+
+case "$1" in
+    configure)
+
+	APACHECONF=/etc/apache2/conf.d/phpmyadmin-apache.conf
+	APACHE_TEMPLATEPATH=${COREDIR}/etc/templates/phpmyadmin-apache.template
+	APACHE_CONFDIR=/etc/apache2/conf.d
+	NGINXCONF=/etc/nginx/vhosts-includes/phpmyadmin-nginx.conf
+	NGINX_TEMPLATEPATH=${COREDIR}/etc/templates/phpmyadmin-nginx.template
+	NGINX_CONFDIR=/etc/nginx/vhosts-includes
+	OPENLITESPEEDCONF=/usr/local/lsws/conf/vhosts-includes/phpmyadmin-openlitespeed.conf
+	OPENLITESPEED_TEMPLATEPATH=${COREDIR}/etc/templates/phpmyadmin-openlitespeed.template
+	OPENLITESPEED_CONFDIR=/usr/local/lsws/conf/vhosts-includes
+	EXTACTION_PATH_CONF=/usr/local/mgr5/etc/conf.d/myadmin.conf
+	RANDOM_PATH=/phpmyadmin
+	if [ -z ${2} ] && [ ! -f ${NGINXCONF} ] && [ ! -f ${APACHECONF} ] && [ ! -f ${OPENLITESPEEDCONF} ]; then
+		RANDOM_PATH=/$(pwgen -s 16 1)/phpmyadmin
+		sed -i "s|http://\$site/phpmyadmin/|http://\$site${RANDOM_PATH}/|g" ${EXTACTION_PATH_CONF}
+	fi
+	if [ ! -f ${NGINXCONF} ]; then
+		mkdir -p ${NGINX_CONFDIR}
+		cp ${NGINX_TEMPLATEPATH} ${NGINXCONF}
+		if ! grep -qE "location\s+\^\~\s+__PHP_MYADMIN_PATH__/setup" ${NGINXCONF}; then
+			cat >> ${NGINXCONF} << EOF
+location ^~ __PHP_MYADMIN_PATH__/setup {
+	deny all;
+}
+EOF
+			RELOAD_WEB=yes
+		fi
+		sed -i "s|__PHP_MYADMIN_PATH__|${RANDOM_PATH}|g" ${NGINXCONF}
+	fi
+	if [ ! -f ${APACHECONF} ]; then
+		mkdir -p ${APACHE_CONFDIR}
+		cp ${APACHE_TEMPLATEPATH} ${APACHECONF}
+		sed -i "s|__PHP_MYADMIN_PATH__|${RANDOM_PATH}|g" ${APACHECONF}
+	fi
+	if [ ! -f ${OPENLITESPEEDCONF} ]; then
+		mkdir -p ${OPENLITESPEED_CONFDIR}
+		cp ${OPENLITESPEED_TEMPLATEPATH} ${OPENLITESPEEDCONF}
+		sed -i "s|__PHP_MYADMIN_PATH__|${RANDOM_PATH}|g" ${OPENLITESPEEDCONF}
+	fi
+	if ! grep -qE "Directory\s+/usr/share/phpmyadmin/setup" ${APACHECONF}; then
+		cat >> ${APACHECONF} << EOF
+<Directory /usr/share/phpmyadmin/setup>
+	<IfModule mod_authz_core.c>
+		# Apache 2.4
+		<RequireAny>
+		Require all denied
+		</RequireAny>
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		# Apache 2.2
+		Order Deny,Allow
+		Deny from All
+	</IfModule>
+</Directory>
+EOF
+		RELOAD_WEB=yes
+	fi
+	if [ -z ${2} ]; then
+		if [ "#${ISPCONVERT}" = "#yes" ]; then
+			PATHLIST="phpmyadmin-servers"
+			PathConvert ${COREDIR}/etc/conf.d/myadmin.conf
+			test -f /etc/nginx/vhosts-includes/phpMyAdmin.conf && rm -f /etc/nginx/vhosts-includes/phpMyAdmin.conf
+			test -f /etc/apache2/conf.d/phpmyadmin.conf && echo "# Disabled by ispmanager" > /etc/apache2/conf.d/phpmyadmin.conf
+			test -f /etc/apache2/conf.d/phpMyAdmin.conf && rm -f /etc/apache2/conf.d/phpMyAdmin.conf
+		else
+			touch ${CONFDIR}/servers.ini.php
+			grep -q "${CONFDIR}/servers.ini.php" ${CONFDIR}/config.inc.php || sed -i -r "/\?>/ iinclude('${CONFDIR}/servers.ini.php');" ${CONFDIR}/config.inc.php
+			grep -q "${CONFDIR}/servers.ini.php" ${CONFDIR}/config.inc.php || echo "include('${CONFDIR}/servers.ini.php');" >> ${CONFDIR}/config.inc.php
+			grep -q "PmaNoRelation_DisableWarning" ${CONFDIR}/config.inc.php || echo "\$cfg['PmaNoRelation_DisableWarning'] = TRUE;" >> ${CONFDIR}/config.inc.php
+
+			test -f /etc/apache2/conf.d/phpmyadmin.conf && echo "# Disabled by ispmanager" > /etc/apache2/conf.d/phpmyadmin.conf
+			sed -i -r "s|\\\$cfg\['blowfish_secret'\] =.*|\$cfg\['blowfish_secret'\] = '$(pwgen -s 32 1)';|" ${CONFDIR}/config.inc.php
+
+			MYADMIN_VERSION=$(dpkg -s phpmyadmin | awk '$1 == "Version:" {print $2}')
+			 if [ "$(lsb_release -s -c)" = "jammy" ]; then
+				if dpkg --compare-versions ${MYADMIN_VERSION} ge 4:5.1.0+dfsg1-5ubuntu1 ; then
+					if ! grep -q "\\$cfg['CookieSameSite']" ${CONFDIR}/config.inc.php ; then
+						echo "\$cfg['CookieSameSite'] = 'Lax';" >> ${CONFDIR}/config.inc.php
+					fi
+				fi
+			fi
+
+			test -f ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME} || ln -sf ../conf.d/myadmin.conf ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME}
+			DBLIST=$(${MGRCTL} -R -m ${ISPMGR} db.server | grep type=mysql | tr ' ' '\n' | awk -F= '$1 == "name" {print $2}')
+			for DB in ${DBLIST}; do
+				${MGRCTL} -m ${ISPMGR} db.server.edit elid=${DB} sok=ok >/dev/null 2>&1 &
+			done
+			ReloadWeb
+
+			MakeConfigLink myadmin
+			# Afterinstall
+			AfterinstallModule ${ISPMGR} myadmin
+		fi
+	fi
+	if ! grep -qE "Option\s+phpMyAdmin" ${COREDIR}/etc/conf.d/myadmin.conf ; then
+		echo "Option phpMyAdmin" >> ${COREDIR}/etc/conf.d/myadmin.conf
+		RELOAD_WEB=yes
+	fi
+	if [ "${RELOAD_WEB}" = "yes" ]; then
+		ReloadWeb
+	fi
+	${MGRCTL} -m ${ISPMGR} feature.check elid=ispmanager-pkg-myadmin result=0>/dev/null 2>&1 &
+	ReloadMgr ${ISPMGR}
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+
+
+exit 0

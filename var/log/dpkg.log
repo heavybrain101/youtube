@@ -1,0 +1,45 @@
+2024-03-01 05:16:28 startup packages configure
+2024-03-01 05:16:28 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-01 05:16:28 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-02 05:11:06 startup packages configure
+2024-03-02 05:11:06 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-02 05:11:06 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-03 05:27:45 startup packages configure
+2024-03-03 05:27:45 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-03 05:27:45 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-04 07:15:56 startup packages configure
+2024-03-04 07:15:56 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-04 07:15:56 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-05 05:44:30 startup packages configure
+2024-03-05 05:44:30 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-05 05:44:30 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-06 05:12:09 startup packages configure
+2024-03-06 05:12:09 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-06 05:12:09 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-07 05:18:52 startup packages configure
+2024-03-07 05:18:52 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-07 05:18:52 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-08 05:11:05 startup packages configure
+2024-03-08 05:11:05 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-08 05:11:05 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-09 05:13:19 startup packages configure
+2024-03-09 05:13:19 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-09 05:13:19 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-10 05:14:14 startup packages configure
+2024-03-10 05:14:14 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-10 05:14:14 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-11 05:18:18 startup packages configure
+2024-03-11 05:18:18 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-11 05:18:18 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-12 05:28:57 startup packages configure
+2024-03-12 05:28:57 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-12 05:28:57 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-13 06:00:20 startup packages configure
+2024-03-13 06:00:20 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-13 06:00:20 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-14 05:41:11 startup packages configure
+2024-03-14 05:41:11 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-14 05:41:11 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1
+2024-03-15 05:14:28 startup packages configure
+2024-03-15 05:14:28 configure mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1 <none>
+2024-03-15 05:14:28 status half-configured mysql-server-8.0:amd64 8.0.36-0ubuntu0.20.04.1

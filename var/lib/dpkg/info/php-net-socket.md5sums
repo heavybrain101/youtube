@@ -1,0 +1,5 @@
+f11c9035f7456b4b5546773a5c20c2b1  usr/share/doc/php-net-socket/changelog.Debian.gz
+f9831c371c0fbf581e83d921e2d7410d  usr/share/doc/php-net-socket/copyright
+d288cb1de7cd7583c8837c17b727fbad  usr/share/doc/php-net-socket/package.xml
+1714b99685945e9b10ac4e6d1cb51187  usr/share/php/.registry/net_socket.reg
+057d5c52b2dd9cfb2a458d532d95cfbb  usr/share/php/Net/Socket.php

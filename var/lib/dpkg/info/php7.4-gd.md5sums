@@ -1,0 +1,5 @@
+65bce8fc15fc7b30e7d9959d49d71bcd  usr/lib/php/20190902/gd.so
+b4358047262260ffb316eb6c9459f16c  usr/share/bug/php7.4-gd/control
+6a09c81430e5b62622c59678ba6f7f12  usr/share/bug/php7.4-gd/script
+948213aa315a4e393c2a2b2ef83167dd  usr/share/lintian/overrides/php7.4-gd
+dcba6b3c7745411277aa243c2920ae70  usr/share/php7.4-gd/gd/gd.ini

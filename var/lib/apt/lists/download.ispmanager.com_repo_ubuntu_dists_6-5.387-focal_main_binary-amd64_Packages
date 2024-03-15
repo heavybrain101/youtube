@@ -1,0 +1,1399 @@
+Package: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 94673
+Depends: libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libcurl4 (>= 7.56.1), libetpan-isp, libfcgi0ldbl, libgcc-s1 (>= 3.0), libgcrypt20 (>= 1.8.0), libgeoip1 (>= 1.6.12), libgnutls30 (>= 3.6.5), libgpg-error0 (>= 1.14), libidn11 (>= 1.13), libjsoncpp1 (>= 1.7.4), libmicrohttpd12 (>= 0.9.50), libmysqlclient21 (>= 8.0.11), libncurses6 (>= 6), libpam0g (>= 0.99.7.1), libpq5, libsasl2-2 (>= 2.1.27+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 9), libtasn1-6 (>= 4.14), libtinfo6 (>= 6), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4), ntp | openntpd | systemd-timesyncd, ntpdate | systemd-timesyncd, cron, tar, psmisc, geoip-bin, lsb-release, at, qrencode, coreutils, wget, python | python3, gnupg, iproute | iproute2, shared-mime-info
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager_5.387.0-5-ubuntu20_amd64.deb
+Size: 25161640
+SHA256: 8a5cc225e899b6b14122d4e8af521ebaf7be6ed6b9f6b4d32864d64cd0bf3cf0
+SHA1: 3d0c3495865cdd175f5256d076874537fc678412
+MD5sum: 0f406ce27dab838b55f5ff46991e59da
+Description: COREmanager
+ COREmanager binary and libraries
+
+Package: coremanager-dev
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 1173
+Pre-Depends: coremanager (= 5.387.0-5-ubuntu20)
+Depends: python-lxml | python3-lxml
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libdevel
+Filename: pool/main/c/coremanager/coremanager-dev_5.387.0-5-ubuntu20_amd64.deb
+Size: 197904
+SHA256: 55b3fba52ac014a9d741f239eaa94424e60d7608501c5ca9c2bd356b1157f1a4
+SHA1: 126404303868504ca5ea690f09656c84f58cf107
+MD5sum: be8e5519fb15af610b5de70917169e91
+Description: COREmanager development files
+ COREmanager development files,
+ headers and examples
+
+Package: coremanager-pkg-bind
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 17
+Pre-Depends: coremanager (>= 5.387.0-5), bind9
+Depends: dnsutils
+Conflicts: coremanager-pkg-nsd, coremanager-pkg-pdns
+Provides: coremanager-pkg-dns
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-bind_5.387.0-5-ubuntu20_all.deb
+Size: 2392
+SHA256: e7381e17674841c6bb5dfe4c8236cf42f6c8e2a08f046c863681b0bcef540144
+SHA1: a3089385f4cb3e6864e471485712346e33273097
+MD5sum: 78fbc2243da76e90ea4ed13404183338
+Description: COREmanager-pkg-bind
+ COREmanager bind installer
+
+Package: coremanager-pkg-dhcp
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: coremanager (>= 5.387.0-5), isc-dhcp-server
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-dhcp_5.387.0-5-ubuntu20_all.deb
+Size: 2540
+SHA256: 56f81de1ed39d084df4a4532ec20dc96f934754ebb67cae6fd9d3faa65dfeab5
+SHA1: 0fc7ef50fd9b85fb2fbe5c7b94dbc9f7c1cec63c
+MD5sum: 6c3eaec8d673bdc16d859c2ac82ed3fb
+Description: COREmanager-pkg-dhcp
+ COREmanager dhcp installer
+
+Package: coremanager-pkg-fail2ban
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 11
+Pre-Depends: coremanager (= 5.387.0-5-ubuntu20)
+Depends: fail2ban
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-fail2ban_5.387.0-5-ubuntu20_all.deb
+Size: 2028
+SHA256: 406c906345ce774c97d3d749608c15b8005d26f8b8bfefb01e032362544ae587
+SHA1: 5f80612ee6c5fd2028898e056dbf192316c744bd
+MD5sum: 1e8ae962a539471deedcfbadea06fa19
+Description: COREmanager-pkg-fail2ban virtual package
+
+Package: coremanager-pkg-mysql
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: coremanager (>= 5.387.0-5), mysql-server-5.6 | mysql-server-5.7 | mysql-server-8.0 | mysql-server | mariadb-server-10.1 | mariadb-server-10.3 | mariadb-server-10.6 | mariadb-server
+Depends: pwgen, mysqltuner
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-mysql_5.387.0-5-ubuntu20_all.deb
+Size: 3572
+SHA256: e70d9675203fd21c158d2bce2c0e7338699a173a567d3ec0104119af2603905e
+SHA1: 6f813cf62c14d8f00ceead9003327c09428c3ee1
+MD5sum: af0f3fe2a897f95c002f05225ad99ef8
+Description: COREmanager-pkg-mysql
+ COREmanager mysql installer
+
+Package: coremanager-pkg-nfs
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: coremanager (>= 5.387.0-5), rpcbind, nfs-kernel-server
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-nfs_5.387.0-5-ubuntu20_all.deb
+Size: 2508
+SHA256: ae79197f11bf13fb098e7f82528f595acf14bc33939088d0108815a7e81f3b83
+SHA1: d095f7e7d947373834d1d8786829219c9eda02dc
+MD5sum: 8441e92c61fe31951e1c2e528845e3ba
+Description: COREmanager-pkg-nfs
+ COREmanager nfsd installer
+
+Package: coremanager-pkg-nodejs
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 14
+Pre-Depends: coremanager (= 5.387.0-5-ubuntu20)
+Depends: nodejs, node-ejs
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-nodejs_5.387.0-5-ubuntu20_all.deb
+Size: 1488
+SHA256: c6b256528c6ae063347c2b313c5176da3652177e05b900833208b1d2f2fed09d
+SHA1: bd4a3de14ef4d6f3c31d02c81d480b490c66ffe7
+MD5sum: 9baba6fe7f2a75723a8c2fa4a17cc4de
+Description: COREmanager-pkg-nodejs
+ COREmanager node-ejs template
+
+Package: coremanager-pkg-pdns
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 25
+Pre-Depends: coremanager (>= 5.387.0-5), pdns-backend-mysql, coremanager-pkg-mysql
+Depends: dnsutils, pdns-server
+Conflicts: coremanager-pkg-bind, coremanager-pkg-nsd
+Provides: coremanager-pkg-dns
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-pdns_5.387.0-5-ubuntu20_all.deb
+Size: 4164
+SHA256: a7c5eefe3316ead8083b6381f72252e06e90c127a0b5b161cd9b4604cc5dd477
+SHA1: ed5280b7d5c38089467ceb9b9006ef7f03f491d1
+MD5sum: 2fb34f25adcc7d93c63469f202bec855
+Description: COREmanager-pkg-pdns
+ COREmanager pdns installer
+
+Package: coremanager-pkg-samba
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: coremanager (>= 5.387.0-5), samba
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-samba_5.387.0-5-ubuntu20_all.deb
+Size: 2500
+SHA256: 5fedb9a4bf10d14e2672ca170093a2c69f783d0b74dfb197c9b3cf5e111530aa
+SHA1: 06a876f3e96dc7d2e62fcb970a82de59790c29e5
+MD5sum: 556ba8f5ab2942908b8ef20a6b03e84f
+Description: COREmanager-pkg-samba
+ COREmanager samba installer
+
+Package: coremanager-pkg-tftp
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: coremanager (>= 5.387.0-5), tftpd-hpa
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-tftp_5.387.0-5-ubuntu20_all.deb
+Size: 2368
+SHA256: f7878cbb2d3b0fa587388e3cf206a878e104221eb1641e8a57ac268bc66264b0
+SHA1: 9a38b1d1622b2c7ae3e637ec5ab675d793484a6d
+MD5sum: f57ac79a82407848131fa6e7c9bc0859
+Description: COREmanager-pkg-tftp
+ COREmanager tftp installer
+
+Package: coremanager-pkg-wkhtmltopdf
+Source: coremanager
+Version: 5.387.0-5-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 14
+Pre-Depends: coremanager (= 5.387.0-5-ubuntu20)
+Depends: wkhtmltox, libicu48 | libicu52 | libicu66
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/c/coremanager/coremanager-pkg-wkhtmltopdf_5.387.0-5-ubuntu20_all.deb
+Size: 1524
+SHA256: d741ad20aecc9e3ad7692c7ccad8981bbe5213cdde54463ae1bf55045e739cb9
+SHA1: bac0fc3e5a5ac596ca23e04e13538baf30b46ef4
+MD5sum: b2e3fd47d693f433c6fafa9264ca1bfc
+Description: COREmanager-pkg-wkhtmltopdf
+ COREmanager PDF converter installer
+
+Package: ispmanager-lite
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 10
+Pre-Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Depends: ispmanager-pkg-exim, ispmanager-pkg-proftpd, ispmanager-pkg-bind, ispmanager-pkg-logrotate, ispmanager-pkg-dovecot, ispmanager-pkg-sieve, ispmanager-pkg-httpd-itk, ispmanager-pkg-php, ispmanager-pkg-mysql, ispmanager-pkg-awstats, ispmanager-pkg-myadmin, ispmanager-pkg-roundcube
+Conflicts: exim4-daemon-light, rmail, sendmail, sendmail-base, sendmail-bin, sendmail-cf, sendmail-doc
+Breaks: ispmanager-business, ispmanager-business-common, ispmanager-node-common, ispmanager-pro
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-lite_6.92.3-1-ubuntu20_amd64.deb
+Size: 2048
+SHA256: 9c4addb4c4bfc852d9d31aab20b42351c6c31345387541e69a5d7cab05a9f5ac
+SHA1: 5794f3650d91b3f66fd3fd0583567429793161f6
+MD5sum: ce40ec993064f975634c92b7bc6ddd60
+Description: Ispmanager-lite virtual meta package
+
+Package: ispmanager-lite-common
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 33778
+Pre-Depends: coremanager
+Depends: libc6 (>= 2.29), libgcc-s1 (>= 3.0), libjsoncpp1 (>= 1.7.4), libstdc++6 (>= 9), coremanager (>= 5.387.0-5-ubuntu20), coremanager (<< 5.387.1), ispmanager-plugins (= 6.92.3-1-ubuntu20), ispmanager-notify (>= 1.0.0), ispmanager-notify (<< 1.0.1), shellinabox, openssl, iptables, rsync, openssh-client, zip, unzip, ipset, dnsutils, apt-transport-https, dirmngr, zstd
+Breaks: ispmanager-business-common, ispmanager-node-common, ispmanager-plugins (<< 6.92.3-1-ubuntu20), ispmanager-pro-common
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-lite-common_6.92.3-1-ubuntu20_amd64.deb
+Size: 7024952
+SHA256: 3cfbcfb4bb26b5bf20463198b42826f76a978c78b53953252b87e194ed890934
+SHA1: 6465094b5c5a525953baf42193ce01002f995912
+MD5sum: df8f5eb36680194376600d0c1c2f8148
+Description: Ispmanager-lite
+
+Package: ispmanager-lite-dev
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 274
+Pre-Depends: ispmanager-lite (= 6.92.3-1-ubuntu20)
+Depends: coremanager-dev
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libdevel
+Filename: pool/main/i/ispmanager/ispmanager-lite-dev_6.92.3-1-ubuntu20_amd64.deb
+Size: 51596
+SHA256: 87ea92efc7b8a0a04d12e75a9f67a874eeaaddc9ce38409db919a183a976aae3
+SHA1: 477709cd27c79eba6c7901f8c76993ee10e3e027
+MD5sum: dfb9697596f209088b0c75b0dc701da9
+Description: Ispmanager development files
+ Ispmanager development files,
+  headers and examples
+
+Package: ispmanager-pkg-afterlogic
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 43
+Pre-Depends: ispmanager-lite-common
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20), ispmanager-pkg-mysql, ispmanager-pkg-webphp, ispmanager-pkg-dovecot, ispmanager-pkg-exim | ispmanager-pkg-postfix | ispmanager-pkg-sendmail, php-curl, python, afterlogic-isp
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-afterlogic_6.92.3-1-ubuntu20_all.deb
+Size: 6008
+SHA256: c6ce19768da35fa684263931898fbbeca34af3e545a4a24f72c77ecab65b9bc8
+SHA1: 4f1052f0d7927e7afb7b4e6ac403c83080daf30c
+MD5sum: ab248554713c478784ad7c34165f2f9a
+Description: Afterloigc email client
+
+Package: ispmanager-pkg-awstats
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 29
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, awstats, ispmanager-pkg-logrotate
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Provides: ispmanager-pkg-webanalyzer
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-awstats_6.92.3-1-ubuntu20_all.deb
+Size: 2796
+SHA256: d208f6ed2a825885d1fa4e02a11ad8984bacd10b630e375c2ce45b934d1d4f61
+SHA1: 875182c9f63a2f65d66449cb40fa7aced6f4c145
+MD5sum: 8adf0d01487a2e0f6db3cfe5266554a9
+Description: Ispmanager-pkg-awstats
+
+Package: ispmanager-pkg-bind
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 12
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, coremanager-pkg-bind
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Conflicts: ispmanager-pkg-nsd, ispmanager-pkg-pdns
+Provides: ispmanager-pkg-dns
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-bind_6.92.3-1-ubuntu20_all.deb
+Size: 2148
+SHA256: 1f556199a8b3d097a8c986105b1e27186d7d0f9570105a496b076ecbd5b4c988
+SHA1: b809b400ac081fd2c1b962a2f2c01a9b06359cdc
+MD5sum: e8983ec672edc9bc6088742195acd91d
+Description: Ispmanager-pkg-bind
+
+Package: ispmanager-pkg-clamav-exim
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 21
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, clamav-daemon, ispmanager-pkg-exim, curl
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), lsb-release
+Conflicts: postfix, rmail, sendmail, sendmail-base, sendmail-bin
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-clamav-exim_6.92.3-1-ubuntu20_all.deb
+Size: 3472
+SHA256: 210d3ec75f1caa70c88386e05317901cb3da2e0be308aacd1fd2e1a093be6d30
+SHA1: e5a9922ebf75222b0f3b7a2e3541553b09e5eb29
+MD5sum: 6354857b97ad4f86da41541636c113ca
+Description: Ispmanager-pkg-clamav-exim
+
+Package: ispmanager-pkg-clamav-postfix
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common, clamav-milter, ispmanager-pkg-postfix, curl
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-clamav-postfix_6.92.3-1-ubuntu20_all.deb
+Size: 2820
+SHA256: 06075bc3938e5de444222043b7ae88981b000f432dbeb04a761f3acc878a54fb
+SHA1: 527d1b5e5d6f80f5731e55f2dc89107cc6e2f699
+MD5sum: bccab0a46582b53c4e2889c893c055c7
+Description: Ispmanager-pkg-clamav-postfix
+
+Package: ispmanager-pkg-clamav-sendmail
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 20
+Pre-Depends: ispmanager-lite-common, clamav-milter, ispmanager-pkg-sendmail, curl
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Conflicts: exim4-base, exim4-config
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-clamav-sendmail_6.92.3-1-ubuntu20_all.deb
+Size: 3008
+SHA256: 2940935d00912a8413bb8ddc54bdde565c9752153cb12e1eb38bec4e5c1ba7c9
+SHA1: 461c4a7a4b187fda4116714ab52b0530268cf774
+MD5sum: 36992a9bacab69932f89222b7f31d9f1
+Description: Ispmanager-pkg-clamav-sendmail
+
+Package: ispmanager-pkg-docker
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: coremanager, ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), docker.io (>= 1.9) | docker-engine (>= 1.9) | docker-ce (>= 17.00)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-docker_6.92.3-1-ubuntu20_all.deb
+Size: 2440
+SHA256: eff90ebdf89be242c36ef1672677d515227ddbaa4d564728042b2f5f4a89d893
+SHA1: c5ff0975c332e9efda91159d583052fd3ab258b9
+MD5sum: 87d9fbee2928f8fdd213cf8d6e0a6eeb
+Description: Ispmanager-pkg-docker
+
+Package: ispmanager-pkg-dovecot
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 21
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, dovecot-pop3d (>= 2.0), dovecot-imapd (>= 2.0)
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Provides: ispmanager-pkg-pop
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-dovecot_6.92.3-1-ubuntu20_all.deb
+Size: 3348
+SHA256: c9771714171ba70a43a2243df225fe62e5d1f37d4eecafe3d892db5a9ad08978
+SHA1: 18bb3fdc07e458fc347ae097e98305e2fa5e6083
+MD5sum: 1d529a024b8a42d5eecadac6229f7da7
+Description: Ispmanager-pkg-dovecot
+
+Package: ispmanager-pkg-exim
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 51
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, exim4-daemon-heavy
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), ispmanager-pkg-dovecot
+Conflicts: exim4-daemon-light, postfix, rmail, sendmail, sendmail-base, sendmail-bin
+Provides: ispmanager-pkg-mta
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-exim_6.92.3-1-ubuntu20_all.deb
+Size: 9764
+SHA256: 850968de22334c85dc010c3f9b2db608f23c9acf6ec9f67eb0d421bc47b7ab00
+SHA1: cf4a3d0ea8cc2710c8ada239233c6f2d737515ca
+MD5sum: 9656427a39951d30e5e546d1612200a9
+Description: Ispmanager-pkg-exim
+
+Package: ispmanager-pkg-greylisting-exim
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, postgrey, ispmanager-pkg-exim
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Conflicts: postfix, rmail, sendmail, sendmail-base, sendmail-bin
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-greylisting-exim_6.92.3-1-ubuntu20_all.deb
+Size: 2864
+SHA256: 30d4711809fc92892d1f32ccd8329d909a57aa53f92418cfe1989bfd2c76a736
+SHA1: a2fb38c7327425ba0f394f17bf07f68e184d6af8
+MD5sum: 112a5fca3fbccb5e0519ea727424e95d
+Description: Ispmanager-pkg-greylisting-exim
+
+Package: ispmanager-pkg-greylisting-postfix
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common, postgrey, ispmanager-pkg-postfix
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-greylisting-postfix_6.92.3-1-ubuntu20_all.deb
+Size: 2724
+SHA256: 7bda00a99536969e3beeba0cfc359c317478157abf4dd0c1622a2b63ba5fd25c
+SHA1: c4eaae11166290d4d7f69dfe2c65b7a919606a03
+MD5sum: 3559604491c83313be04fe139e54bcd6
+Description: Ispmanager-pkg-greylisting-postfix
+
+Package: ispmanager-pkg-greylisting-sendmail
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common, milter-greylist, ispmanager-pkg-sendmail
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Conflicts: exim4-base, exim4-config
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-greylisting-sendmail_6.92.3-1-ubuntu20_all.deb
+Size: 2728
+SHA256: d38917ef79d88dc313c31997c239c63641480dc175e0107242d38f0d221da3a1
+SHA1: 6c83f2829ad545457b296d6ec14399a4842776fa
+MD5sum: 3c0f5a5d429be70b8de65b2d9aa1c999
+Description: Ispmanager-pkg-greylisting-sendmail
+
+Package: ispmanager-pkg-httpd
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 33
+Pre-Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), apache2, apache2-suexec, binutils, libapache2-mod-fcgid, libapache2-mod-rpaf
+Conflicts: ispmanager-pkg-httpd-itk
+Provides: ispmanager-pkg-apache
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-httpd_6.92.3-1-ubuntu20_all.deb
+Size: 4616
+SHA256: 5583dfcd293eb2ef2f5f579413dd1513f424e28bec45b3ec468b16ccfedd82f1
+SHA1: 90e6105ad1fde08c72ae3778208df526f8df5ea4
+MD5sum: 29edb6c256451f43653e91722c696319
+Description: Ispmanager-pkg-httpd
+
+Package: ispmanager-pkg-httpd-itk
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 33
+Pre-Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), apache2, binutils, apache2-mpm-itk | libapache2-mpm-itk, libapache2-mod-rpaf
+Depends: pwauth (>= 2.3.11) | pwauth-isp, libapache2-mod-authnz-external
+Conflicts: ispmanager-pkg-httpd
+Provides: ispmanager-pkg-apache
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-httpd-itk_6.92.3-1-ubuntu20_all.deb
+Size: 4736
+SHA256: 658288df584dcdf7baddaa968a3fecb8b6e273c8546814c4e061d7e33962cd1d
+SHA1: 0fc3b6ad8e05e80d3149f37e3bc49124272398f0
+MD5sum: c597f185f5e17b20f5a38e50570c8577
+Description: Ispmanager-pkg-httpd-itk
+
+Package: ispmanager-pkg-httpd-pagespeed
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 12
+Pre-Depends: coremanager, ispmanager-lite-common, mod-pagespeed-stable, ispmanager-pkg-apache
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-httpd-pagespeed_6.92.3-1-ubuntu20_all.deb
+Size: 2252
+SHA256: f05aa54bfad82cdcb0cfd5e0b7638428ec6cf371da34a852a0ae2b73a7a5d392
+SHA1: 51e48e81fb8f606effd97952dd5e2e9cc3060584
+MD5sum: 934ddc78e197ca460067c3a2a4a4198e
+Description: Ispmanager-pkg-apache-pagespeed
+
+Package: ispmanager-pkg-logrotate
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Depends: logrotate
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-logrotate_6.92.3-1-ubuntu20_all.deb
+Size: 2296
+SHA256: 158af5dffd10908a5282ddfd3b7d0b1d46df3114c2748adb5086807ebe6546ab
+SHA1: 4121e4dced2204ad1c92e55b423c9d253eb89bcf
+MD5sum: 557ddf562b7eca724511703427ae053b
+Description: Ispmanager-pkg-logrotate
+
+Package: ispmanager-pkg-myadmin
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 30
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, ispmanager-pkg-webphp, phpmyadmin
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), pwgen
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-myadmin_6.92.3-1-ubuntu20_all.deb
+Size: 4808
+SHA256: 106f5f09d111d1d852137d1da6d8dba43e39978dd67f1edca229195e91a9fafe
+SHA1: 58a2b09e6260e45ea779e450261ff5588bbe1f7f
+MD5sum: 997939f0cbdbf62117a5c3ef44be9079
+Description: Ispmanager-pkg-myadmin
+
+Package: ispmanager-pkg-mysql
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 21
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, coremanager-pkg-mysql, virtual-mysql-server
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-mysql_6.92.3-1-ubuntu20_all.deb
+Size: 3556
+SHA256: b064ce5408bf83584fb3c793072749eccd5e2428c9045a3c418ed412fc3e7802
+SHA1: e37bfd27eeb333d78fa50ae62e2f158c3cc69fcc
+MD5sum: 43a593f65c0063e1d800499229865a62
+Description: Ispmanager-pkg-mysql
+
+Package: ispmanager-pkg-nginx
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 26
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, nginx (>= 1.1.15)
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), ispmanager-ddos (>= 1.0.0), ispmanager-ddos (<< 1.0.1)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-nginx_6.92.3-1-ubuntu20_all.deb
+Size: 3592
+SHA256: 927033b1e4868c00796a07c24628437b507b9b31696b76369fb20b59cc80a186
+SHA1: 655677dd3d63e04063c90514f9007de0f10707f4
+MD5sum: 39091a0f597aa39d8c5b9e017eb57f34
+Description: Ispmanager-pkg-nginx
+
+Package: ispmanager-pkg-nginx-business
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 17
+Pre-Depends: coremanager, nginx (>= 1.6.0)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-nginx-business_6.92.3-1-ubuntu20_all.deb
+Size: 2624
+SHA256: a43e7ed67edd4a3ed90add2bbdfbd3b0e37a9cf6939043749952e2febb55ce07
+SHA1: 0ed6060b36e4de6657b309e4e2bb5e227600b984
+MD5sum: e7a57e6f311de3111f921a43020def71
+Description: Ispmanager-pkg-nginx-business
+
+Package: ispmanager-pkg-ngx-pagespeed
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 12
+Pre-Depends: coremanager, ispmanager-lite-common, ngx-pagespeed, ispmanager-pkg-nginx
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-ngx-pagespeed_6.92.3-1-ubuntu20_all.deb
+Size: 2116
+SHA256: 9dd5a76110b992976f44278734f6acd285a81dc4551775ff6421afce875eb398
+SHA1: d5b5d513227ea3f0f92fbe55bd0eb5addecd531b
+MD5sum: ce7571083c12f472aafd28e784bf6e02
+Description: Ispmanager-pkg-ngx-pagespeed
+
+Package: ispmanager-pkg-nodejs
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 12
+Pre-Depends: ispmanager-lite-common
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-nodejs_6.92.3-1-ubuntu20_all.deb
+Size: 2240
+SHA256: 0a8b967d984aea767a84dbd9a3476a999cf9cf211b1e1cd8e24b95e4c9db843f
+SHA1: 8bbe4f7d4dd66eed1520aecfd223b7f4c519d8de
+MD5sum: bd70c0039b923a943b6c38f8cc8730aa
+Description: Ispmanager-pkg-nodejs
+
+Package: ispmanager-pkg-opendkim-exim
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, opendkim-tools, ispmanager-pkg-exim
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Conflicts: postfix, rmail, sendmail, sendmail-base, sendmail-bin
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-opendkim-exim_6.92.3-1-ubuntu20_all.deb
+Size: 2660
+SHA256: 38af19f2f255a8692a36834ccbfd26577a1a752e90f3826329d868771a9a0590
+SHA1: 8b68914df8fe83de0bf20fb9e418cb2acb16cca9
+MD5sum: 90b8ca5cb2e8a3652508bb77af4c30a1
+Description: Ispmanager-pkg-opendkim-exim
+
+Package: ispmanager-pkg-opendkim-postfix
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common, opendkim, opendkim-tools, ispmanager-pkg-postfix
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Conflicts: exim4-base, exim4-config, sendmail
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-opendkim-postfix_6.92.3-1-ubuntu20_all.deb
+Size: 2776
+SHA256: 94f2a867823ac56913bf1fcf87fd1384b393205573bb4a45c7cf90667963d738
+SHA1: 9cf635972401576da371ed4793d817d92a709443
+MD5sum: fd8644712af9cbb53198af13ff8efeef
+Description: Ispmanager-pkg-opendkim-postfix
+
+Package: ispmanager-pkg-opendkim-sendmail
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 20
+Pre-Depends: ispmanager-lite-common, opendkim, opendkim-tools, ispmanager-pkg-sendmail
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Conflicts: exim4-base, exim4-config
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-opendkim-sendmail_6.92.3-1-ubuntu20_all.deb
+Size: 2920
+SHA256: f8f30a49dbcaae76a1d832a74985f7e798c7232caf87702425e6a09da27a753b
+SHA1: aea7be7a5cd3535aedd27910be3ee6636902472c
+MD5sum: 19bd5cd742f0b7bb41a7dce483988bab
+Description: Ispmanager-pkg-opendkim-sendmail
+
+Package: ispmanager-pkg-openlitespeed
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 25
+Pre-Depends: ispmanager-lite-common, openlitespeed
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Conflicts: ispmanager-pkg-httpd, ispmanager-pkg-httpd-itk, ispmanager-pkg-nginx
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-openlitespeed_6.92.3-1-ubuntu20_all.deb
+Size: 3200
+SHA256: 4d11e2222207afc2e53fdcc81ab477be3523c953d5c010cca834d284e8c3fedf
+SHA1: bc8f4a096eb327891bfee550a4a6fdc6926a488c
+MD5sum: 0a01cc9a0e43e87bbdf76b824c1920b3
+Description: Ispmanager-pkg-openlitespeed
+
+Package: ispmanager-pkg-openlitespeed-php
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 10
+Pre-Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20), ispmanager-pkg-openlitespeed, isp-php74-lsapi
+Provides: ispmanager-pkg-webphp
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-openlitespeed-php_6.92.3-1-ubuntu20_all.deb
+Size: 2224
+SHA256: 316e855e6c7967a933364c5d7c1c7658f102940c3790af372d57e9df935f0c2d
+SHA1: f080d8bae1959784d8ae9ae42c2819ca386a9d98
+MD5sum: 217d1969e6369930a234e8bd0b194238
+Description: Ispmanager-pkg-openlitespeed-php
+
+Package: ispmanager-pkg-pdns
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 12
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, coremanager-pkg-pdns
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Conflicts: ispmanager-pkg-bind, ispmanager-pkg-nsd
+Provides: ispmanager-pkg-dns
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-pdns_6.92.3-1-ubuntu20_all.deb
+Size: 2164
+SHA256: fae60e31e80c8a48e75d29b2691e5a07f435b74e7ea1f6a02720845dc22fc48b
+SHA1: e7f84001e39f36f7df2d3a9e63d9b996c25c1fbd
+MD5sum: be9526ce2e23789f327230eca39e49e9
+Description: Ispmanager-pkg-pdns
+
+Package: ispmanager-pkg-pgadmin
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 30
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, ispmanager-pkg-webphp, phppgadmin
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), pwgen
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-pgadmin_6.92.3-1-ubuntu20_all.deb
+Size: 4524
+SHA256: 9d6126146bf79dcd20bfdfab7572c390f065c80928767e6434179415a66dbde3
+SHA1: 77a5c4d489231cd8181e294ac45a72e5a39ebee7
+MD5sum: d31023818e9d22069a8bae62a5733bb0
+Description: Ispmanager-pkg-pgadmin
+
+Package: ispmanager-pkg-php
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 30
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, ispmanager-pkg-apache, libapache2-mod-php, php-cgi, php-cli
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), util-linux
+Provides: ispmanager-pkg-webphp
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-php_6.92.3-1-ubuntu20_all.deb
+Size: 4600
+SHA256: cfd2b129459ea2f04b94d773d5b80cc0cc358a75cbcac64c113f4b55fd33d109
+SHA1: 48e2105aaef02b2796c1994b47707beb1497b0a9
+MD5sum: 8d6b61c823bc49eb2c9f263cb21c6e76
+Description: Ispmanager-pkg-php
+
+Package: ispmanager-pkg-phpcomposer
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: ispmanager-lite-common
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-phpcomposer_6.92.3-1-ubuntu20_all.deb
+Size: 2796
+SHA256: dfda0bdae95d92a62d3d37e0612b4a77e15ec4e952df915574be50f2582a14b2
+SHA1: d55137699e8f3473ed3a7219323752395f422e5f
+MD5sum: 58f80a4e9f48afb9d2f8b583813c2126
+Description: Ispmanager-pkg-phpcomposer
+
+Package: ispmanager-pkg-phpext-ioncube
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 14
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, php-ioncube-isp, php-cgi, php-cli
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-phpext-ioncube_6.92.3-1-ubuntu20_all.deb
+Size: 2460
+SHA256: a03ca87bf825753a6d741f2df398cbab887d91d22c34dbaa50cbb5d841368210
+SHA1: bf938483325267c3dcd3c443efe7198b32639df5
+MD5sum: adecaaa57d2dcfd50498d38741e1bb09
+Description: Ispmanager-pkg-phpext-ioncube
+
+Package: ispmanager-pkg-phpfpm
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 26
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, ispmanager-pkg-nginx, php-cli, php-cgi, php-fpm
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Provides: ispmanager-pkg-webphp
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-phpfpm_6.92.3-1-ubuntu20_all.deb
+Size: 3492
+SHA256: cc0239926c0a78a95e5f179d2facbede378c16ef937b60497a371b30d81f493c
+SHA1: a0f66c2f72d5640a3ee314d8efeb4a118da39e3b
+MD5sum: 22ff12793a97cba756724dc298b8046f
+Description: Ispmanager-pkg-phpfpm
+
+Package: ispmanager-pkg-postfix
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 23
+Pre-Depends: ispmanager-lite-common, ispmanager-pkg-dovecot, postfix
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Conflicts: exim4-base, exim4-config, sendmail
+Provides: ispmanager-pkg-mta
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-postfix_6.92.3-1-ubuntu20_all.deb
+Size: 4020
+SHA256: 1b1df97bec538372cab1820094e816daf34c9bc5431e2d8436bc16106d7ed747
+SHA1: 3e7552494aa34d5dfd0d4b4d0c372470edf6dbe7
+MD5sum: 6bd261212522e551ad15c9fc6ff8439c
+Description: Ispmanager-pkg-postfix
+
+Package: ispmanager-pkg-postgresql
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 22
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, postgresql, pwgen
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-postgresql_6.92.3-1-ubuntu20_all.deb
+Size: 3708
+SHA256: 8680775df08a694c5e26ebf86b5a0765fe081441dbf6537ded57cd8c6d28c392
+SHA1: cce3f9bcb8ed2e5f90fef0c7e14c5a64cb026749
+MD5sum: d026ebfd0fbdbc3d3df34a201fc3affb
+Description: Ispmanager-pkg-postgresql
+
+Package: ispmanager-pkg-proftpd
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 22
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, proftpd
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), lsb-release
+Conflicts: ispmanager-pkg-pureftpd
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-proftpd_6.92.3-1-ubuntu20_all.deb
+Size: 3392
+SHA256: 6a924867e0c0f663d4f4a5670089d521c98becc0f87fed60bf1948ec69d342d4
+SHA1: ec56587b6f1ff2ab76a780d33a6facb96c181870
+MD5sum: 2d7f28a61f8e26239099afc54a821142
+Description: Ispmanager-pkg-proftpd
+
+Package: ispmanager-pkg-psacct
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Depends: acct
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-psacct_6.92.3-1-ubuntu20_all.deb
+Size: 2188
+SHA256: 74cff9f0b8eede2045877dca0974313044cfe559c49bde0f433b686234e9bb31
+SHA1: 7b0ec2531391974095f501f00eb1b45d8520b536
+MD5sum: dd07b9280c7e1231c93c238aefd726b0
+Description: Ispmanager-pkg-psacct
+
+Package: ispmanager-pkg-pureftpd
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 20
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, pure-ftpd
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Conflicts: ispmanager-pkg-proftpd
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-pureftpd_6.92.3-1-ubuntu20_all.deb
+Size: 2920
+SHA256: 0eb37c7ed053f1d98ec4113eeeac6c39f7b9f767f20ce1ec1ac37ec62f0339f8
+SHA1: 3994874f5abf1e7fa3339b4b3d03dbdcdade8c47
+MD5sum: 2f1c4eaa429055413c6e3ca64ed4d2c6
+Description: Ispmanager-pkg-pureftpd
+
+Package: ispmanager-pkg-python
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 13
+Pre-Depends: ispmanager-lite-common
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-python_6.92.3-1-ubuntu20_all.deb
+Size: 2440
+SHA256: 9dd5216890967e7c6a7b8ba6372a6310c90aaa2c0e507c0c1c3fd9bf92485a4e
+SHA1: 7f82f0a0bab3d31aef2c39410ef0e8d26cf06046
+MD5sum: beb860d8f9cb6c4836d71598d1033997
+Description: ISPmanager-pkg-python
+
+Package: ispmanager-pkg-quota
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 24
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, sed, awk, coreutils, quota, xfsprogs
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-quota_6.92.3-1-ubuntu20_all.deb
+Size: 3648
+SHA256: 5fa68867546b17b3eee3a20c0498cf35fef42eea27a09444b77de0ecead520a7
+SHA1: e96748ae244274699f29ede4e7013059f1636c66
+MD5sum: bc08a2645a2dddccbb85fa21d153dd4c
+Description: Ispmanager-pkg-quota
+
+Package: ispmanager-pkg-roundcube
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 55
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, ispmanager-pkg-webphp, ispmanager-pkg-exim | ispmanager-pkg-postfix | ispmanager-pkg-sendmail, ispmanager-pkg-dovecot, ispmanager-pkg-mysql, roundcube, roundcube-mysql, python | python3
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-roundcube_6.92.3-1-ubuntu20_all.deb
+Size: 7800
+SHA256: e2b4d0c1fed1620518a82a9797043d1e4fa5fed427bbc7d9368922ae9214f8f3
+SHA1: a6be566a0e51ba3c4740fb90318bc1fdd8d2b0f3
+MD5sum: 6e87ac0d52464204463e39c7f27b1eb0
+Description: Ispmanager-pkg-roundcube
+
+Package: ispmanager-pkg-sendmail
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 29
+Pre-Depends: ispmanager-lite-common, ispmanager-pkg-dovecot, sendmail, sasl2-bin
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20), sendmail-bin
+Conflicts: exim4-base, exim4-config, postfix
+Provides: ispmanager-pkg-mta
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-sendmail_6.92.3-1-ubuntu20_all.deb
+Size: 4048
+SHA256: c733f353805ce42cbdd4fed133b3c4495a6f208235ad98a468ab29ae5dde32f5
+SHA1: 36afdfe2efc2d84320b753e092daf1af313b03cf
+MD5sum: 9e725fb28a75c30f1369019818bab8c0
+Description: Ispmanager-pkg-sendmail
+
+Package: ispmanager-pkg-sieve
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, dovecot-sieve, ispmanager-pkg-dovecot
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-sieve_6.92.3-1-ubuntu20_all.deb
+Size: 2716
+SHA256: 9d6b308a3294903702d764fa0149d7be5be5dcf12a055330445a9470f6692e49
+SHA1: a38581d55a4641a643f516cad64065df64da4812
+MD5sum: 6d191da0c206a5ca17e8a31e5b5b2344
+Description: Ispmanager-pkg-sieve
+
+Package: ispmanager-pkg-spamassassin-exim
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, spamassassin, ispmanager-pkg-exim
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20), libmail-dkim-perl
+Conflicts: postfix, rmail, sendmail, sendmail-base, sendmail-bin
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-spamassassin-exim_6.92.3-1-ubuntu20_all.deb
+Size: 2848
+SHA256: cd43813cc3c58c51182153964993f694c581d179d366a51c3035426469a88373
+SHA1: d8b35724548ccad422b3894a2f6b3db93ba0f963
+MD5sum: 2e98746d88a2d8c2d146469d6c3c29de
+Description: Ispmanager-pkg-spamassassin-exim
+
+Package: ispmanager-pkg-spamassassin-postfix
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common, spamassassin, spamass-milter, ispmanager-pkg-postfix
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20), libmail-dkim-perl
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-spamassassin-postfix_6.92.3-1-ubuntu20_all.deb
+Size: 2740
+SHA256: 23d71d0bc56a4a1c770b7adc6959fcd4ac886cceabb821754ba1990424e8ff10
+SHA1: b572016d2873594aa05537d63f4aacbcad4e7bd9
+MD5sum: 36e293ab073409dc3604938b08de38e3
+Description: Ispmanager-pkg-spamassassin-postfix
+
+Package: ispmanager-pkg-spamassassin-sendmail
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 19
+Pre-Depends: ispmanager-lite-common, spamassassin, spamass-milter, ispmanager-pkg-sendmail
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20), libmail-dkim-perl
+Conflicts: exim4-base, exim4-config
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-spamassassin-sendmail_6.92.3-1-ubuntu20_all.deb
+Size: 2868
+SHA256: 072e8608e88d88c9fd5441e036ef1bad09886443990cd76c203031cc43a65ce6
+SHA1: 7afe833b26fb6c9c01584b454511020d6a7a5db0
+MD5sum: 15cd5ac71f59a58fd6ff2175a2e3fc61
+Description: Ispmanager-pkg-spamassassin-sendmail
+
+Package: ispmanager-pkg-webalizer
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 18
+Pre-Depends: ispmanager-lite-common | ispmanager-node-common, webalizer, ispmanager-pkg-logrotate
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-node-common (= 6.92.3-1-ubuntu20)
+Provides: ispmanager-pkg-webanalyzer
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-webalizer_6.92.3-1-ubuntu20_all.deb
+Size: 2304
+SHA256: 90e8491970038b341c9414b44c0cdd2ebfd05ff7210f04b7a99e756bab948e0a
+SHA1: 505e70f2abc65629cdd644d62e147ee6d696f0a3
+MD5sum: 892a8fdb859d5c65462818307829b7c7
+Description: Ispmanager-pkg-webalizer
+
+Package: ispmanager-pkg-wireguard
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: all
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 29
+Pre-Depends: coremanager, ispmanager-lite-common
+Depends: wireguard
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-pkg-wireguard_6.92.3-1-ubuntu20_all.deb
+Size: 3852
+SHA256: 64abec79288cbfbac091cadce272bd5b20799b77b1fa38f73233e73d1690913b
+SHA1: ad17131c48ef61ed85f4d080ba8327bfa59eeacb
+MD5sum: ef8666c984d69cbab3bcd7a48e1aa54f
+Description: Ispmanager-pkg-wireguard
+
+Package: ispmanager-plugin-cloudflare
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 83
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-cloudflare_6.92.3-1-ubuntu20_amd64.deb
+Size: 13840
+SHA256: 1962559868a5d3eb0705881e31fcba9179dc3feb3bcf7133039637d2e31c8d43
+SHA1: 003762748d0e46590b3dcf77ecf239d3be076a2a
+MD5sum: c38817d53e120773778ae476f9211f31
+Description: CloudFlare plugin for ispmanager
+
+Package: ispmanager-plugin-ddosguard
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 534
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-ddosguard_6.92.3-1-ubuntu20_amd64.deb
+Size: 145260
+SHA256: 8bac317cf6b02406c812b48de7677bf65df8a87026472c56f55b5a97a3a6ae17
+SHA1: 579ccaa1409002f195c9fba7c600a26e04521a12
+MD5sum: 042c32aecc1f98e80a4f4e1eef146dbe
+Description: DDoSGUARD plugin for ispmanager
+
+Package: ispmanager-plugin-dnssecinfo
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 93
+Depends: coremanager, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20)
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-dnssecinfo_6.92.3-1-ubuntu20_amd64.deb
+Size: 19008
+SHA256: f32a2f255a113802aa344aa94c4df93f05f2fd7e7346d4a2b7158d0f03d0202f
+SHA1: 8a2d380e0aa8bf6a536b04dd0ce25db69d900c27
+MD5sum: 34af37bef706423f440e709d7b958e1f
+Description: ispmanager-plugin-dnssecinfo
+
+Package: ispmanager-plugin-drweb
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 188
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20), coremanager, drweb-file-servers
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-drweb_6.92.3-1-ubuntu20_amd64.deb
+Size: 46700
+SHA256: d4b8dea93f3cd60f60d06e96a15de99ff3bded4327c887a4a97648ad0943e22a
+SHA1: fad8642bb3cda323a27e03fb329950ec4b80ad0e
+MD5sum: a0a346c2fe4575603eefecf3fa31ec97
+Description: DrWeb plugin for ispmanager
+
+Package: ispmanager-plugin-kernelcare
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 106
+Depends: libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-kernelcare_6.92.3-1-ubuntu20_amd64.deb
+Size: 25176
+SHA256: c6023c660e986b097ad0b31eace974a0bae2cb0dd26965fcb6cb075977b9c2ea
+SHA1: 917e1c94e262d2322cfb1f212f597ca629068518
+MD5sum: 10b34bf9779c893acd05224c656dd1f5
+Description: KernelCare plugin for ispmanager
+
+Package: ispmanager-plugin-letsencrypt
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 10
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-letsencrypt_6.92.3-1-ubuntu20_amd64.deb
+Size: 1872
+SHA256: 93788d22f911575d71ea031dfa5b83064d4f4766220956feb722f4a753882af5
+SHA1: 9b948a38c0a03dc58d7ae9ddadaed4fa339adfeb
+MD5sum: 5cb1a2837fabc43a1f656f720dc33955
+Description: LetsEncrypt plugin for ispmanager
+
+Package: ispmanager-plugin-oneclickssl
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 10
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20), coremanager, openssl, gsoap
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-oneclickssl_6.92.3-1-ubuntu20_amd64.deb
+Size: 1924
+SHA256: 0f9b0fa7242b724b12dbd86c991377fa995c92837b42292196af514dec152eac
+SHA1: dd95735011d7fc1b2f3af469c11113bde62d375b
+MD5sum: 51eb72bba0031305dda9992454fbaf2c
+Description: Deprecated OneClickSSL plugin for ispmanager
+ Extension to get SSL certificate in ispmanager panel in one click
+
+Package: ispmanager-plugin-revisium
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 55
+Depends: coremanager, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20), isp-php71
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-revisium_6.92.3-1-ubuntu20_amd64.deb
+Size: 11012
+SHA256: 960f09b278782144a9a7a4c6f644737c20cd7e148d389c4911a5ed5f7c61eb61
+SHA1: a6e4f22cc406bcf6458c2f321b527c437adb4ee2
+MD5sum: 33ac2ac15334f9135cb9bf517d15a7ac
+Description: Revisium Antivirus plugin for ispmanager
+
+Package: ispmanager-plugin-siteprobuilder
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 108
+Depends: coremanager, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20), ispmanager-pkg-proftpd | ispmanager-pkg-pureftpd, php-cli, php-curl
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-siteprobuilder_6.92.3-1-ubuntu20_amd64.deb
+Size: 28508
+SHA256: c4decbff6c6c68a0d4a4381642910cc2e5e2731d4bd3115de238e32ffc016b74
+SHA1: 8ffd897820f64e335cf9610160b582083a6c55ce
+MD5sum: 7344db4efb2bbed4faaedca32fecc0ea
+Description: siteprobuilder plugin for ispmanager
+
+Package: ispmanager-plugin-softaculous
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 270
+Depends: coremanager, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2), ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20), ispmanager-pkg-php | ispmanager-pkg-phpfpm, php-cli
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-softaculous_6.92.3-1-ubuntu20_amd64.deb
+Size: 62620
+SHA256: 6da7871e42eaad4a65a1995502b4adc2092c43641e91945f9569c14fef280e4f
+SHA1: 1858d7996cdc437a19581c1fa1bfc47a10afab55
+MD5sum: 539d7a2e925d773560756f84fba7ad25
+Description: Softaculous plugin for ispmanager
+
+Package: ispmanager-plugin-virusdie
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 10
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-virusdie_6.92.3-1-ubuntu20_amd64.deb
+Size: 1860
+SHA256: 15dc157bb254834ed3e936968d2834c17a589d3b61637ebbe1442fef26fc4f89
+SHA1: 5d42132a50ef375ffac3a8952d76f1a34e428690
+MD5sum: ad572aeb08158ff91a73002875e3187c
+Description: Deprecated Virusdie plugin for ispmanager
+
+Package: ispmanager-plugin-virusdie-pro
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 10
+Depends: ispmanager-business-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugin-virusdie-pro_6.92.3-1-ubuntu20_amd64.deb
+Size: 1868
+SHA256: 45df19e4656f6c9a6493c832df1d606e5d286796fe442ea60b846405c76ff310
+SHA1: 8bfe3e41a14e27c09927246f7ad7a5aa4d4ea7e7
+MD5sum: 2bcab42b468e627efd961180f8d5d1e5
+Description: Deprecated Virusdie plugin for ispmanager
+
+Package: ispmanager-plugins
+Source: ispmanager
+Version: 6.92.3-1-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 26
+Depends: ispmanager-lite-common (= 6.92.3-1-ubuntu20) | ispmanager-business-common (= 6.92.3-1-ubuntu20), coremanager
+Homepage: http://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager/ispmanager-plugins_6.92.3-1-ubuntu20_amd64.deb
+Size: 4184
+SHA256: c561fc07ec8fdebd9d83390b0dd72f4414961ca0b0ed408c10f65a293f425354
+SHA1: eac602da6e2138fd35e79dd0506ec0f96ad15241
+MD5sum: 415698378c48ebb7593cf045b1d8b0c4
+Description: Plugins for ispmanager
+

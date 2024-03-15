@@ -1,0 +1,4 @@
+/usr/local/mgr5/bin/index
+/usr/local/mgr5/etc/repo.list
+/etc/bash_completion.d/mgrctl_completion
+/etc/default/coremanager

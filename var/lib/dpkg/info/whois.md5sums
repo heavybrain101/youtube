@@ -1,0 +1,8 @@
+4a979a259e36d14223594532357a8e4e  usr/bin/mkpasswd
+9808eb276c0e98e4ac7e0f11a29c9c80  usr/bin/whois
+8b497473e4d531be81258275d2f91bae  usr/share/doc/whois/README
+c376496f48d9333f6331485cceada61e  usr/share/doc/whois/changelog.gz
+971fdba71f4a262ae727031e9d631fa8  usr/share/doc/whois/copyright
+1bf7ec1921b3ab736d6261221a10e000  usr/share/man/man1/mkpasswd.1.gz
+4608acbeabfffb59c2d289a15a4ec1f7  usr/share/man/man1/whois.1.gz
+9a77302c33cb1b092c857a7a7cb57bdd  usr/share/man/man5/whois.conf.5.gz

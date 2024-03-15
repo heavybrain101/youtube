@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/php-net-sieve
+/usr/share/doc/php-net-sieve/changelog.Debian.gz
+/usr/share/doc/php-net-sieve/copyright
+/usr/share/doc/php-net-sieve/package.xml.gz
+/usr/share/php
+/usr/share/php/.registry
+/usr/share/php/.registry/net_sieve.reg
+/usr/share/php/Net
+/usr/share/php/Net/Sieve.php

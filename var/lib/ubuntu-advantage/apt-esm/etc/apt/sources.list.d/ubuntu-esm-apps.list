@@ -1,0 +1,7 @@
+# Written by ubuntu-advantage-tools
+
+deb https://esm.ubuntu.com/apps/ubuntu focal-apps-security main
+# deb-src https://esm.ubuntu.com/apps/ubuntu focal-apps-security main
+
+deb https://esm.ubuntu.com/apps/ubuntu focal-apps-updates main
+# deb-src https://esm.ubuntu.com/apps/ubuntu focal-apps-updates main

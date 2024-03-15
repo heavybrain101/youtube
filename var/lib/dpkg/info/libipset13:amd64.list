@@ -1,0 +1,12 @@
+/.
+/lib
+/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu/libipset.so.13.1.0
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libipset13
+/usr/share/doc/libipset13/NEWS.Debian.gz
+/usr/share/doc/libipset13/changelog.Debian.gz
+/usr/share/doc/libipset13/copyright
+/lib/x86_64-linux-gnu/libipset.so.13

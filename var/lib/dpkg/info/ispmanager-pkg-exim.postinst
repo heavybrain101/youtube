@@ -1,0 +1,330 @@
+#!/bin/bash
+# postinst script for coremanager
+#
+# see: dh_installdeb(1)
+
+#set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+COREDIR=/usr/local/mgr5
+CONFNAME=mta.conf
+. ${COREDIR}/lib/pkgsh/core_pkg_funcs.sh
+. ${COREDIR}/lib/pkgsh/ispmgr_pkg_funcs.sh
+CONFFILE=${COREDIR}/etc/conf.d/exim.conf
+
+EximFile() {
+	if [ ! -f /etc/exim4/$1 ]; then
+		touch /etc/exim4/$1
+		chown Debian-exim:Debian-exim /etc/exim4/$1
+		chmod 600 /etc/exim4/$1
+	fi
+	echo /etc/exim4/$1
+}
+
+HasFeatureEAI() {
+	if [[ $(lsb_release -s -c) =~ bullseye ]]; then
+		EXIM_OUT=$(exim --version)
+		EXIM_VERSION=$(echo "${EXIM_OUT}" | grep -i "exim version" | awk '{print $3}')
+		if version_ge "${EXIM_VERSION}" "4.94" ; then
+			EXIM_SUPPORT=$(echo "${EXIM_OUT}" | grep -i "support for: " | cut -c14-)
+			for exim_feature in $EXIM_SUPPORT
+			do
+				if [ $exim_feature = I18N ]; then
+					return 0
+				fi
+			done
+		fi
+	fi
+	return 1
+}
+
+case "$1" in
+    configure)
+	if [ -z ${2} ]; then
+		if [ "#${ISPCONVERT}" = "#yes" ]; then
+			PATHLIST="exim-passwd exim-domains exim-aliases exim-pipe-aliases exim-whitelist exim-blacklist exim-domainips exim-ratelimits exim-config exim-restart"
+			PARAMLIST="MTA EmailAuth"
+			PathConvert ${COREDIR}/etc/conf.d/exim.conf
+			ParamConvert ${COREDIR}/etc/conf.d/exim.conf
+			MakeConfigLink mta exim
+			ReloadMgr ${ISPMGR}
+		else
+
+			## Backuping
+			test -f /etc/exim4/exim4.conf.template || cp -af /etc/exim4/exim4.conf.template /etc/exim4/exim4.conf.template.orig
+			## Config file
+			## exim.conf
+			cp /etc/exim4/isp/exim.config /etc/exim4/exim4.conf.template
+			chmod 644 /etc/exim4/exim4.conf.template
+			chown root:mail /etc/exim4/exim4.conf.template
+			## Get ip
+			DEV=$(ip route | awk '$1=="default" {print $5}')
+			IPADDR=$(ip addr show dev ${DEV} | awk '$1=="inet" {print $2}'| cut -d/ -f1)
+			sed -i -r "s|__LOCAL_IP__|${IPADDR}|g" /etc/exim4/exim4.conf.template
+			## User/Group
+			sed -i -r "s|__ISP_USER__|Debian-exim|g" /etc/exim4/exim4.conf.template
+			sed -i -r "s|__ISP_GROUP__|Debian-exim|g" /etc/exim4/exim4.conf.template
+			sed -i -r "s|__ISP_WWW_USER__|www-data|g" /etc/exim4/exim4.conf.template
+			## Domains
+			sed -i -r "s|__ISP_DOMAINS__|$(EximFile domains)|g" /etc/exim4/exim4.conf.template
+			## Ratelimits
+			sed -i -r "s|__ISP_RATELIMITS__|$(EximFile ratelimits)|g" /etc/exim4/exim4.conf.template
+			## Whitelist/Blacklist
+			sed -i -r "s|__ISP_WHITEL__|$(EximFile whitelist)|g" /etc/exim4/exim4.conf.template
+			sed -i -r "s|__ISP_BLACKL__|$(EximFile blacklist)|g" /etc/exim4/exim4.conf.template
+			## Passwd
+			sed -i -r "s|__ISP_PASSWD__|$(EximFile passwd)|g" /etc/exim4/exim4.conf.template
+			## Aliases
+			sed -i -r "s|__ISP_ALIASES__|$(EximFile aliases)|g" /etc/exim4/exim4.conf.template
+			## LDA
+			sed -i -r "s|__ISP_LDA__|dovecot_deliver|g" /etc/exim4/exim4.conf.template
+			sed -i -r "s|__ISP_LDA_BIN__|/usr/local/mgr5/sbin/dovecot_lda|g" /etc/exim4/exim4.conf.template
+			## Domain_ips
+			sed -i -r "s|__ISP_DOMAINIPS__|$(EximFile domainips)|g" /etc/exim4/exim4.conf.template
+			## DNSBL
+			sed -i -r "s|__ISP_DNSBL__|$(EximFile dnsbllist)|g" /etc/exim4/exim4.conf.template
+			grep -qE "path\s+exim-dnsbllist" ${CONFFILE} || echo "path exim-dnsbllist $(EximFile dnsbllist)" >> ${CONFFILE}
+
+			## Certificates
+			mkdir -p /etc/exim4/ssl
+			chmod 750 /etc/exim4/ssl
+			chown Debian-exim:Debian-exim /etc/exim4/ssl
+			if [[ $(lsb_release -s -c) =~ jammy|focal|buster|bullseye ]]; then
+				keylen=2048
+			fi
+			CreateCert /etc/exim4/ssl/exim.key /etc/exim4/ssl/exim.crt ${keylen}
+			chown Debian-exim:Debian-exim /etc/exim4/ssl/*
+			chmod 0444 /etc/exim4/ssl/exim.crt
+			chmod 0400 /etc/exim4/ssl/exim.key
+			sed -i -r "s|__SSL_DIR__|/etc/exim4/ssl|g" /etc/exim4/exim4.conf.template
+			export EXIM_SNI=yes
+			sed -i -r "s|__SSL_CRTFILE__|/etc/exim4/ssl/exim.crt|g" /etc/exim4/exim4.conf.template
+			sed -i -r "s|__SSL_KEYFILE__|/etc/exim4/ssl/exim.key|g" /etc/exim4/exim4.conf.template
+			
+			## Support internalization
+			if HasFeatureEAI ; then
+				sed -i -r 's|__ISP_ACL_SMTP_MAIL__|acl_smtp_mail = acl_check_mail|' /etc/exim4/exim4.conf.template
+				sed -i -r 's|__ISP_ACL_CHECK_MAIL__|acl_check_mail:\n\t\twarn	authenticated = *\n\t\t\t\tset acl_c10	= $\{run\{/usr/local/mgr5/sbin/octalconv.sh \$authenticated_id\}\}\n\t\taccept	condition		= \$\{if eq\{\$\{utf8_localpart_to_alabel:\${local_part:\$acl_c10\}\}\}\{\$\{local_part:\$acl_c10\}\}\{yes\}\{no\}\}\n\t\tdeny	condition		= \$\{if !eq\{\$sender_address\}\{\$acl_c10\}\{yes\}\{no\}\}\n\t\t\t\tmessage	= Address \$\{local_part:\$sender_address\}@\$\{utf8_domain_from_alabel:\$\{domain:\$sender_address\}\} \\\n\t\t\t\t\t\t\tdoes not match with authenticated data \$\{local_part:\$acl_c10\}@\$\{utf8_domain_from_alabel:\$\{domain:\$acl_c10\}\}. \\\n\t\t\t\t\t\t\tCheck your email program settings.\n\t\taccept\n|' /etc/exim4/exim4.conf.template
+				sed -i -r 's|__ISP_ACL_EAI_SECTION__|accept authenticated = *\n\t\t\t\tcondition	= \$\{if !eq\{\$\{utf8_localpart_to_alabel:\$\{local_part:\$acl_c11\}\}\}\{\$\{local_part:\$acl_c11\}\}\{yes\}\{no\}\}\n\t\t\t\tcondition	= \$\{if eq\{\$\{extract\{5\}\{:\}\{\$\{lookup\{\$acl_c11\}lsearch\{/etc/exim4/passwd\}\}\}\}\}\{no\} \{yes\}\{no\}\}\n\t\t\t\tcondition	= \$\{if eq\{\$\{extract\{3\}\{:\}\{\$\{lookup\{\$\{domain:\$acl_c11\}\}lsearch\{/etc/exim4/domains\}\}\}\}\}\{no\} \{yes\}\{no\}\}\n\t\t\t\tremove_header	= Sender\n\t\t\t\tadd_header	= Sender: \$acl_c11\n\t\t\t\tcontrol		= utf8_downconvert/-1|' /etc/exim4/exim4.conf.template
+				sed -i -r 's|__ISP_AUTHENTICATED_ID_EXPR__|set acl_c11 = ${run{/usr/local/mgr5/sbin/octalconv.sh $authenticated_id}}|' /etc/exim4/exim4.conf.template
+				sed -i -r "s|__ISP_AUTHENTICATED_ID__|\$acl_c11|g" /etc/exim4/exim4.conf.template
+				sed -i -r "s|__ISP_DOMAIN_VAR__|\$\{utf8_domain_to_alabel:\$domain\}|g" /etc/exim4/exim4.conf.template
+				echo "Option EmailEAI" >> ${CONFFILE}
+			else
+				sed -i -r '/__ISP_ACL_SMTP_MAIL__/d' /etc/exim4/exim4.conf.template
+				sed -i -r '/__ISP_ACL_CHECK_MAIL__/d' /etc/exim4/exim4.conf.template
+				sed -i -r '/__ISP_AUTHENTICATED_ID_EXPR__/d' /etc/exim4/exim4.conf.template
+				sed -i -r "s|__ISP_AUTHENTICATED_ID__|\$authenticated_id|g" /etc/exim4/exim4.conf.template
+				sed -i -r "s|__ISP_DOMAIN_VAR__|\$domain|g" /etc/exim4/exim4.conf.template
+				sed -i -r '/__ISP_ACL_EAI_SECTION__/d' /etc/exim4/exim4.conf.template
+			fi
+
+			if ! grep -Pzq "server_socket = /var/run/dovecot/auth-client" /etc/exim4/exim4.conf.template ; then
+
+			    cat >> /etc/exim4/exim4.conf.template << EOF
+
+       auth_plain:
+               driver = dovecot
+               public_name = PLAIN
+               server_socket = /var/run/dovecot/auth-client
+               server_set_id = \$auth1
+
+       auth_login:
+       	       driver = dovecot
+       	       public_name = LOGIN
+       	       server_socket = /var/run/dovecot/auth-client
+       	       server_set_id = \$auth1
+
+       auth_cram_md5:
+               driver = dovecot
+               public_name = CRAM-MD5
+               server_socket = /var/run/dovecot/auth-client
+       	       server_set_id = \$auth1
+EOF
+			fi
+
+			# patching dovecot
+			if ! grep -Pzq "unix_listener auth-client {\n\s*mode = 0660\n\s*user = Debian-exim\n\s*}" /etc/dovecot/conf.d/10-master.conf ; then
+				test -f /etc/dovecot/conf.d/10-master.conf.orig || cp -f /etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf.orig
+				# Далее обязательно перенос строки, иначе fail. Страшное колдунство
+				sed -i -r "/^service auth \{/,/^\}/{/^\}/i \ \ #SASL\n  unix_listener auth-client \{\n    mode = 0660\n    user = Debian-exim\n  \}
+}" /etc/dovecot/conf.d/10-master.conf
+
+				# Настраиваем ssl для dovecot на использование тех же сертификатов, что и exim
+
+				test -d /etc/dovecot/certs || mkdir -p /etc/dovecot/certs
+				if ! grep -qE '!include_try /etc/dovecot/certs/*.conf' /etc/dovecot/conf.d/10-ssl.conf ; then
+					echo "!include_try /etc/dovecot/certs/*.conf" >> /etc/dovecot/conf.d/10-ssl.conf
+				fi
+				if grep -qE '^ssl\s*=' /etc/dovecot/conf.d/10-ssl.conf ; then
+					sed -i -r 's/^ssl\s*=.+/ssl = yes/' /etc/dovecot/conf.d/10-ssl.conf
+				else
+					echo "ssl = yes" >> /etc/dovecot/conf.d/10-ssl.conf
+				fi
+
+				if grep -qE '^ssl_cert\s*=' /etc/dovecot/conf.d/10-ssl.conf ; then
+					sed -i -r 's|^ssl_cert\s*=.*|ssl_cert = </etc/exim4/ssl/exim.crt|' /etc/dovecot/conf.d/10-ssl.conf
+				else
+					echo "ssl_cert = </etc/exim4/ssl/exim.crt" >> /etc/dovecot/conf.d/10-ssl.conf
+				fi
+
+				if grep -qE '^ssl_key\s*=' /etc/dovecot/conf.d/10-ssl.conf ; then
+					sed -i -r 's|^ssl_key\s*=.*|ssl_key = </etc/exim4/ssl/exim.key|' /etc/dovecot/conf.d/10-ssl.conf
+				else
+					echo "ssl_key = </etc/exim4/ssl/exim.key" >> /etc/dovecot/conf.d/10-ssl.conf
+				fi
+
+				ReloadService dovecot
+			fi
+
+			DisableService postfix
+			DisableService sendmail
+			EnableService exim4
+
+			test -f ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME} || ln -sf ../conf.d/exim.conf ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME}
+
+			ReloadMgr ${ISPMGR}
+
+			ServiceAddmon exim4
+
+			# Enable fail2ban jail
+			if [ -f /etc/fail2ban/jail.local ]; then
+				sed -i "/\[exim-isp\]/,/\[/ { s/enabled = false/enabled = true/ }" /etc/fail2ban/jail.local
+				ReloadService fail2ban
+			fi
+
+			# Afterinstall
+			AfterinstallModule ${ISPMGR} mta
+		fi
+	else
+		if [[ $(lsb_release -s -c) =~ jammy|focal|buster|bullseye ]]; then
+			if AddFix "fix_ISP-1653_exim_key_len" && [ "$(ssh-keygen -lf /etc/exim4/ssl/exim.key  | awk '{print $1;}')" = "1024" ]; then
+				CreateCert /etc/exim4/ssl/exim.key /etc/exim4/ssl/exim.crt 2048
+				ReloadService exim4
+				ReloadService dovecot
+			fi
+		fi
+		# Convert dovecot LDA
+		if AddFix "fix_ISP6-787_email_eai" ; then
+			if grep -q "command = \"/usr/lib/dovecot/dovecot-lda -d \$local_part@\$domain" /etc/exim4/exim4.conf.template ; then
+				sed -i 's|/usr/lib/dovecot/dovecot-lda -d \$local_part@\$domai.*|/usr/local/mgr5/sbin/dovecot_lda\"|g' /etc/exim4/exim4.conf.template
+			fi
+			if grep -q "command = \"/usr/local/mgr5/sbin/dovecot_lda.sh\"" /etc/exim4/exim4.conf.template ; then
+				sed -i 's|/usr/local/mgr5/sbin/dovecot_lda.sh|/usr/local/mgr5/sbin/dovecot_lda|g' /etc/exim4/exim4.conf.template
+			fi
+			ReloadService exim4
+			ReloadService dovecot
+		fi
+	fi
+	if [ "${ISPMGR}" = "ispmgrnode" ]; then
+		# Fix ratelimits
+		if grep -qE 'warn\s+set\s+acl_c9\s+=\s+\$sender_address_local_part' /etc/exim4/exim4.conf.template ; then
+			sed -i -r '/# check ratelimits/,/deny\s+ratelimit/s/\$sender_address_local_part/\$sender_address/g' /etc/exim4/exim4.conf.template
+			EXIM_RELOAD=true
+		fi
+		if ! grep -A1 -E 'accept\s+hosts\s+=\s+\+relay_from_hosts' /etc/exim4/exim4.conf.template | grep -q authenticated ; then
+			sed  -i -r '/accept\s+hosts\s+=\s+\+relay_from_hosts/{n;/authenticated/!s/(.*)/\t\t\t!authenticated = *\n\1/}' /etc/exim4/exim4.conf.template
+			EXIM_RELOAD=true
+		fi
+		CONFFILE=${COREDIR}/etc/conf.d/exim.conf
+		if ! grep -qE "^path\s+exim-ratelimits\s" ${CONFFILE} ; then
+			echo "path exim-ratelimits $(EximFile ratelimits)" >> ${CONFFILE}
+		fi
+		if ! grep -qE "^path\s+exim-reload\s" ${CONFFILE} ; then
+			echo "path exim-reload service exim4 restart" >> ${CONFFILE}
+		fi
+		if [ "${EXIM_RELOAD}" = "true" ]; then
+			ReloadService exim4
+		fi
+	fi
+
+	AddKeepEnvironment() {
+		if ! grep -qE '^keep_environment =' /etc/exim4/exim4.conf.template ; then
+			sed -i -r "/trusted_users = /a\\\nkeep_environment =" /etc/exim4/exim4.conf.template
+			ReloadService exim4
+		fi
+	}
+	if ! grep -qE '^keep_environment =' /etc/exim4/exim4.conf.template ; then
+		# If param exist do not any checks
+		EXIM_VERSION=$(dpkg -s exim4-daemon-heavy | awk '$1 == "Version:" {print $2}')
+		echo "Detected exim version: ${EXIM_VERSION}"
+		if [ "$(lsb_release -s -c)" = "wheezy" ]; then
+			if dpkg --compare-versions ${EXIM_VERSION} ge 4.80-7+deb7u2 ; then
+				AddKeepEnvironment
+			fi
+		elif [ "$(lsb_release -s -c)" = "jessie" ]; then
+			if dpkg --compare-versions ${EXIM_VERSION} ge 4.84.2-1 ; then
+				AddKeepEnvironment
+			fi
+		elif [ "$(lsb_release -s -c)" = "trusty" ]; then
+			if dpkg --compare-versions ${EXIM_VERSION} ge 4.82-3ubuntu2.1 ; then
+				AddKeepEnvironment
+			fi
+		elif [ "$(lsb_release -s -c)" = "xenial" ]; then
+			if dpkg --compare-versions ${EXIM_VERSION} ge 4.86.2-2ubuntu1 ; then
+				AddKeepEnvironment
+			fi
+		else
+			AddKeepEnvironment
+		fi
+	fi
+
+	# Disabled
+	if false ; then
+		# checking if log_selector tls_sni is enabled
+		if ! sed -r -n '/^log_selector/,/^\s*$/p' /etc/exim4/exim4.conf.template | grep -q tls_sni ; then
+			# enable log_selector tls_sni
+			sed -i -r '/^log_selector/,/^\s*$/{/tls/s/\\/ +tls_sni \\/}' /etc/exim4/exim4.conf.template
+		fi
+
+		if grep -qE "^tls_certificate\s*=\s*\/etc\/exim" /etc/exim4/exim4.conf.template ; then
+			sed -i -r '/^tls_certificate\s*=\s*\/etc\/exim/s|(^tls_certificate\s*)=.+|\1 = ${if exists{/etc/exim4/ssl/${tls_sni}.crt}{/etc/exim4/ssl/${tls_sni}.crt}{/etc/exim4/ssl/exim.crt}}|' /etc/exim4/exim4.conf.template
+		fi
+		if grep -qE "^tls_privatekey\s*=\s*\/etc\/exim" /etc/exim4/exim4.conf.template ; then
+			sed -i -r '/^tls_privatekey\s*=\s*\/etc\/exim/s|(^tls_privatekey\s*)=.+|\1 = ${if exists{/etc/exim4/ssl/${tls_sni}.key}{/etc/exim4/ssl/${tls_sni}.key}{/etc/exim4/ssl/exim.key}}|' /etc/exim4/exim4.conf.template
+		fi
+		export EXIM_SNI=yes
+	fi
+
+	# Bug ISP-89. Fix dkim_selector
+	if grep -qE "dkim_selector\s*=\s*dkim$" /etc/exim4/exim4.conf.template ; then
+		sed -i -r 's|(dkim_selector\s*=\s*)dkim$|\1${if exists{/etc/exim4/ssl/$sender_address_domain.txt}{${extract{1}{.}{${readfile{/etc/exim4/ssl/$sender_address_domain.txt}}}}}{dkim}}|' /etc/exim4/exim4.conf.template && Service exim reload
+	fi
+
+	AddPath exim-tlscert /etc/exim4/ssl/exim.crt exim
+	AddPath exim-tlskey /etc/exim4/ssl/exim.key exim
+	if [ -n "${EXIM_SNI}" ]; then
+		AddPath exim-certdir /etc/exim4/ssl exim
+		AddPath dovecot-certconf /etc/dovecot/certs dovecot
+	fi
+	AddPath exim-pid /var/run/exim4/exim.pid exim
+
+	ReloadMgr ${ISPMGR}
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+
+
+exit 0

@@ -1,0 +1,3 @@
+/usr/local/mgr5/etc/conf.d/phpfpm.conf
+/etc/php/7.4/fpm/pool.d/www-data.conf
+/etc/php/7.4/fpm/pool.d/www-data.conf

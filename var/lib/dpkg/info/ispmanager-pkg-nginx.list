@@ -1,0 +1,16 @@
+/.
+/etc
+/etc/nginx
+/etc/nginx/vhosts-includes
+/etc/nginx/vhosts-includes/letsencrypt.conf
+/usr
+/usr/local
+/usr/local/mgr5
+/usr/local/mgr5/etc
+/usr/local/mgr5/etc/conf.d
+/usr/local/mgr5/etc/conf.d/nginx.conf
+/usr/share
+/usr/share/doc
+/usr/share/doc/ispmanager-pkg-nginx
+/usr/share/doc/ispmanager-pkg-nginx/changelog.Debian.gz
+/usr/share/doc/ispmanager-pkg-nginx/copyright

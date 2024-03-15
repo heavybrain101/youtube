@@ -1,0 +1,12 @@
+7b96f7017e0818d927a66983cf773d9f  usr/share/doc/php-google-recaptcha/changelog.Debian.gz
+fd77930326cab777d81620e7eabda6b7  usr/share/doc/php-google-recaptcha/copyright
+fc9ab2c83f5a241aeac9ff9d379985f4  usr/share/php/ReCaptcha/ReCaptcha/ReCaptcha.php
+e2967c0725c2781787ab8db78d1220ef  usr/share/php/ReCaptcha/ReCaptcha/RequestMethod.php
+c10398c5a8d801598bd37b611a657378  usr/share/php/ReCaptcha/ReCaptcha/RequestMethod/Curl.php
+2dd9f0390d9c7a7862cf80d4b2b1b8c0  usr/share/php/ReCaptcha/ReCaptcha/RequestMethod/CurlPost.php
+5d99b56f2815d2b6a254064e34c9a8ec  usr/share/php/ReCaptcha/ReCaptcha/RequestMethod/Post.php
+d0746b3e2ea9b24359945ff0659d08be  usr/share/php/ReCaptcha/ReCaptcha/RequestMethod/Socket.php
+fee350d0692940d397663851d2db4148  usr/share/php/ReCaptcha/ReCaptcha/RequestMethod/SocketPost.php
+6d75beebe8f7cca753f90930de041d79  usr/share/php/ReCaptcha/ReCaptcha/RequestParameters.php
+9ed031f42338fec757920ce292aa68c1  usr/share/php/ReCaptcha/ReCaptcha/Response.php
+d33ec56f48edb4185d069261318e5993  usr/share/php/ReCaptcha/autoload.php

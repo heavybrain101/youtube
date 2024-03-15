@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/php-symfony-cache-contracts
+/usr/share/doc/php-symfony-cache-contracts/changelog.Debian.gz
+/usr/share/doc/php-symfony-cache-contracts/copyright
+/usr/share/php
+/usr/share/php/Symfony
+/usr/share/php/Symfony/Contracts
+/usr/share/php/Symfony/Contracts/Cache
+/usr/share/php/Symfony/Contracts/Cache/CacheInterface.php
+/usr/share/php/Symfony/Contracts/Cache/CacheTrait.php
+/usr/share/php/Symfony/Contracts/Cache/CallbackInterface.php
+/usr/share/php/Symfony/Contracts/Cache/ItemInterface.php
+/usr/share/php/Symfony/Contracts/Cache/TagAwareCacheInterface.php
+/usr/share/php/Symfony/Contracts/Cache/autoload.php

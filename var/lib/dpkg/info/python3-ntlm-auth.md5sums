@@ -1,0 +1,17 @@
+1a2d643ca59959a4f35bc20c6a3647c6  usr/lib/python3/dist-packages/ntlm_auth-1.1.0.egg-info/PKG-INFO
+68b329da9893e34099c7d8ad5cb9c940  usr/lib/python3/dist-packages/ntlm_auth-1.1.0.egg-info/dependency_links.txt
+6012cee99845722000fa798d2e8f4242  usr/lib/python3/dist-packages/ntlm_auth-1.1.0.egg-info/requires.txt
+9be3cbc48df6a370857957496fcc5449  usr/lib/python3/dist-packages/ntlm_auth-1.1.0.egg-info/top_level.txt
+18683050a35f1750a2997ed206b95bca  usr/lib/python3/dist-packages/ntlm_auth/__init__.py
+1140c87d985a367e153d6b9b3852b8ca  usr/lib/python3/dist-packages/ntlm_auth/compute_hash.py
+7a23509bda13882d49725ab82333cb67  usr/lib/python3/dist-packages/ntlm_auth/compute_keys.py
+cbab760fa805ff476560407618dfdf1e  usr/lib/python3/dist-packages/ntlm_auth/compute_response.py
+bc70ae038731f78f2c9c6fb7feea1838  usr/lib/python3/dist-packages/ntlm_auth/constants.py
+b8b37ef894eda5023114980687ab5d63  usr/lib/python3/dist-packages/ntlm_auth/des.py
+ce20d425378f7c5d171757021e124b31  usr/lib/python3/dist-packages/ntlm_auth/gss_channel_bindings.py
+34748f89fd19379753dfd6012cd34aaf  usr/lib/python3/dist-packages/ntlm_auth/messages.py
+ccf4f1342d5c5b15ef512525bb680370  usr/lib/python3/dist-packages/ntlm_auth/ntlm.py
+b6067ac6347d3e28a34bca9c52bda14c  usr/lib/python3/dist-packages/ntlm_auth/rc4.py
+bf4c559655c96b0d0d0194cfec59f96d  usr/lib/python3/dist-packages/ntlm_auth/session_security.py
+fd02fd8721fd0ba526ed8fb2fd608363  usr/share/doc/python3-ntlm-auth/changelog.Debian.gz
+7dbac2d2c4d604dbe115a71bf552262e  usr/share/doc/python3-ntlm-auth/copyright

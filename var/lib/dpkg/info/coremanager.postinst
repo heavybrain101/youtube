@@ -1,0 +1,171 @@
+#!/bin/bash
+# vim: ts=4 noexpandtab
+# postinst script for coremanager
+#
+# see: dh_installdeb(1)
+
+#set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+COREDIR=/usr/local/mgr5
+MGR=core
+. ${COREDIR}/lib/pkgsh/core_pkg_funcs.sh
+
+case "$1" in
+    configure)
+	cp -an ${COREDIR}/etc/dist/* ${COREDIR}/etc/
+	if [ -z ${2} ]; then
+		test -f ${COREDIR}/var/new_license || touch ${COREDIR}/var/new_license
+		if [ "#${ISPCONVERT}" = "#yes" ]; then
+			exit 0
+		fi
+		if [ "${MIGRATION}" = "mgr5" ]; then
+			# Migration
+			# Trying to stop old (ver 4) ihttpd
+			crontab -l | grep -v ihttpd.check.sh > /root/crontab-isp.$$ || :
+			crontab /root/crontab-isp.$$ || :
+			rm -f /root/crontab-isp.$$ >/dev/null 2>&1 || :
+			killall ihttpd >/dev/null 2>/dev/null || :
+			killall -9 ihttpd >/dev/null 2>/dev/null || :
+		fi
+		
+		if [[ $(lsb_release -s -c) =~ focal|jammy ]] && dpkg -s systemd-timesyncd ; then
+			:
+		else
+			# ntp
+			ntpservice=ntp
+			if dpkg -s openntpd >/dev/null 2>&1 ; then
+				ntpservice=openntpd
+			fi
+			
+			service ${ntpservice} stop >/dev/null 2>&1 ||:
+
+			envID=$(awk '$1 == "envID:" {print $2}' /proc/$$/status)
+			if [ -n "${envID}" ] && [ "${envID}" != "0" ]; then
+				# OpenVZ virtualization
+				DisableService ${ntpservice}
+				grep -q 'exit' /etc/default/ntpdate || echo "exit 0" >> /etc/default/ntpdate
+			else
+				# Not openvz or node
+				ntpdate pool.ntp.org >/dev/null 2>&1 ||:
+				EnableService ${ntpservice} >/dev/null 2>&1 ||:
+			fi
+		fi
+
+		# Cron
+		update-rc.d cron defaults >/dev/null || :
+		invoke-rc.d cron start >/dev/null || :
+
+		# First install
+		touch ${COREDIR}/etc/mgrlist.conf
+		chmod 600 ${COREDIR}/etc/mgrlist.conf
+		
+		ip=$(echo $SSH_CONNECTION | awk '{print $3}')
+		if [ -z ${ip} ]; then
+			ip=$(ip addr show | awk '$1 ~ /inet/ && $2 !~ /127.0.0|::1|fe80:/ {print $2}' |cut -d/ -f1 | head -1)
+		fi
+
+		if ! grep -q "^listen" ${COREDIR}/etc/ihttpd.conf ; then
+			printf "\nlisten {\n\tip $ip\n\tredirect\n}" >> ${COREDIR}/etc/ihttpd.conf
+		fi
+
+
+		touch  ${COREDIR}/etc/${MGR}.conf
+		chmod 600  ${COREDIR}/etc/${MGR}.conf
+		grep -q UsageStatAgree ${COREDIR}/etc/core.conf || echo "Option UsageStatAgree" >> ${COREDIR}/etc/core.conf
+		grep -q PWStrength ${COREDIR}/etc/${MGR}.conf || echo "PWStrength 2" >> ${COREDIR}/etc/${MGR}.conf
+#		${COREDIR}/sbin/fail2ban.sh || :
+		Service ihttpd start || :
+	else
+		update-rc.d ntp enable >/dev/null 2>&1 || :
+
+
+		# ihttpd_errpage
+		if [ -d ${COREDIR}/etc/ihttpd_errpage ] && [ ! -f ${COREDIR}/etc/.ihttpd_errpage.converted ] && [ ! -d ${COREDIR}/etc/ihttpd_errpage.moved ]; then
+			mv -f ${COREDIR}/etc/ihttpd_errpage ${COREDIR}/etc/ihttpd_errpage.moved
+		fi
+		test -f ${COREDIR}/etc/.ihttpd_errpage.converted || touch ${COREDIR}/etc/.ihttpd_errpage.converted
+
+		# New license
+		if [ ! -f ${COREDIR}/var/disable_new_license ] && [ ! -f ${COREDIR}/var/new_license ]; then
+			touch ${COREDIR}/var/new_license
+		fi
+
+		# Upgrade
+		cd ${COREDIR}
+		${COREDIR}/sbin/mgrctl -u >/dev/null 2>&1
+		AfterupdateMgr ${MGR}
+		service ihttpd restart >/dev/null 2>&1 || :
+	fi
+	CronLink ${MGR}
+	test -f ${COREDIR}/etc/mgrlist.conf || touch ${COREDIR}/etc/mgrlist.conf
+	chmod 600  ${COREDIR}/etc/${MGR}.conf 2>/dev/null || :
+	chmod 600  ${COREDIR}/etc/conf.d/*.conf 2>/dev/null || :
+
+	# usagestat
+	killall usagestat >/dev/null 2>/dev/null || :
+
+	if [ ! -f /etc/apt/trusted.gpg.d/ispsystem.gpg ]; then
+		apt-key del 810F8996 >/dev/null 2>&1 || :
+			wget -O /etc/apt/trusted.gpg.d/ispsystem.gpg http://download.ispmanager.com/repo/ispsystem.gpg || :
+	fi
+    ;;
+
+	triggered)
+	for triggername in $2; do
+		echo coremanager: processing trigger "'$triggername'"
+		case "$triggername" in
+			"/etc/powerdns/pdns.conf")
+				if  [ -f /etc/powerdns/pdns.conf ] && ! grep -q '^local-address=' /etc/powerdns/pdns.conf && systemctl status systemd-resolved >/dev/null 2>&1; then
+					PDNS_OPTION="local-address=$(hostname -I | awk 'ORS=" " {for(i=1;i<=NF;i++){if($i!~/:/){print $i}}}') 127.0.0.1"
+					echo "Set ${PDNS_OPTION} in /etc/powerdns/pdns.conf"
+					echo "${PDNS_OPTION}" >> /etc/powerdns/pdns.conf
+				fi
+			;;
+			*)
+				echo "unhandled/unknown trigger!"
+				exit 0
+			;;
+		esac
+	done
+	;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+# Automatically added by dh_installinit/12.10ubuntu1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "/etc/init.d/ihttpd" ]; then
+		update-rc.d ihttpd defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d ihttpd $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+
+
+exit 0

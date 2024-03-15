@@ -1,0 +1,5 @@
+/usr/local/mgr5/etc/conf.d/roundcube.conf
+/etc/nginx/vhosts-includes/roundcube-nginx.conf
+/etc/apache2/conf.d/roundcube-apache.conf
+/etc/apache2/conf.d/roundcube-apache.conf
+/etc/nginx/vhosts-includes/roundcube-nginx.conf

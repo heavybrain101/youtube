@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/local
+/usr/local/mgr5
+/usr/local/mgr5/etc
+/usr/local/mgr5/etc/conf.d
+/usr/local/mgr5/etc/conf.d/myadmin.conf
+/usr/local/mgr5/etc/templates
+/usr/local/mgr5/etc/templates/phpmyadmin-apache.template
+/usr/local/mgr5/etc/templates/phpmyadmin-nginx.template
+/usr/local/mgr5/etc/templates/phpmyadmin-openlitespeed.template
+/usr/share
+/usr/share/doc
+/usr/share/doc/ispmanager-pkg-myadmin
+/usr/share/doc/ispmanager-pkg-myadmin/changelog.Debian.gz
+/usr/share/doc/ispmanager-pkg-myadmin/copyright

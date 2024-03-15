@@ -1,0 +1,7 @@
+8e6a07655296cbcf10ef731a17ff2d0a  usr/share/doc/libnet-xwhois-perl/TODO
+64e584f80335a463732bc16c64baefaa  usr/share/doc/libnet-xwhois-perl/changelog.Debian.gz
+aa5035f2b8366e6ed88bf6886a17ccf9  usr/share/doc/libnet-xwhois-perl/copyright
+5fa921406281d37ad698da129d192c66  usr/share/doc/libnet-xwhois-perl/examples/creation_time
+5d0246ecc09e336daa9b10d908deab2d  usr/share/doc/libnet-xwhois-perl/examples/whois
+53dcd7e1a2ad64b11c1a3b374c62b0b3  usr/share/man/man3/Net::XWhois.3pm.gz
+f2e1e5707cf58ce508dd71130f1ce771  usr/share/perl5/Net/XWhois.pm

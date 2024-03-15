@@ -1,0 +1,16 @@
+/.
+/etc
+/etc/apache2
+/etc/apache2/mods-available
+/etc/apache2/mods-available/php56.load
+/opt
+/opt/php56
+/opt/php56/lib
+/opt/php56/lib/apache2
+/opt/php56/lib/apache2/modules
+/opt/php56/lib/apache2/modules/libphp5.so
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/isp-php56-mod-apache
+/usr/share/doc/isp-php56-mod-apache/changelog.Debian.gz

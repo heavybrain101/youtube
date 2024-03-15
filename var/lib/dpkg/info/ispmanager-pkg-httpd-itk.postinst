@@ -1,0 +1,205 @@
+#!/bin/bash
+# postinst script for coremanager
+#
+# see: dh_installdeb(1)
+
+#set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+COREDIR=/usr/local/mgr5
+CONFNAME=apache.conf
+. ${COREDIR}/lib/pkgsh/ispmgr_pkg_funcs.sh
+
+
+if [ "$(lsb_release -s -c)" = "focal" ] || [ "$(lsb_release -s -c)" = "bullseye" ] || [ -f /etc/php/7.4/cli/php.ini ]; then
+	PHPETC=/etc/php/7.4
+	PHPMOD=php7.4
+	PHPLIB=/usr/lib/php
+elif [ "$(lsb_release -s -c)" = "buster" ]; then
+	PHPETC=/etc/php/7.3
+	PHPMOD=php7.3
+	PHPLIB=/usr/lib/php
+elif [ "$(lsb_release -s -c)" = "bionic" ]; then
+	PHPETC=/etc/php/7.2
+	PHPMOD=php7.2
+	PHPLIB=/usr/lib/php
+elif [ "$(lsb_release -s -c)" = "xenial" ] || [ "$(lsb_release -s -c)" = "stretch" ]; then
+	PHPETC=/etc/php/7.0
+	PHPMOD=php7.0
+	PHPLIB=/usr/lib/php
+elif [ "$(lsb_release -s -c)" = "jammy" ]; then
+	PHPETC=/etc/php/8.1
+	PHPMOD=php8.1
+	PHPLIB=/usr/lib/php
+else
+	PHPETC=/etc/php5
+	PHPMOD=php5
+	PHPLIB=/usr/lib/php5
+fi
+
+case "$1" in
+    configure)
+
+	# Enable remoteip. Disable rpaf. Fix int #24630 ext #2241
+	APACHE_VER=$(apachectl -v | awk -F "[ /]" '/Server version/ {print $4}')
+	if [ -f /usr/lib/apache2/modules/mod_rpaf.so ] && strings /usr/lib/apache2/modules/mod_rpaf.so | grep -iq 'RPAF_SetHTTPS' ; then
+		# Skipping removing rpaf if new rpaf. Fix #30036
+		:
+	else
+		if dpkg --compare-versions ${APACHE_VER} ge 2.4; then
+			if [ -f /etc/apache2/mods-enabled/remoteip.conf ] && [ ! -L /etc/apache2/mods-enabled/remoteip.conf ] && [ ! -f /etc/apache2/mods-available/remoteip.conf ]; then
+				mv /etc/apache2/mods-enabled/remoteip.conf /etc/apache2/mods-available/remoteip.conf
+				ln -s ../mods-available/remoteip.conf /etc/apache2/mods-enabled/remoteip.conf
+				apachectl -t >/dev/null
+			fi
+			if [ -f /etc/apache2/mods-enabled/rpaf.conf ]; then
+				a2dismod -q -f rpaf || :
+				A2_RELOAD=yes
+			fi
+			if [ ! -f /etc/apache2/mods-enabled/remoteip.load ]; then
+				if [ ! -f /etc/apache2/mods-available/remoteip.conf ]; then
+					echo "RemoteIPHeader X-Forwarded-For" > /etc/apache2/mods-available/remoteip.conf
+					echo "RemoteIPInternalProxy 127.0.0.1" >> /etc/apache2/mods-available/remoteip.conf
+				fi
+				a2enmod -q -f remoteip || :
+				A2_RELOAD=yes
+			fi
+			if grep -qE "^\s*LogFormat.+%h.*" /etc/apache2/apache2.conf ; then
+				sed -i -r '/^\s*LogFormat.+%h.*/s/(^\s*LogFormat.+)%h(.*)/\1%a\2/g' /etc/apache2/apache2.conf
+				A2_RELOAD=yes
+			fi
+
+		else
+			if [ ! -f /etc/apache2/mods-enabled/rpaf.conf ]; then
+				a2enmod -q -f rpaf || :
+				A2_RELOAD=yes
+			fi
+		fi
+	fi
+
+	# Enable headers module. Fix #31885
+	if [ ! -e /etc/apache2/mods-enabled/headers.load ]; then
+		a2enmod -q -f headers || :
+		A2_RELOAD=yes
+	fi
+
+	# Enabling mod_include. For #30733
+	if [ ! -f /etc/apache2/mods-enabled/include.load ]; then
+		a2enmod -q -f include || :
+		A2_RELOAD=yes
+	fi
+
+	if [ -z "${2}" ]; then
+
+		if [ "#${ISPCONVERT}" = "#yes" ]; then
+			sed -i -r '/Option ApacheITK/d' ${COREDIR}/etc/${ISPMGR}.conf
+			PATHLIST="apachectl apacheroot apache.conf apache-vhosts-default apache-vhosts apache-conf.d"
+			PathConvert ${COREDIR}/etc/conf.d/httpd-itk.conf
+			MakeConfigLink apache httpd-itk
+			ReloadMgr ${ISPMGR}
+		else
+			# LimitUIDRange
+			if dpkg --compare-versions ${APACHE_VER} ge 2.4; then
+				ITK_CONF=/etc/apache2/mods-available/mpm_itk.conf
+				test -f ${ITK_CONF} || touch ${ITK_CONF}
+				if ! grep -qE "^LimitUIDRange" ${ITK_CONF} ; then
+					echo "LimitUIDRange 0 65000" >> ${ITK_CONF}
+				fi
+				if ! grep -qE "^LimitGIDRange" ${ITK_CONF} ; then
+					echo "LimitGIDRange 0 65000" >> ${ITK_CONF}
+				fi
+			fi
+
+			# Включаем модули
+			a2dismod -q -f ${PHPMOD} fcgid >/dev/null 2>&1 || :
+			test -f /etc/apache2/mods-available/mpm_event.load && a2dismod -q -f mpm_event >/dev/null 2>&1 || :
+			if [ -f /etc/apache2/mods-available/mpm_itk.load ]; then
+				itk_mod=mpm_itk
+			else
+				itk_mod=itk
+			fi
+			a2enmod -q -f suexec cgi rewrite vhost_alias ssl actions rpaf ${itk_mod} >/dev/null 2>&1 || :
+
+			a2dissite -q -f default >/dev/null 2>&1 || :
+
+			# Комментим Listen и NameVirtualHost
+			sed -i.orig -r 's:^(\s*(Listen|NameVirtualHost)):#\1:g' /etc/apache2/ports.conf
+
+			# Creating vhosts dir
+			mkdir -p /etc/apache2/vhosts
+			mkdir -p /etc/apache2/vhosts-default
+
+			# Adding inclues if not exists
+			grep -q "^Include conf.d/" /etc/apache2/apache2.conf || echo "Include conf.d/" >> /etc/apache2/apache2.conf
+			grep -qE "^Include(Optional)? vhosts-default/" /etc/apache2/apache2.conf || echo "IncludeOptional vhosts-default/*.conf" >> /etc/apache2/apache2.conf
+			grep -qE "^Include(Optional)? vhosts/" /etc/apache2/apache2.conf || echo "IncludeOptional vhosts/*/*.conf" >> /etc/apache2/apache2.conf
+			echo "ApacheConfExt .conf" >> ${COREDIR}/etc/conf.d/httpd-itk.conf
+
+			# Для про версии
+			if [ "${ISPMGR}" = "ispmgrnode" ]; then
+				mkdir -p /etc/apache2/vhosts-resources
+				echo "path apache-vhosts-resources /etc/apache2/vhosts-resources" >> ${COREDIR}/etc/conf.d/httpd-itk.conf
+			fi
+
+			# Limit NOFILE
+			if [ -d /etc/systemd/system/ ] && [ -n "$(which systemctl 2>/dev/null)" ]; then
+				if [ ! -f /etc/systemd/system/apache2.service.d/nofile.conf ] && [ ! -f /etc/systemd/system/apache2.service.d/limits.conf ]; then
+					mkdir -p /etc/systemd/system/apache2.service.d
+					echo -e "[Service]\nLimitNOFILE=16384" > /etc/systemd/system/apache2.service.d/nofile.conf
+					systemctl daemon-reload
+				fi
+			fi
+
+			EnableService apache2
+			ReloadService apache2
+
+			test -f ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME} || ln -sf ../conf.d/httpd-itk.conf ${COREDIR}/etc/${ISPMGR}.conf.d/${CONFNAME}
+
+			CheckDisabledPage
+
+			AddWebModule apache
+
+			ServiceAddmon apache2
+
+			# Afterinstall
+			AfterinstallModule ${ISPMGR} apache
+		fi
+	else
+		sed -ri 's/^Include(Optional)?\svhosts\/$/IncludeOptional vhosts\/*\/*/' /etc/apache2/apache2.conf
+		test -n "${A2_RELOAD}" && ReloadService apache2
+	fi
+
+	test -d /etc/apache2/webdav-users || mkdir -p /etc/apache2/webdav-users
+	AddPath apache-webdav /etc/apache2/webdav-users apache
+	AddPath apache-modules-includes /etc/apache2/modules-includes apache
+	if [ -n "${2}" ]; then
+		ReloadMgr ${ISPMGR}
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+
+
+exit 0

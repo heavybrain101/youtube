@@ -1,0 +1,8 @@
+libdovecot-compression 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot-dsync 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot-fts 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot-lda 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot-login 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot-sql 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot-storage 0 dovecot-core (>= 1:2.3.7.2)
+libdovecot 0 dovecot-core (>= 1:2.3.7.2)

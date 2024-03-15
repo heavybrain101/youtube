@@ -1,0 +1,5 @@
+08d25d4dcf19c501246ce988163fcd2a  usr/sbin/exim4
+5f254c019b7103756c72a798ce6769b9  usr/share/bug/exim4-daemon-heavy/script
+6b562e1c60caa8d679b73926a128908b  usr/share/doc/exim4-daemon-heavy/EDITME.exim4-heavy.gz
+1cc887a9de38e1a4045e7ba7f81a797e  usr/share/doc/exim4-daemon-heavy/copyright
+a3b162d74343d8b56b75282b4fb249eb  usr/share/lintian/overrides/exim4-daemon-heavy

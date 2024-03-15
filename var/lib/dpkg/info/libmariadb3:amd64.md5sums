@@ -1,0 +1,7 @@
+e3215eb1885daf620153b5892a399d78  usr/lib/x86_64-linux-gnu/libmariadb.so.3
+ae891a2ed01dd5e9beee9c28bea486f0  usr/lib/x86_64-linux-gnu/mariadb19/plugin/caching_sha2_password.so
+14e397462ff154f7c7733f997c1c4717  usr/lib/x86_64-linux-gnu/mariadb19/plugin/client_ed25519.so
+7d816e69c3cd2cc0a21b10ed66b6154a  usr/lib/x86_64-linux-gnu/mariadb19/plugin/dialog.so
+180403876554badac213907d6c596112  usr/lib/x86_64-linux-gnu/mariadb19/plugin/mysql_clear_password.so
+7b2acc9b562d17619c096fdfe7a73b00  usr/share/doc/libmariadb3/changelog.Debian.gz
+58c2b6d76da85bab4cbb029485f426b2  usr/share/doc/libmariadb3/copyright

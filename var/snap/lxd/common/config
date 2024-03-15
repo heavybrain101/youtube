@@ -1,0 +1,15 @@
+# This file is auto-generated, do NOT manually edit
+ceph_builtin=false
+ceph_external=false
+criu_enable=false
+daemon_debug=false
+daemon_group=lxd
+daemon_syslog=false
+daemon_verbose=false
+lvm_external=false
+lxcfs_loadavg=false
+lxcfs_pidfd=false
+lxcfs_cfs=false
+openvswitch_builtin=false
+openvswitch_external=false
+shiftfs_enable=auto

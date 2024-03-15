@@ -1,0 +1,61 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Origin: 6-5.387-focal
+Label: Ispmanager 6-5.387-focal repo
+Suite: unstable
+Codename: 6-5.387-focal
+Date: Tue, 12 Mar 2024 07:11:40 UTC
+Architectures: amd64 i386
+Components: main
+Description: Ispmanager  6-5.387-focal repo
+MD5Sum:
+ a176d1014e0ef140b2452cc5365b8864 54880 main/binary-amd64/Packages
+ e5811c3bfef110d1ed0af87e0212c087 11434 main/binary-amd64/Packages.gz
+ de766560542f7247f34e7287262cf1fa 157 main/binary-amd64/Release
+ 904e0f0fff3a8ce8a935d7b5bddf278e 41173 main/binary-i386/Packages
+ e93fcb11d9ffa6558b832532318e7851 8278 main/binary-i386/Packages.gz
+ e22fbb671e8ccfbf9b91b947b1b51c7f 156 main/binary-i386/Release
+ dfcf4af7ba4e94ed57ee3aec46cfbe8c 257270 main/Contents-amd64
+ 7791006694ba7c1bfb872d4ec6e05fe0 22680 main/Contents-amd64.gz
+ cebcae0b1f5571045a1c5179f7d653fb 19113 main/Contents-amd64.bz2
+ 241176a083fdede3e70372b3a6162e69 17669 main/Contents-i386
+ 6837d47668f95fec0cc4b067f84ec23b 1841 main/Contents-i386.gz
+ eed9b0c2dec42f8dd3e0365ba5b6aedc 1731 main/Contents-i386.bz2
+SHA1:
+ c1bafead92bbee05f0c58bcab400689e9169a902 54880 main/binary-amd64/Packages
+ 96f3fe4ba775fd68268cede855fb0e0a5ad2066f 11434 main/binary-amd64/Packages.gz
+ 5e42b94720aa6b17b6fb2686e862b880ac88e819 157 main/binary-amd64/Release
+ 2c4c4b71184c13d63cda3e3d6d18fc2d6483aa98 41173 main/binary-i386/Packages
+ 60c292bac45b03570e305764472827d0f128761c 8278 main/binary-i386/Packages.gz
+ ca410245411aac3873911ef8ae2954c7387f21fc 156 main/binary-i386/Release
+ 9d40d08454e3a679c744e3c9204b10e3b371321b 257270 main/Contents-amd64
+ ff13f85d7116d1b91d3d86af8d98733760f1b97b 22680 main/Contents-amd64.gz
+ df7de2b496f2e975aedbd667e82905c03ee59003 19113 main/Contents-amd64.bz2
+ 158247756a86c0f76c94fe96295c565f0b953a67 17669 main/Contents-i386
+ 925298b96191aeb7baf559a7a828a142210c4cb4 1841 main/Contents-i386.gz
+ 52b0c6152dcc61d148437d5b9fe40b45edac2866 1731 main/Contents-i386.bz2
+SHA256:
+ 35bebe594196eda75462f0ba9bfc5defff120ade491197b01d0dad565eaaa318 54880 main/binary-amd64/Packages
+ 2a74e4e5f55d9e0fa25972049ef8bbcff3de460b77b881db99c44897962d918e 11434 main/binary-amd64/Packages.gz
+ b6a6e639e7582c6050e5240e9dced8f6723ec39a7081ab716b799fd122382864 157 main/binary-amd64/Release
+ f32ed47af1d05cea26b991ea6caa428d50e2ae62212af3ebdf9cbba1389cf432 41173 main/binary-i386/Packages
+ 20e5f066d02e643f5fb4c28aaf99557f0c4a662d0508218250e8e1e009bbe175 8278 main/binary-i386/Packages.gz
+ 74a785fa31282565ff5d209714c5df6e6b1a864a3b59ddd082c71b28c8640b86 156 main/binary-i386/Release
+ 2dcc2257643dbc1c4530d1f27bfdc96d350f153a3603ecb482d27c57d595d381 257270 main/Contents-amd64
+ 63bc515d3ce0c8db21704342c964a5d2fd7c7665ab8196d4d0a3255ae70b371c 22680 main/Contents-amd64.gz
+ 35945c02bec217d2267e5ee4ac3832a4e46261733c197592312fcf11f1d5a726 19113 main/Contents-amd64.bz2
+ 69270ecf2155c83bd41b3864fe156c343a64036af013e7759f5866f778d14b85 17669 main/Contents-i386
+ deea3d409ab53759a07f28b12ecccbb17ef4e7e19317b90aff9f55827a189d06 1841 main/Contents-i386.gz
+ 546c8c9aa95fb331d17908cbd3e445e7cceff7aaf44535c7d5610337e0f9516b 1731 main/Contents-i386.bz2
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEElY1cexkrCBWQYVV7c88Lx4EPiZYFAmXwACwACgkQc88Lx4EP
+iZbxkAf+MhZEgf9p3KhYKrW8xieVgPGOu5wuhWPlDNvu8KL+eGHpyA8znaXWvP2E
+pbTpc7yEu7I/A660fSY7wf4d7g80I0IC6JYLKwrVKSJm9AxqMIz+G12lK7Na2n5D
+EAqO4XW+uGgMCc6y/TUMDrNAbpM9gf+goFffulU3yefV/UH1E4Od93/VdOFHTToc
+xpY6X4AN1PzaG/KUXd7dtBmjMgORoKWF4fLOBRI4SB91FBf1X1O+0QXsQAFKwBLY
+mqnDIdpzvcX6W26G+dnoWjaCRjfSXHWHvq08/XmdG8L4WbSct5sIGKUGx/RuYaeF
+gVyN6LgXWQv4GVgQ+HB94bzEFMkf0Q==
+=YBGs
+-----END PGP SIGNATURE-----

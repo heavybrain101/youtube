@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libzip.so.5.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libzip5
+/usr/share/doc/libzip5/changelog.Debian.gz
+/usr/share/doc/libzip5/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libzip5
+/usr/lib/x86_64-linux-gnu/libzip.so.5

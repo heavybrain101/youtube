@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/local
+/usr/local/mgr5
+/usr/local/mgr5/etc
+/usr/local/mgr5/etc/conf.d
+/usr/local/mgr5/etc/conf.d/quota.conf
+/usr/share
+/usr/share/doc
+/usr/share/doc/ispmanager-pkg-quota
+/usr/share/doc/ispmanager-pkg-quota/changelog.Debian.gz
+/usr/share/doc/ispmanager-pkg-quota/copyright

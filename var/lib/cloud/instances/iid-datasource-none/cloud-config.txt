@@ -1,0 +1,26 @@
+#cloud-config
+
+# from 1 files
+# part-001
+
+---
+growpart:
+    mode: 'off'
+locale: en_US.UTF-8
+preserve_hostname: true
+resize_rootfs: false
+ssh_pwauth: true
+users:
+-   gecos: user
+    groups: !!set
+        adm: null
+        cdrom: null
+        dip: null
+        lxd: null
+        plugdev: null
+        sudo: null
+    lock_passwd: false
+    name: user
+    passwd: $6$G81ysVhWaTl1Qtwx$JdlxFM.M26GMuugJ/vGQ2ijq44bmpI1korYq9pHsaduITeyDoBztz/Y6qHtBtb.fcaSYmYfPMsm5r8b29U0W8.
+    shell: /bin/bash
+...

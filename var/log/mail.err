@@ -1,0 +1,2 @@
+Mar 11 21:03:51 ipankratov101 dovecot: master: Error: service(auth): Initial status notification not received in 30 seconds, killing the process
+Mar 11 21:03:53 ipankratov101 dovecot: auth: Fatal: master: service(auth): child 2865549 killed with signal 9

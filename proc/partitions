@@ -1,0 +1,11 @@
+major minor  #blocks  name
+
+   7        0      65444 loop0
+   7        1      65440 loop1
+   7        2      68856 loop2
+   7        3      41400 loop3
+   7        4      94036 loop4
+   7        5      40036 loop5
+ 252        0   15728640 vda
+ 252        1       1024 vda1
+ 252        2   15725376 vda2

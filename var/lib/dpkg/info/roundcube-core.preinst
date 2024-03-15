@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+for link in \
+    /usr/share/roundcube/program/js/tinymce \
+    /usr/share/roundcube/program/js/jquery.js \
+    /usr/share/roundcube/program/js/jquery.min.js \
+    /usr/share/roundcube/plugins/jqueryui/css \
+    /usr/share/roundcube/plugins/jqueryui/js/i18n \
+    /usr/share/roundcube/plugins/jqueryui/js/jquery-ui.min.js \
+    /var/lib/roundcube/robots.txt; do
+    [ ! -L $link ] || rm $link
+done
+
+if [ -f /usr/share/dbconfig-common/dpkg/preinst ]; then
+    . /usr/share/dbconfig-common/dpkg/preinst
+    dbc_go roundcube "$@"
+fi
+
+# Automatically added by dh_installdeb/12.9ubuntu1
+dpkg-maintscript-helper dir_to_symlink /var/lib/roundcube/config /etc/roundcube 1.1.2\+dfsg.1-4 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/roundcube/db.inc.php 1.0.0\+dfsg.1-1\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/roundcube/main.inc.php 1.0.0\+dfsg.1-1\~ -- "$@"
+# End automatically added section
+
+
+exit 0

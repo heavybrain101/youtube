@@ -1,0 +1,15 @@
+[cmdline]
+0=
+
+[Dir Hist New Right Panel]
+0=/var/lib/postgresql
+1=/var/lib
+2=/var
+3=/
+4=/etc
+5=/etc/postgresql
+6=/etc/postgresql/12
+7=/etc/postgresql/12/main
+
+[Dir Hist New Left Panel]
+0=/var/lib/postgresql

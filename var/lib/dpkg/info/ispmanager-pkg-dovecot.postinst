@@ -1,0 +1,138 @@
+#!/bin/bash
+# postinst script for coremanager
+#
+# see: dh_installdeb(1)
+
+#set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+COREDIR=/usr/local/mgr5
+CONFNAME=dovecot.conf
+. ${COREDIR}/lib/pkgsh/core_pkg_funcs.sh
+. ${COREDIR}/lib/pkgsh/ispmgr_pkg_funcs.sh
+
+
+case "$1" in
+    configure)
+	if [ -z ${2} ]; then
+
+		if [ "#${ISPCONVERT}" = "#yes" ]; then
+			PATHLIST="dovecot-passwd dovecot-doveadm"
+			PARAMLIST="POP3"
+			PathConvert ${COREDIR}/etc/conf.d/dovecot.conf
+			ParamConvert ${COREDIR}/etc/conf.d/dovecot.conf
+			MakeConfigLink dovecot
+			ReloadMgr ${ISPMGR}
+		else
+
+			# auth conf
+			sed -i -r "s|^(\s*\!include auth-system.conf.ext)$|#\1|" /etc/dovecot/conf.d/10-auth.conf
+			sed -i -r "s|^\s*#(!include auth-passwdfile.conf.ext)|\1|" /etc/dovecot/conf.d/10-auth.conf
+			sed -i -r "s|^\s*#(disable_plaintext_auth = ).*|\1no|" /etc/dovecot/conf.d/10-auth.conf
+			sed -i -r "s/^\s*(auth_mechanisms = )plain\s*($|#)/\1plain login cram-md5/" /etc/dovecot/conf.d/10-auth.conf
+			if grep -Eq '^#auth_username_chars' /etc/dovecot/conf.d/10-auth.conf ; then
+				sed -i -r '/#auth_username_chars/s/^#(auth_username_chars)\s*=.*/\1 = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890.-_+=`@абвгдеёжзийклмнопрстуфхцчшщъыьэюя/' /etc/dovecot/conf.d/10-auth.conf
+			fi
+
+			AddFix "fix_ISP6-1447_remove_digestmd5"
+	
+			# auth-passwdfile.conf.ext
+			sed -i -r "s|args = scheme=CRYPT username_format=%u /etc/dovecot/users|args = scheme=CRYPT username_format=%Lu /etc/dovecot/dovecot.passwd|" /etc/dovecot/conf.d/auth-passwdfile.conf.ext
+			sed -i -r "s|args = username_format=%u /etc/dovecot/users|args = username_format=%Lu /etc/dovecot/dovecot.passwd|" /etc/dovecot/conf.d/auth-passwdfile.conf.ext
+	
+			# mail.conf
+			sed -i -r "s|#mail_location = |mail_location = maildir:~/.maildir|" /etc/dovecot/conf.d/10-mail.conf
+			sed -i -r "s|#mail_plugins = |mail_plugins = \$mail_plugins quota|" /etc/dovecot/conf.d/10-mail.conf
+			sed -i -r 's|#separator = $|separator = /|' /etc/dovecot/conf.d/10-mail.conf
+	
+			# ssl.conf
+			sed -i -r "s|ssl = required|ssl = yes|" /etc/dovecot/conf.d/10-ssl.conf
+	
+			# imap.conf
+			sed -i -r "s|  #mail_plugins = \$mail_plugins|  mail_plugins = \$mail_plugins imap_quota|" /etc/dovecot/conf.d/20-imap.conf
+	
+			# dovecot.conf
+			sed -i -r "s|#listen = \*, ::|listen = *|" /etc/dovecot/dovecot.conf
+	
+			# master.con. Ugh
+			sed -i '/  unix_listener auth-userdb {/{$!{N;s|  unix_listener auth-userdb {\n    #mode = 0600|  unix_listener auth-userdb {\n    mode = 0666|}}' /etc/dovecot/conf.d/10-master.conf
+	
+			# lda.conf
+			sed -i -r "s|(^\s*)#mail_plugins = \$mail_plugins|\1mail_plugins = \$mail_plugins quota|" /etc/dovecot/conf.d/15-lda.conf
+			sed -i -r "s|#postmaster_address =.*|postmaster_address = postmaster@$(hostname -f)|" /etc/dovecot/conf.d/15-lda.conf
+	
+			# quota.conf
+			sed -i -r "s|#quota = maildir:User quota|quota = maildir:User quota|" /etc/dovecot/conf.d/90-quota.conf
+			
+			# plugin.conf
+			if ! grep -rq listescape /etc/dovecot/ ; then
+				cat >> /etc/dovecot/conf.d/90-plugin.conf << 'EOF'
+mail_plugins = $mail_plugins listescape
+plugin {
+  listescape_char = "\\"
+}
+EOF
+			fi
+			AddFix "fix_ISP6-1167_maildir_separator"
+
+			touch /etc/dovecot/dovecot.passwd
+			chown dovecot /etc/dovecot/dovecot.passwd
+			chmod 640 /etc/dovecot/dovecot.passwd
+	
+			ReloadService dovecot
+			EnableService dovecot
+
+			MakeConfigLink dovecot
+			ReloadMgr ${ISPMGR}
+
+			ServiceAddmon dovecot
+
+			# Afterinstall
+			AfterinstallModule ${ISPMGR} dovecot
+		fi
+	else
+		if AddFix "fix_ISP6-1167_maildir_separator"; then
+			sed -i -r -z 's|#?separator = \.?\n|separator = /\n|' /etc/dovecot/conf.d/10-mail.conf
+			if ! grep -rq listescape /etc/dovecot/ && ! find /var/www/*/data/email/*/*/.maildir/ -maxdepth 1 -type d -name '*\\*' | grep -q . ; then
+				cat >> /etc/dovecot/conf.d/90-plugin.conf << 'EOF'
+mail_plugins = $mail_plugins listescape
+plugin {
+	listescape_char = "\\"
+}
+EOF
+			fi
+			ReloadService dovecot
+		fi
+		if AddFix "fix_ISP6-1447_remove_digestmd5"; then
+			sed -i -r "s/^\s*(auth_mechanisms = )plain login digest-md5 cram-md5\s*($|#)/\1plain login cram-md5/" /etc/dovecot/conf.d/10-auth.conf
+			ReloadService dovecot
+		fi
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+
+
+exit 0

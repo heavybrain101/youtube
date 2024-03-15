@@ -1,0 +1,6 @@
+45ee80f1309b96f46f6f5d976a6f3671  usr/share/doc/php-psr-container/changelog.Debian.gz
+4eab6a9f62f31c71d7c9696ffb4f0518  usr/share/doc/php-psr-container/copyright
+d7a4fda88b943f658e13f7f5aa3e85f1  usr/share/php/Psr/Container/ContainerExceptionInterface.php
+d459395043420a1cfde26c94500f5b66  usr/share/php/Psr/Container/ContainerInterface.php
+8fc6d3d2099bf1fd8d03a3273157c8d3  usr/share/php/Psr/Container/NotFoundExceptionInterface.php
+de68b6d4f22e3acbc5c04a6a48e2c8c8  usr/share/php/Psr/Container/autoload.php

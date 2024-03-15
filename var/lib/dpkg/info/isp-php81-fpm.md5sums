@@ -1,0 +1,4 @@
+7ad03a87256fa1b711e441868f3f99a9  lib/systemd/system/php-fpm81.service
+2d62efc7c86fca905e570280378cf2f1  opt/php81/sbin/php-fpm
+07a43737fd8b7843086c81f461558ad1  opt/php81/share/man/man8/php-fpm.8
+7648196192dfc4ac409f7d41c5a252b0  usr/share/doc/isp-php81-fpm/changelog.Debian.gz

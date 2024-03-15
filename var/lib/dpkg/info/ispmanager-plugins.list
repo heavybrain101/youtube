@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/local
+/usr/local/mgr5
+/usr/local/mgr5/etc
+/usr/local/mgr5/etc/plugins
+/usr/local/mgr5/etc/plugins/ispmgr
+/usr/local/mgr5/etc/plugins/ispmgr/ispmgr-plugins.xml
+/usr/share
+/usr/share/doc
+/usr/share/doc/ispmanager-plugins
+/usr/share/doc/ispmanager-plugins/changelog.Debian.gz
+/usr/share/doc/ispmanager-plugins/copyright

@@ -1,0 +1,20 @@
+Package: hello
+Priority: optional
+Section: devel
+Installed-Size: 275
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 2.10-2ubuntu3~esm1
+Replaces: hello-debhelper (<< 2.9), hello-traditional
+Depends: libc6 (>= 2.14)
+Conflicts: hello-traditional
+Breaks: hello-debhelper (<< 2.9)
+Filename: pool/main/h/hello/hello_2.10-2ubuntu3~esm1_amd64.deb
+Size: 52152
+SHA256: b62ec36f16a1f5c5c1dee8c5dea2313cca886c3fd0a0a6a2464f7ef404489101
+SHA1: ab00add2b41828f4c551bbdbcf008d66f3ba1c94
+MD5sum: bc20aefe810e35b70ba74388ab88cb65
+Description: example package based on GNU hello
+Description-md5: c4a4aec43084cfb4a44c959b27e3a6d6
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
+

@@ -1,0 +1,6 @@
+7460bbe307fee9cca519704d44241d24  usr/share/doc/php-mail-mime/changelog.Debian.gz
+feabdabb5369faff617ac595689d13c5  usr/share/doc/php-mail-mime/copyright
+72c52ff26008523937dfd54cc50527aa  usr/share/doc/php-mail-mime/package.xml.gz
+a866da134cbc3d012288948d196c629e  usr/share/php/.registry/mail_mime.reg
+cc12a9a5722eb56452f2e2aab5c250ec  usr/share/php/Mail/mime.php
+c03dc27441dbb191ce4c21253c8a14fd  usr/share/php/Mail/mimePart.php

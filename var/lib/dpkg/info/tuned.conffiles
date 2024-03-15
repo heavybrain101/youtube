@@ -1,0 +1,12 @@
+/etc/dbus-1/system.d/com.redhat.tuned.conf
+/etc/grub.d/00_tuned
+/etc/modprobe.d/tuned.conf
+/etc/tuned/active_profile
+/etc/tuned/bootcmdline
+/etc/tuned/cpu-partitioning-variables.conf
+/etc/tuned/profile_mode
+/etc/tuned/realtime-variables.conf
+/etc/tuned/realtime-virtual-guest-variables.conf
+/etc/tuned/realtime-virtual-host-variables.conf
+/etc/tuned/sap-hana-vmware-variables.conf
+/etc/tuned/tuned-main.conf

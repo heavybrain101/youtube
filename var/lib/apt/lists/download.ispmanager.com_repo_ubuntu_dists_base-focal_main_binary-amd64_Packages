@@ -1,0 +1,1442 @@
+Package: billchat
+Version: 2020.05.27-1-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 69416
+Depends: nodejs
+Homepage: http://afterlogic.com/
+Priority: extra
+Section: libs
+Filename: pool/main/b/billchat/billchat_2020.05.27-1-ubuntu20_amd64.deb
+Size: 8049940
+SHA256: dcb2d3d990b25d892a68e764db3cf34152c0988e3fb7b6e77754cfecda962c41
+SHA1: 61c51ffd0c9571d3d7e964ec39c1981108989352
+MD5sum: 73b3b6aea6d474be32da009b33bee56c
+Description: BILLmanager chat
+
+Package: billchat-helpdesk
+Source: billchat
+Version: 2020.05.27-1-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 24569
+Depends: coremanager
+Homepage: http://afterlogic.com/
+Priority: extra
+Section: libs
+Filename: pool/main/b/billchat/billchat-helpdesk_2020.05.27-1-ubuntu20_amd64.deb
+Size: 7011176
+SHA256: c9a0ba841c14794563c1c7aaaace831af818c0afc46c11c2174cfdf8eb0efdaa
+SHA1: 5a7325562af4bd1ba7e0be6f0064ffa8025643cc
+MD5sum: fc43cfd568bdfb76fcbf04ace8b4c42c
+Description: BILLchat helpdesk
+
+Package: gmock-isp
+Source: gmock
+Version: 1.6.0-bionic
+Architecture: amd64
+Maintainer: Steve M. Robbins <smr@debian.org>
+Installed-Size: 147
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2), gtest-isp | libgtest-dev (>= 1.8.0)
+Homepage: http://code.google.com/p/googletest/
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/gmock/gmock-isp_1.6.0-bionic_amd64.deb
+Size: 42088
+SHA256: 11f59230d7f4ec634c63ec8a7dc159e6a0379e1160ef90c730cb580338030b20
+SHA1: 65a4834066d2979155a1ead3a24b01917cec8224
+MD5sum: eaf9a7196064209db914a328c19b4b41
+Description: Google's framework for writing and using C++ mock classes
+ Inspired by jMock, EasyMock, and Hamcrest, and designed with C++'s
+ specifics in mind, it can help you derive better designs of your
+ system and write better tests.
+ .
+ Google Mock:
+ .
+  - provides a declarative syntax for defining mocks,
+  - can easily define partial (hybrid) mocks, which are a cross of real
+    and mock objects,
+  - handles functions of arbitrary types and overloaded functions,
+  - comes with a rich set of matchers for validating function arguments,
+  - uses an intuitive syntax for controlling the behavior of a mock,
+  - does automatic verification of expectations (no record-and-replay
+    needed),
+  - allows arbitrary (partial) ordering constraints on
+    function calls to be expressed,
+  - lets a user extend it by defining new matchers and actions.
+  - does not use exceptions, and
+  - is easy to learn and use.
+
+Package: gmock-isp-dev
+Source: gmock
+Version: 1.6.0-bionic
+Architecture: amd64
+Maintainer: Steve M. Robbins <smr@debian.org>
+Installed-Size: 772
+Depends: gmock-isp (= 1.6.0-bionic)
+Homepage: http://code.google.com/p/googletest/
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/gmock/gmock-isp-dev_1.6.0-bionic_amd64.deb
+Size: 104524
+SHA256: 81298c4a507093330977af08684906ba006feee2debee8dfb1eae99bed484e03
+SHA1: ede0e716c3643d7b7160897db012fa70bc53296a
+MD5sum: dcd2df8a87799723635ac5d72db1b903
+Description: gmock headers
+
+Package: gtest-isp
+Source: gtest
+Version: 1.6.0-bionic
+Architecture: amd64
+Maintainer: Steve M. Robbins <smr@debian.org>
+Installed-Size: 678
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5.2)
+Homepage: http://code.google.com/p/googletest/
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/gtest/gtest-isp_1.6.0-bionic_amd64.deb
+Size: 161412
+SHA256: 3abaf3e1fcb670bdc067f15244e565ac9e970fcc4acfa076b1acb99867264832
+SHA1: ff9246a175a5c731e35b98129de6167fb4e92dba
+MD5sum: a21f758e54e616bbea4d3f0ce0456553
+Description: Google's framework for writing C++ tests - header files
+ Google's framework for writing C++ tests on a variety of platforms. Based on
+ the xUnit architecture. Supports automatic test discovery, a rich set of
+ assertions, user-defined assertions, death tests, fatal and non-fatal failures,
+ value- and type-parameterized tests, various options for running the tests, and
+ XML test report generation.
+ .
+ This package contains the header files needed to link programs against
+ gtest.
+
+Package: gtest-isp-dev
+Source: gtest
+Version: 1.6.0-bionic
+Architecture: amd64
+Maintainer: Steve M. Robbins <smr@debian.org>
+Installed-Size: 869
+Homepage: http://code.google.com/p/googletest/
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/gtest/gtest-isp-dev_1.6.0-bionic_amd64.deb
+Size: 97544
+SHA256: 4bc8d6091c4b18539437a63972e4a28256b4571e76834cf2b2de3693622d27a2
+SHA1: 9b4c224feb370fb6f34a1fe90c89a8b13618e074
+MD5sum: e5b76ea102855baf333fc8e3cea55fd8
+Description: Google's framework for writing C++ tests - header files
+ Google's framework for writing C++ tests on a variety of platforms. Based on
+ the xUnit architecture. Supports automatic test discovery, a rich set of
+ assertions, user-defined assertions, death tests, fatal and non-fatal failures,
+ value- and type-parameterized tests, various options for running the tests, and
+ XML test report generation.
+ .
+ This package contains the header files needed to link programs against
+ gtest.
+
+Package: isp-php52
+Source: php52
+Version: 5.2.17-1252-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 20957
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libct4 (>= 0.64), libcurl4 (>= 7.16.2), libdb5.3, libedit2 (>= 2.11-20080614-0), libfreetype6 (>= 2.2.1), libgmp10, libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmariadb3 (>= 3.0.0), libmcrypt4, libmemcached11, libmhash2 (>= 0.9.9.9), libodbc1 (>= 2.3.1), libpcre3, libpng16-16 (>= 1.6.2-1), libpq5, librecode0 (>= 3.6), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.0.0 (>= 1.0.0), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php52-mod-apache (>> 5.2.17-1252-ubuntu20), isp-php52-mod-apache (<< 5.2.17-1252-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php52/isp-php52_5.2.17-1252-ubuntu20_amd64.deb
+Size: 3849716
+SHA256: effa69bfcbda360a10acf0aa6ab03e573ca7db85d8bc0d2c19f3b56b9f5b409a
+SHA1: 69406136f987eba2aae0d09f1b50d3588cf14282
+MD5sum: d87b1d94b789eb5d606891bba1f47d63
+Description: ISPsystem php-5.2
+
+Package: isp-php52-mod-apache
+Source: php52
+Version: 5.2.17-1252-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 3564
+Depends: libbz2-1.0, libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php52 (= 5.2.17-1252-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php52/isp-php52-mod-apache_5.2.17-1252-ubuntu20_amd64.deb
+Size: 1039864
+SHA256: b3dcfe8df3fee425d47d8b4581c8afa84ced72e845077ce2c23b3611417ebd9b
+SHA1: e4f31b7bf4027c40cebe5804da2bcf260da0686c
+MD5sum: 2dff02e10e519786c97b30e00dfa0b6a
+Description: ISPsystem php-5.2 apache module
+
+Package: isp-php53
+Source: php53
+Version: 5.3.29-1252-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 28522
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libct4 (>= 0.64), libcurl4 (>= 7.16.2), libdb5.3, libedit2 (>= 2.11-20080614-0), libfreetype6 (>= 2.2.1), libgmp10, libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmariadb3 (>= 3.0.0), libmcrypt4, libmemcached11, libodbc1 (>= 2.3.1), libpcre3, libpng16-16 (>= 1.6.2-1), libpq5 (>= 8.4~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.0.0 (>= 1.0.0), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php53-fpm (>> 5.3.29-1252-ubuntu20), isp-php53-fpm (<< 5.3.29-1252-ubuntu20), isp-php53-mod-apache (>> 5.3.29-1252-ubuntu20), isp-php53-mod-apache (<< 5.3.29-1252-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php53/isp-php53_5.3.29-1252-ubuntu20_amd64.deb
+Size: 4692528
+SHA256: 545172a645590ce74219e0596cc487f60f5c92e1843d276f8b47e2bbaac53152
+SHA1: 05928c2661ec4ee96b9f6b43bb2d02ed61effcd2
+MD5sum: 4869154c8634bfc99acad7546f5ddcb1
+Description: ISPsystem php-5.3
+
+Package: isp-php53-fpm
+Source: php53
+Version: 5.3.29-1252-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 7095
+Depends: libbz2-1.0, libc6 (>= 2.29), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php53 (= 5.3.29-1252-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php53/isp-php53-fpm_5.3.29-1252-ubuntu20_amd64.deb
+Size: 1712488
+SHA256: a6bb9e4ed155e39a7fdffcac749658c1f48142c0165af95873139950c228c1a4
+SHA1: 6154e1b3523b7f0ba438bd9adc32255e1c439d52
+MD5sum: 93052888bfae7c971c0cd829a45d328f
+Description: ISPsystem php-5.3 php-fpm service
+
+Package: isp-php53-lsapi
+Source: php53
+Version: 5.3.29-1252-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 6972
+Depends: libbz2-1.0, libc6 (>= 2.29), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php53 (= 5.3.29-1252-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php53/isp-php53-lsapi_5.3.29-1252-ubuntu20_amd64.deb
+Size: 1672540
+SHA256: e5cd9f8deb9519922a36d0fe7757c17014ed25d29ad83d68eef2932cf1ca76c3
+SHA1: 7ffb644813b8a357eeca900f86e9e126f5ec9e6c
+MD5sum: 387ac59602d003fbfa447496f28b7fd6
+Description: ISPsystem php-5.3 LSAPI module
+
+Package: isp-php53-mod-apache
+Source: php53
+Version: 5.3.29-1252-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 7030
+Depends: libbz2-1.0, libc6 (>= 2.29), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php53 (= 5.3.29-1252-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php53/isp-php53-mod-apache_5.3.29-1252-ubuntu20_amd64.deb
+Size: 1666616
+SHA256: cce54f9ec510720d885f42236a6d48327ab599c64d68031bdc9319e951ef9d98
+SHA1: e3cdc6df5b0c466f2238a8aeb6fd27e5ad97c8b4
+MD5sum: da6f1fb02b977f42585e4d6114f86c05
+Description: ISPsystem php-5.3 apache module
+
+Package: isp-php54
+Source: php54
+Version: 5.4.45-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 32750
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libct4 (>= 0.64), libcurl4 (>= 7.16.2), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgmp10, libgomp1 (>= 9), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmariadb3 (>= 3.0.0), libmcrypt4, libmemcached11, libodbc1 (>= 2.3.1), libpcre3, libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.0~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.0.0 (>= 1.0.0), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libvpx6 (>= 1.6.0), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php54-fpm (>> 5.4.45-1313-ubuntu20), isp-php54-fpm (<< 5.4.45-1313-ubuntu20), isp-php54-mod-apache (>> 5.4.45-1313-ubuntu20), isp-php54-mod-apache (<< 5.4.45-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php54/isp-php54_5.4.45-1313-ubuntu20_amd64.deb
+Size: 7085444
+SHA256: 8950465b182edc2e85132a46bb46c6c26e4de7516d2ebf8c2a4510f8b8f0b9f8
+SHA1: 66d5f8b8e66d611f20c6ccb0e02ee7c1608e5ff6
+MD5sum: 246c3e34d0ea2d8683784b157519deef
+Description: ISPsystem php-5.4
+
+Package: isp-php54-fpm
+Source: php54
+Version: 5.4.45-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 8750
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php54 (= 5.4.45-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php54/isp-php54-fpm_5.4.45-1313-ubuntu20_amd64.deb
+Size: 2033596
+SHA256: f1c69b534b01a3267d6d28d4cce371048d2f76d9ba75b01ae0bad63406ac62df
+SHA1: 94a62c85eb46aab9c8ee54692eb2570a939e8e41
+MD5sum: f0a2f2f348dcaefdcc7530dd9d684419
+Description: ISPsystem php-5.4 php-fpm service
+
+Package: isp-php54-lsapi
+Source: php54
+Version: 5.4.45-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 8631
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php54 (= 5.4.45-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php54/isp-php54-lsapi_5.4.45-1313-ubuntu20_amd64.deb
+Size: 1998556
+SHA256: ce2038a8434f26ff21fbf0bb263b319900ac7072222bde87ebfc9a47443d57d8
+SHA1: 885c76f3e12cc3c1f42ea282ed8a0b090aef1df7
+MD5sum: e4464172e37e9c97383ce033b50bdd3b
+Description: ISPsystem php-5.4 LSAPI module
+
+Package: isp-php54-mod-apache
+Source: php54
+Version: 5.4.45-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 8727
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php54 (= 5.4.45-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php54/isp-php54-mod-apache_5.4.45-1313-ubuntu20_amd64.deb
+Size: 1983432
+SHA256: b70e7bf2d3d57687409ae084ceea8610e08f1ce047268a3c112a17690b82fd94
+SHA1: aacee6cc47478158840ec5ab3f76480314c59201
+MD5sum: c16e459173505deb16adfac6f6ca4ab3
+Description: ISPsystem php-5.4 apache module
+
+Package: isp-php55
+Source: php55
+Version: 5.5.38-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 34600
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libct4 (>= 0.64), libcurl4 (>= 7.18.0), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgmp10, libgomp1 (>= 9), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmariadb3 (>= 3.0.0), libmcrypt4, libmemcached11, libodbc1 (>= 2.3.1), libpcre3, libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.0~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.1.1), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libvpx6 (>= 1.6.0), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php55-fpm (>> 5.5.38-1313-ubuntu20), isp-php55-fpm (<< 5.5.38-1313-ubuntu20), isp-php55-mod-apache (>> 5.5.38-1313-ubuntu20), isp-php55-mod-apache (<< 5.5.38-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php55/isp-php55_5.5.38-1313-ubuntu20_amd64.deb
+Size: 7413368
+SHA256: 64c0077464c5dfe83d7211438687730bf5acbc0c64ce0a6d0990eb8e8af402d1
+SHA1: 57124e0daedf0c43fa1424211f4a3d143eb49a4c
+MD5sum: aeef0e0f4bdeafeb82e77e5268a343a4
+Description: ISPsystem php-5.5
+
+Package: isp-php55-fpm
+Source: php55
+Version: 5.5.38-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9280
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php55 (= 5.5.38-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php55/isp-php55-fpm_5.5.38-1313-ubuntu20_amd64.deb
+Size: 2088736
+SHA256: 8b8f8ca9d56f72420fec842dd07550380b76d9a762d832de49756b9b02b977c1
+SHA1: c90ed0d7ef550a932a60058466ac9bfb9b90e381
+MD5sum: bf93d473bf9e01b3eb902ec7658ec130
+Description: ISPsystem php-5.5 php-fpm service
+
+Package: isp-php55-lsapi
+Source: php55
+Version: 5.5.38-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9160
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php55 (= 5.5.38-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php55/isp-php55-lsapi_5.5.38-1313-ubuntu20_amd64.deb
+Size: 2051140
+SHA256: 6887ba96e584c75de2b4debfb19c46962e88653a9203850826f74f386dad61c8
+SHA1: 608a5450fbb5d9e60f52b3726c4132a7ff6e9109
+MD5sum: c96a1856f68609e5d3af01cd35f2908b
+Description: ISPsystem php-5.5 LSAPI module
+
+Package: isp-php55-mod-apache
+Source: php55
+Version: 5.5.38-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9261
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php55 (= 5.5.38-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php55/isp-php55-mod-apache_5.5.38-1313-ubuntu20_amd64.deb
+Size: 2039964
+SHA256: 7026b43a3458798163259863b25cb2872e763044707808eca8161b02b08528b1
+SHA1: 3fac6c9f345ef2357dda7a0855f30c7a64b004ba
+MD5sum: 2d0660acc4fbda0357aa35ca5a078058
+Description: ISPsystem php-5.5 apache module
+
+Package: isp-php56
+Source: php56
+Version: 5.6.40-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 35208
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libct4 (>= 0.64), libcurl4 (>= 7.18.0), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgmp10, libgomp1 (>= 9), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmariadb3 (>= 3.0.0), libmcrypt4, libmemcached11, libodbc1 (>= 2.3.1), libpcre3, libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.1.1), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libvpx6 (>= 1.6.0), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php56-fpm (>> 5.6.40-1313-ubuntu20), isp-php56-fpm (<< 5.6.40-1313-ubuntu20), isp-php56-mod-apache (>> 5.6.40-1313-ubuntu20), isp-php56-mod-apache (<< 5.6.40-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php56/isp-php56_5.6.40-1313-ubuntu20_amd64.deb
+Size: 7497716
+SHA256: 06eaf896da0032ce7e78b4bf1350fa89d47144f410d7a8861936d4f5dd8b8943
+SHA1: f7673546bd553be794eadecfe16e876314cdd4cd
+MD5sum: 676f64c5721a93554ebf841d7dbf78fd
+Description: ISPsystem php-5.6
+
+Package: isp-php56-fpm
+Source: php56
+Version: 5.6.40-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9500
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php56 (= 5.6.40-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php56/isp-php56-fpm_5.6.40-1313-ubuntu20_amd64.deb
+Size: 2111392
+SHA256: 78a2fbca068a89f908fd441cd7fbc21f82ae6a7c4a1138b507f4a4a24a2cf203
+SHA1: db4096a245c8a11a1da6639a23688e7b04d2733b
+MD5sum: 8e57a20dc9ab26bd527129175557cef0
+Description: ISPsystem php-5.6 php-fpm service
+
+Package: isp-php56-lsapi
+Source: php56
+Version: 5.6.40-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9384
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php56 (= 5.6.40-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php56/isp-php56-lsapi_5.6.40-1313-ubuntu20_amd64.deb
+Size: 2075600
+SHA256: 955c6da37f1f87b3976a44f88517ca3e2a9e7f2ffd6e46f98d4a3446aadc4923
+SHA1: b5aed72770714856cc6dd2735358094099090781
+MD5sum: e7b2d5199d610a188ecdce4d98fd7b4d
+Description: ISPsystem php-5.6 LSAPI module
+
+Package: isp-php56-mod-apache
+Source: php56
+Version: 5.6.40-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9486
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php56 (= 5.6.40-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php56/isp-php56-mod-apache_5.6.40-1313-ubuntu20_amd64.deb
+Size: 2062096
+SHA256: 0379ec083ee521a98e9437f5206b959ae659d90e0dbfa43b3b08a74cd5042339
+SHA1: e63783752b0adee74e6dcfc2a415b3db523e36ae
+MD5sum: 703522c37e3a53ad5a774387a5b2ff4b
+Description: ISPsystem php-5.6 apache module
+
+Package: isp-php70
+Source: php70
+Version: 7.0.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 44549
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.18.0), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgmp10, libgomp1 (>= 9), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmcrypt4, libmemcached11, libodbc1 (>= 2.3.1), libpcre3, libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php70-fpm (>> 7.0.33-1313-ubuntu20), isp-php70-fpm (<< 7.0.33-1313-ubuntu20), isp-php70-mod-apache (>> 7.0.33-1313-ubuntu20), isp-php70-mod-apache (<< 7.0.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php70/isp-php70_7.0.33-1313-ubuntu20_amd64.deb
+Size: 9475772
+SHA256: c35bff750728e89219564be6594f0bd56eac208e155716171129368e79b7e275
+SHA1: e8d5a5ba016a12c89c20661c93ed92e6d94fa55f
+MD5sum: 43f7b83103d92908f616b4e5d69871c9
+Description: ISPsystem php-7.0
+
+Package: isp-php70-fpm
+Source: php70
+Version: 7.0.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9871
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php70 (= 7.0.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php70/isp-php70-fpm_7.0.33-1313-ubuntu20_amd64.deb
+Size: 2221304
+SHA256: 780b90775ef19c83bd5fccf18284ef6471c67698d2d93ab7c759eb10ff6b407d
+SHA1: f1631454fa73fdcda2bbd6637b0305d0581dc559
+MD5sum: 7866d4199ef5749fb2138db92680b308
+Description: ISPsystem php-7.0 php-fpm service
+
+Package: isp-php70-lsapi
+Source: php70
+Version: 7.0.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9746
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php70 (= 7.0.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php70/isp-php70-lsapi_7.0.33-1313-ubuntu20_amd64.deb
+Size: 2183636
+SHA256: 75663ad2b23060f5c9f965081242a390744975b4bca4ad40fabdfe1c810e9e5c
+SHA1: dafe84a5790331854ada5a0bee26a04538608af6
+MD5sum: b097fcaf4a7eb3f4b0af107f23c066a8
+Description: ISPsystem php-7.0 LSAPI module
+
+Package: isp-php70-mod-apache
+Source: php70
+Version: 7.0.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 9853
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libpcre3, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php70 (= 7.0.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php70/isp-php70-mod-apache_7.0.33-1313-ubuntu20_amd64.deb
+Size: 2167124
+SHA256: 65c4c12a5c7e292371a644ef15e5f0d72dda8dea53ba80d4fa04332390c41507
+SHA1: b3ac1995adba3f9196ecf6f472240a9a0b38b199
+MD5sum: c4540a62851986e52349a8779b28c193
+Description: ISPsystem php-7.0 apache module
+
+Package: isp-php71
+Source: php71
+Version: 7.1.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 48030
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.44.0), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmcrypt4, libmemcached11, libodbc1 (>= 2.3.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsqlite3-0 (>= 3.5.9), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.9), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php71-fpm (>> 7.1.33-1313-ubuntu20), isp-php71-fpm (<< 7.1.33-1313-ubuntu20), isp-php71-mod-apache (>> 7.1.33-1313-ubuntu20), isp-php71-mod-apache (<< 7.1.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php71/isp-php71_7.1.33-1313-ubuntu20_amd64.deb
+Size: 10403840
+SHA256: b19931a55ddbddb78e1be3008cae1ca689f31d98abcec540f3021804a45b9b1a
+SHA1: ff491c47d56b445460675e6a3f419e51c6345280
+MD5sum: 205ec8af01531bf800fcc45541e49220
+Description: ISPsystem php-7.1
+
+Package: isp-php71-fpm
+Source: php71
+Version: 7.1.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 10522
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php71 (= 7.1.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php71/isp-php71-fpm_7.1.33-1313-ubuntu20_amd64.deb
+Size: 2441652
+SHA256: 453c2830f6aa68299bf78c9d8f5ac042218539a8feae87015106c4a60667f7a1
+SHA1: 4b28184a925a22c4d64b292a94489c05394c0739
+MD5sum: 62f9158dd448c4d642406c2ff2eaa232
+Description: ISPsystem php-7.1 php-fpm service
+
+Package: isp-php71-lsapi
+Source: php71
+Version: 7.1.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 10405
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php71 (= 7.1.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php71/isp-php71-lsapi_7.1.33-1313-ubuntu20_amd64.deb
+Size: 2406852
+SHA256: a55eb9fae633c5fd4d78b3c7b2e752e45295c85b4ef036fae9441fca12c90433
+SHA1: 82a75269ae8142aa8e6f58568b3aff40b6838e53
+MD5sum: 13b4b9eca32bf63c93c6c6bd6049a264
+Description: ISPsystem php-7.1 LSAPI module
+
+Package: isp-php71-mod-apache
+Source: php71
+Version: 7.1.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 10512
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php71 (= 7.1.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php71/isp-php71-mod-apache_7.1.33-1313-ubuntu20_amd64.deb
+Size: 2386480
+SHA256: e65788950e5890b5be02d6a37dcd32893aba6bfa2304dc7a3b0fc02572d66cea
+SHA1: 64767bf0441bfa6711fc189a95d46757c6ed2ce4
+MD5sum: e37234b6b7255bb0337a5697fa352c66
+Description: ISPsystem php-7.1 apache module
+
+Package: isp-php72
+Source: php72
+Version: 7.2.34-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 54843
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.44.0), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.7), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.14), libsqlite3-0 (>= 3.7.14), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.9), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php72-fpm (>> 7.2.34-1313-ubuntu20), isp-php72-fpm (<< 7.2.34-1313-ubuntu20), isp-php72-mod-apache (>> 7.2.34-1313-ubuntu20), isp-php72-mod-apache (<< 7.2.34-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php72/isp-php72_7.2.34-1313-ubuntu20_amd64.deb
+Size: 10717212
+SHA256: e2da19c5c71adef54917e1b55851aeefd63053721f69e8ba7bb726e00673c127
+SHA1: 9fbcd436e42f16bb16a69821d7202a9afcf528e4
+MD5sum: 8ff7f4a2f6508dfd03377d371a3612b2
+Description: ISPsystem php-7.2
+
+Package: isp-php72-fpm
+Source: php72
+Version: 7.2.34-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12631
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php72 (= 7.2.34-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php72/isp-php72-fpm_7.2.34-1313-ubuntu20_amd64.deb
+Size: 2529308
+SHA256: 1c4850a7f8af7bc3834439a18026130c817327a535e221999a69aa6b794df2b1
+SHA1: d1df43b1325542acb2d0159c95f68603b99395a8
+MD5sum: 26a6d277e31ae206c44aee2547328f51
+Description: ISPsystem php-7.2 php-fpm service
+
+Package: isp-php72-lsapi
+Source: php72
+Version: 7.2.34-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12524
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php72 (= 7.2.34-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php72/isp-php72-lsapi_7.2.34-1313-ubuntu20_amd64.deb
+Size: 2494332
+SHA256: 5ffaff4d9b13ef81258aeebd080fa1b0228d162111613fb343b6c590eebcd8c8
+SHA1: 339ebbd14343b772158c0a195008cbc88044178e
+MD5sum: 5a27ad6a4482313df21ad5cd728bf65c
+Description: ISPsystem php-7.2 LSAPI module
+
+Package: isp-php72-mod-apache
+Source: php72
+Version: 7.2.34-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12572
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php72 (= 7.2.34-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php72/isp-php72-mod-apache_7.2.34-1313-ubuntu20_amd64.deb
+Size: 2478632
+SHA256: 51aef5988fa2ffd16c829a17fd21439bd01b717e008634cf14de46d6e7e6b97d
+SHA1: 1ea5d3bb59b57c7fae6dbc29100fa1bb556518dc
+MD5sum: a65981470ee7c28e820c71e6f3295289
+Description: ISPsystem php-7.2 apache module
+
+Package: isp-php73
+Source: php73
+Version: 7.3.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 55589
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.56.1), libdb5.3, libedit2 (>= 3.1-20130611-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.11), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), librecode0 (>= 3.6), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.14), libsqlite3-0 (>= 3.7.14), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.9), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4)
+Breaks: isp-php73-fpm (>> 7.3.33-1313-ubuntu20), isp-php73-fpm (<< 7.3.33-1313-ubuntu20), isp-php73-mod-apache (>> 7.3.33-1313-ubuntu20), isp-php73-mod-apache (<< 7.3.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php73/isp-php73_7.3.33-1313-ubuntu20_amd64.deb
+Size: 10909040
+SHA256: c3a0ad250115b182dd26eacb85f473c68f3c3ba812b76d18e0edcc85f7f6be56
+SHA1: de0b99550b9ba42cabe8a13383bc2dc17f4a4dfc
+MD5sum: 8df8869790d7391de78fd310f87adf5c
+Description: ISPsystem php-7.3
+
+Package: isp-php73-fpm
+Source: php73
+Version: 7.3.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12908
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php73 (= 7.3.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php73/isp-php73-fpm_7.3.33-1313-ubuntu20_amd64.deb
+Size: 2572416
+SHA256: 4d4200d737350883da0fef94c6d9248ecb6d01776e164c06f653dfb7e7c739f9
+SHA1: 2b8069f2349c2f383f14e303efc9577af2a4561e
+MD5sum: 7ad1933539302ac23773d3979c0867f3
+Description: ISPsystem php-7.3 php-fpm service
+
+Package: isp-php73-lsapi
+Source: php73
+Version: 7.3.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12793
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php73 (= 7.3.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php73/isp-php73-lsapi_7.3.33-1313-ubuntu20_amd64.deb
+Size: 2533492
+SHA256: 7ce8291325bfed92adfd98d72fe9d621b9bdd8b20510ce1060e33fa105d573eb
+SHA1: edbfed11d42b0c7b897182addc4d153b7a477c78
+MD5sum: 6e1d1399e491b45f369e73dddba19f11
+Description: ISPsystem php-7.3 LSAPI module
+
+Package: isp-php73-mod-apache
+Source: php73
+Version: 7.3.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12845
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20130611-0), libgmp10, libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php73 (= 7.3.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php73/isp-php73-mod-apache_7.3.33-1313-ubuntu20_amd64.deb
+Size: 2516696
+SHA256: f821f0cd96714657b0e0e98de0852ddd3ea869809777c86314451d64a24bc6a3
+SHA1: c1e79b07bd5dee8fa513a73e299c4c49a73f1fce
+MD5sum: 3ecc94b07399367a93bc141345277d3c
+Description: ISPsystem php-7.3 apache module
+
+Package: isp-php74
+Source: php74
+Version: 7.4.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 52301
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.56.1), libdb5.3, libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.25), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libonig5 (>= 6.8.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.14), libsqlite3-0 (>= 3.14.0), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.9), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), libzip5 (>= 1.5.0), zlib1g (>= 1:1.1.4)
+Breaks: isp-php74-fpm (>> 7.4.33-1313-ubuntu20), isp-php74-fpm (<< 7.4.33-1313-ubuntu20), isp-php74-mod-apache (>> 7.4.33-1313-ubuntu20), isp-php74-mod-apache (<< 7.4.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php74/isp-php74_7.4.33-1313-ubuntu20_amd64.deb
+Size: 9382952
+SHA256: d06022bc82a4c41f6fbadaf5d902239bb9c95ab06bdcf5f01365abf483616b7e
+SHA1: 7f69a70e45f2f4f3d0dbe50ca28277ef9da92787
+MD5sum: 2196fd4cf61767c2357f2cbe9236b90c
+Description: ISPsystem php-7.4
+
+Package: isp-php74-fpm
+Source: php74
+Version: 7.4.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12237
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php74 (= 7.4.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php74/isp-php74-fpm_7.4.33-1313-ubuntu20_amd64.deb
+Size: 2158460
+SHA256: b3aeae92c3637c8a279343f73fbb718dfb5f71ac80a2667dcfc05286333b5374
+SHA1: 1b7c6af8e54834a8f2b4d72b8de441fe42e3bf24
+MD5sum: 99f922d8d469995a6f833fb638a7b265
+Description: ISPsystem php-7.4 php-fpm service
+
+Package: isp-php74-lsapi
+Source: php74
+Version: 7.4.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12112
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php74 (= 7.4.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php74/isp-php74-lsapi_7.4.33-1313-ubuntu20_amd64.deb
+Size: 2116388
+SHA256: d5f0318417323b0e3cf7f3b76d11edf9dd3ba097c6895e80012fb39bc8a0e7ab
+SHA1: 00ebd9b52ad7f5a040f663e9557c49d5a24424c8
+MD5sum: bb1457316013891bc295438fdc9af275
+Description: ISPsystem php-7.4 LSAPI module
+
+Package: isp-php74-mod-apache
+Source: php74
+Version: 7.4.33-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 12165
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php74 (= 7.4.33-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php74/isp-php74-mod-apache_7.4.33-1313-ubuntu20_amd64.deb
+Size: 2100784
+SHA256: d7001d25ac16886dca7ab5cbfb240cf450f8cd7988ff0d4a189d2fd002c9e178
+SHA1: b5dd4267435578247bbbe7dd95f077843113a821
+MD5sum: dcfef353b48e43225f283dd85c55dfb4
+Description: ISPsystem php-7.4 apache module
+
+Package: isp-php80
+Source: php80
+Version: 8.0.30-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 55668
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.56.1), libdb5.3, libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.0), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.25), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libonig5 (>= 6.8.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.14), libsqlite3-0 (>= 3.14.0), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.0), libstdc++6 (>= 4.9), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), libzip5 (>= 1.5.0), zlib1g (>= 1:1.1.4)
+Breaks: isp-php80-fpm (>> 8.0.30-1313-ubuntu20), isp-php80-fpm (<< 8.0.30-1313-ubuntu20), isp-php80-mod-apache (>> 8.0.30-1313-ubuntu20), isp-php80-mod-apache (<< 8.0.30-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php80/isp-php80_8.0.30-1313-ubuntu20_amd64.deb
+Size: 9476704
+SHA256: 756147b5e0598c04ae99da5879bd98e51166c5fd918d37333af7485e5554643e
+SHA1: 0b058a64c5aa2af041419bcd1706c8c4d51657eb
+MD5sum: 284b0910b8e05e7af5c4d54f8f00b165
+Description: ISPsystem php-8.0
+
+Package: isp-php80-fpm
+Source: php80
+Version: 8.0.30-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 13446
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php80 (= 8.0.30-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php80/isp-php80-fpm_8.0.30-1313-ubuntu20_amd64.deb
+Size: 2226292
+SHA256: ffd9f1c37b41462a6943041aaf22fe9ae4682bcc97396f51bbbbe39a1cbb5fb1
+SHA1: efe9aad7ab57f8f52186f23647cfb92daf8bd908
+MD5sum: 19888999a16a6753af6ad368bcd31c9f
+Description: ISPsystem php-8.0 php-fpm service
+
+Package: isp-php80-lsapi
+Source: php80
+Version: 8.0.30-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 13312
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php80 (= 8.0.30-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php80/isp-php80-lsapi_8.0.30-1313-ubuntu20_amd64.deb
+Size: 2186732
+SHA256: 176764f14f5491bb0a35691260633bc2332dc0baac7545b268cd23d75f9b1677
+SHA1: 21053e8ef4548bc2b5da8665462f792f6b08dbea
+MD5sum: 627df97d477e1c0bfa69bb6667a56b8a
+Description: ISPsystem php-8.0 LSAPI module
+
+Package: isp-php80-mod-apache
+Source: php80
+Version: 8.0.30-1313-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 13366
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.0), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php80 (= 8.0.30-1313-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php80/isp-php80-mod-apache_8.0.30-1313-ubuntu20_amd64.deb
+Size: 2169808
+SHA256: 557e34996f334417fd476c62a958da3791a128be5ab720f8805232cfb2747202
+SHA1: 603f2b10a1fe27534e98e7e71f4a08ac6d596919
+MD5sum: dd198e851740e39e244d75119a138e74
+Description: ISPsystem php-8.0 apache module
+
+Package: isp-php81
+Source: php81
+Version: 8.1.27-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 58696
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.56.1), libdb5.3, libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.3), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.25), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libonig5 (>= 6.8.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.18), libsqlite3-0 (>= 3.14.0), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.1), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), libzip5 (>= 1.5.0), zlib1g (>= 1:1.1.4)
+Breaks: isp-php81-fpm (>> 8.1.27-1326-ubuntu20), isp-php81-fpm (<< 8.1.27-1326-ubuntu20), isp-php81-mod-apache (>> 8.1.27-1326-ubuntu20), isp-php81-mod-apache (<< 8.1.27-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php81/isp-php81_8.1.27-1326-ubuntu20_amd64.deb
+Size: 10321796
+SHA256: 9269640192abf175d9d61fedc74f4db470b8743739a21580770121139dc12f24
+SHA1: f34afc8907bbb1a672da19637dd2f0cdf1c6bee6
+MD5sum: f248401e3e22d1b269613f5ed04643f3
+Description: ISPsystem php-8.1
+
+Package: isp-php81-fpm
+Source: php81
+Version: 8.1.27-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 14014
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php81 (= 8.1.27-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php81/isp-php81-fpm_8.1.27-1326-ubuntu20_amd64.deb
+Size: 2412564
+SHA256: b18d7a39b8c0767ee174393f7274a32e4d55d7d16849ca6b8fb895b1df190727
+SHA1: 7fe873a57833f9e7b70ec17665343a78f26b02f5
+MD5sum: ca9db81330ee3f54aa9e5b0bd8e1c135
+Description: ISPsystem php-8.1 php-fpm service
+
+Package: isp-php81-lsapi
+Source: php81
+Version: 8.1.27-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 13880
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php81 (= 8.1.27-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php81/isp-php81-lsapi_8.1.27-1326-ubuntu20_amd64.deb
+Size: 2368064
+SHA256: 56b7e0488877305c220cd1a28d42b4d273c39d0aa3368b34a97c14189d7c18eb
+SHA1: 00ab7c95443b14ab3695ba00d7b57ba175694041
+MD5sum: fed1ee053e61de07c01cb96c27bc0c7b
+Description: ISPsystem php-8.1 LSAPI module
+
+Package: isp-php81-mod-apache
+Source: php81
+Version: 8.1.27-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 13939
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php81 (= 8.1.27-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php81/isp-php81-mod-apache_8.1.27-1326-ubuntu20_amd64.deb
+Size: 2350168
+SHA256: 4d98f0c1cb7015b1a1ff24d23690da99d83d646c8980406b54708878c20a5f5b
+SHA1: ca3e45316bf3dee67503cc0060ca45296f576e9e
+MD5sum: e38def3211ef163552baa85c3c5f8d0f
+Description: ISPsystem php-8.1 apache module
+
+Package: isp-php82
+Source: php82
+Version: 8.2.14-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 59567
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.29), libcurl4 (>= 7.63.0), libdb5.3, libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.3), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.25), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libonig5 (>= 6.8.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.3~), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.18), libsqlite3-0 (>= 3.14.0), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.1), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), libzip5 (>= 1.5.0), zlib1g (>= 1:1.1.4)
+Breaks: isp-php82-fpm (>> 8.2.14-1326-ubuntu20), isp-php82-fpm (<< 8.2.14-1326-ubuntu20), isp-php82-mod-apache (>> 8.2.14-1326-ubuntu20), isp-php82-mod-apache (<< 8.2.14-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php82/isp-php82_8.2.14-1326-ubuntu20_amd64.deb
+Size: 10545336
+SHA256: eed829ed51f10a537fbf21d93567b0db0a16954fe03371552c24eef05d4bcb0c
+SHA1: 5bc09ee47f7cc28094d503534564a1859ac2468b
+MD5sum: 629ca1f41577e7ad17ff86a84a0830f5
+Description: ISPsystem php-8.2
+
+Package: isp-php82-fpm
+Source: php82
+Version: 8.2.14-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 14146
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php82 (= 8.2.14-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php82/isp-php82-fpm_8.2.14-1326-ubuntu20_amd64.deb
+Size: 2455260
+SHA256: b80e4b2b652728f9e00ecf09561b1562b95161215a8456b1a74411ab005076c2
+SHA1: 528a95362000a9763af4a26260e8031fa2a1fc47
+MD5sum: 67a22982691f77d5352232940e0544c6
+Description: ISPsystem php-8.2 php-fpm service
+
+Package: isp-php82-lsapi
+Source: php82
+Version: 8.2.14-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 14017
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php82 (= 8.2.14-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php82/isp-php82-lsapi_8.2.14-1326-ubuntu20_amd64.deb
+Size: 2411196
+SHA256: 89ecd675d6351b761a7a8442d2baac8bf73c959454975c5b30cefb4aa36a40da
+SHA1: 890289944f75f0535a561833c5fd43a80d6828f2
+MD5sum: f1159f788ac6240346147dde62d2471e
+Description: ISPsystem php-8.2 LSAPI module
+
+Package: isp-php82-mod-apache
+Source: php82
+Version: 8.2.14-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 14076
+Depends: libbz2-1.0, libc6 (>= 2.29), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php82 (= 8.2.14-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php82/isp-php82-mod-apache_8.2.14-1326-ubuntu20_amd64.deb
+Size: 2399292
+SHA256: dd354f9c6d038178ab3b026b2dfd34072e6ae8f34f386b42665d6a69d1524dd0
+SHA1: 55c211ae4504fe863471efbf79819e8e95bfd0ee
+MD5sum: 9f858ce200cb0ef8aca6c35c794001f0
+Description: ISPsystem php-8.2 apache module
+
+Package: isp-php83
+Source: php83
+Version: 8.3.1-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 61367
+Depends: libaspell15 (>= 0.60.8), libbz2-1.0, libc-client2007e, libc6 (>= 2.30), libcurl4 (>= 7.63.0), libdb5.3, libedit2 (>= 3.1-20160903-0), libfreetype6 (>= 2.2.1), libgcc-s1 (>= 3.3), libgmp10, libgomp1 (>= 9), libicu66 (>= 66.1-1~), libjpeg8 (>= 8c), libldap-2.4-2 (>= 2.4.25), libmagickcore-6.q16-6 (>= 8:6.9.10.2), libmagickwand-6.q16-6 (>= 8:6.9.10.2), libmemcached11, libodbc1 (>= 2.3.1), libonig5 (>= 6.8.1), libpng16-16 (>= 1.6.2-1), libpq5 (>= 9.6~~), libsasl2-2 (>= 2.1.27+dfsg), libsnmp35 (>= 5.8+dfsg), libsodium23 (>= 1.0.18), libsqlite3-0 (>= 3.14.0), libssh2-1 (>= 1.2.9), libssl1.1 (>= 1.1.1), libsybdb5 (>= 0.63), libtidy5deb1 (>= 1:5.2.0), libwebp6 (>= 0.5.1), libxml2 (>= 2.9.0), libxpm4, libxslt1.1 (>= 1.1.25), libzip5 (>= 1.5.0), zlib1g (>= 1:1.1.4)
+Breaks: isp-php83-fpm (>> 8.3.1-1326-ubuntu20), isp-php83-fpm (<< 8.3.1-1326-ubuntu20), isp-php83-mod-apache (>> 8.3.1-1326-ubuntu20), isp-php83-mod-apache (<< 8.3.1-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php83/isp-php83_8.3.1-1326-ubuntu20_amd64.deb
+Size: 10379916
+SHA256: e3ecacbd981373afc472f143536e85ba639665350bac5f3cd86c22ea5e76af42
+SHA1: b0a9dd12fd385a255440093edd66e8acc11f7acc
+MD5sum: 12e1f1aa56ac70b43c66f5ae5243ca99
+Description: ISPsystem php-8.2
+
+Package: isp-php83-fpm
+Source: php83
+Version: 8.3.1-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 15165
+Depends: libbz2-1.0, libc6 (>= 2.30), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php83 (= 8.3.1-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php83/isp-php83-fpm_8.3.1-1326-ubuntu20_amd64.deb
+Size: 2520240
+SHA256: 4a40b6db2aac04b86c4f2d62293faea588523ed1352adb6504a4ff33ee7da3c9
+SHA1: b68682ebc7ac2353ba6fefeddcdf870ac685828a
+MD5sum: 584e11e0c4205b79d07a3ae74c631d7f
+Description: ISPsystem php-8.2 php-fpm service
+
+Package: isp-php83-lsapi
+Source: php83
+Version: 8.3.1-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 15033
+Depends: libbz2-1.0, libc6 (>= 2.30), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php83 (= 8.3.1-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php83/isp-php83-lsapi_8.3.1-1326-ubuntu20_amd64.deb
+Size: 2475688
+SHA256: 5059e15b84e63e95b38786762eb88c93c47e6b7c584addea10a65a43bdb400b8
+SHA1: 23790c7e8b2f75c39af66583a9f0b677d705fbb2
+MD5sum: 11b52033492c25609b514748a53b090c
+Description: ISPsystem php-8.2 LSAPI module
+
+Package: isp-php83-mod-apache
+Source: php83
+Version: 8.3.1-1326-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 15005
+Depends: libbz2-1.0, libc6 (>= 2.30), libedit2 (>= 3.1-20160903-0), libgmp10, libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libxml2 (>= 2.9.0), zlib1g (>= 1:1.1.4), isp-php83 (= 8.3.1-1326-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/php83/isp-php83-mod-apache_8.3.1-1326-ubuntu20_amd64.deb
+Size: 2458272
+SHA256: 483437a2471795193b68b2137be1db036c1970821e2a94514097284dc862e663
+SHA1: 8b41a2e8fc25f1d4de6c9e3d51b7baf9ee77ea1f
+MD5sum: 41e36edd9d7fb4771b9f35d7cc72acdb
+Description: ISPsystem php-8.2 apache module
+
+Package: isp-python310
+Source: py310
+Version: 3.10.13-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 94035
+Depends: libbz2-1.0, libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), libdb5.3, libexpat1 (>= 2.1~beta3), libffi7 (>= 3.3~20180313), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6.1), libreadline8 (>= 7.0~beta), libsqlite3-0 (>= 3.14.0), libssl1.1 (>= 1.1.1), libtinfo6 (>= 6), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py310/isp-python310_3.10.13-38-ubuntu20_amd64.deb
+Size: 16966984
+SHA256: cc7aa7ebcef387cced2179bcbddac5ff4755ef19b0a99067b516433fa63fb6b8
+SHA1: 5fec395e751e0f808d060b6a0299825de8511fbf
+MD5sum: ae675df8ffc794c36b286cda31d045c0
+Description: Ispmanager python3.10
+
+Package: isp-python310-test
+Source: py310
+Version: 3.10.13-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 71081
+Depends: libc6 (>= 2.14), isp-python310 (= 3.10.13-38-ubuntu20)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py310/isp-python310-test_3.10.13-38-ubuntu20_amd64.deb
+Size: 7556600
+SHA256: 7b1dc24ddc1859f21f7e22e3b09cb16c4fc5756a86f77b87bd2c25fea77521d3
+SHA1: 456326d71504c34be013cdeb900400a302c96a9d
+MD5sum: 1f31774a5e3e36551f0be40248a2adc8
+Description: Test suite for python3.10
+
+Package: isp-python311
+Source: py311
+Version: 3.11.5-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 126022
+Depends: libbz2-1.0, libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), libdb5.3, libexpat1 (>= 2.1~beta3), libffi7 (>= 3.3~20180313), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6.1), libreadline8 (>= 7.0~beta), libsqlite3-0 (>= 3.25.0), libssl1.1 (>= 1.1.1), libtinfo6 (>= 6), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py311/isp-python311_3.11.5-38-ubuntu20_amd64.deb
+Size: 20382172
+SHA256: 2d4066a4cabcd3bd2a8142e5e4660a38d64ac6c5eee5dafcecd2ad0b905b33ce
+SHA1: 04cef59ecba964a939c9d5dcb969c14b0c7cc1fc
+MD5sum: 639bb0dcdde8e4b4612bc405493538cb
+Description: Ispmanager python3.11
+
+Package: isp-python311-test
+Source: py311
+Version: 3.11.5-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 127597
+Depends: libc6 (>= 2.14), isp-python311 (= 3.11.5-38-ubuntu20)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py311/isp-python311-test_3.11.5-38-ubuntu20_amd64.deb
+Size: 10678708
+SHA256: 70646ce3cd87950c26eb1c24447ceabdec97f378f1319083e9f69ab393c98068
+SHA1: 96e996665c8d7e99dbcafc09eb32c4fd5a5b254a
+MD5sum: 2e95d3506c3eaaf059c5461df644902c
+Description: Test suite for python3.11
+
+Package: isp-python312
+Source: py312
+Version: 3.12.0-47-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 106934
+Depends: libbz2-1.0, libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), libdb5.3, libexpat1 (>= 2.1~beta3), libffi7 (>= 3.3~20180313), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6.1), libreadline8 (>= 7.0~beta), libsqlite3-0 (>= 3.25.0), libssl1.1 (>= 1.1.1), libtinfo6 (>= 6), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py312/isp-python312_3.12.0-47-ubuntu20_amd64.deb
+Size: 17745048
+SHA256: 333363d4835f848ddae9fae409dd6b33d19dc5dd7c6662efb76fd6e64540d5e3
+SHA1: b3a03043390316cd8371fa1f4def413f3a34d1b8
+MD5sum: 7386c162becd8475186844265b08f750
+Description: Ispmanager python3.12
+
+Package: isp-python312-test
+Source: py312
+Version: 3.12.0-47-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 120568
+Depends: libc6 (>= 2.14), isp-python312 (= 3.12.0-47-ubuntu20)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py312/isp-python312-test_3.12.0-47-ubuntu20_amd64.deb
+Size: 11901140
+SHA256: e3d6ef4de24200c7a6d3a68bfff52f23e52cdcb4d6425244b93ed28c39927fd9
+SHA1: 3a04c42eb7d53c655eb1c3f01eb43b3d5ab7db01
+MD5sum: b6df852663fb379bf6f74bdcc8e3ad5a
+Description: Test suite for python3.12
+
+Package: isp-python38
+Source: py38
+Version: 3.8.18-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 75589
+Depends: libbz2-1.0, libc6 (>= 2.29), libcrypt1 (>= 1:4.1.0), libdb5.3, libexpat1 (>= 2.1~beta3), libffi7 (>= 3.3~20180313), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6), libreadline8 (>= 7.0~beta), libsqlite3-0 (>= 3.7.15), libssl1.1 (>= 1.1.1), libtinfo6 (>= 6), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py38/isp-python38_3.8.18-38-ubuntu20_amd64.deb
+Size: 16771052
+SHA256: fa06ebd44383b9dc1c60a32e08d1559ae1b09cdbca366b44917e6c86bdb83efa
+SHA1: fc660a68ee08e609af9b4e84be24a05d732e4a4b
+MD5sum: 413af9f3b700287cbbdd3bcc5ec9220f
+Description: Ispmanager python3.8
+
+Package: isp-python38-test
+Source: py38
+Version: 3.8.18-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 65940
+Depends: libc6 (>= 2.14), isp-python38 (= 3.8.18-38-ubuntu20)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py38/isp-python38-test_3.8.18-38-ubuntu20_amd64.deb
+Size: 6928492
+SHA256: 6f6935be2918ea45792122efae52982e4684e9818d148a6b39b1313c08e95cbd
+SHA1: f77b1b398d85af5f395556d924cdd6bfd01ad56b
+MD5sum: 7e3e5ac09bbd67b1f9d587ca960fac92
+Description: Test suite for python3.8
+
+Package: isp-python39
+Source: py39
+Version: 3.9.18-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 86809
+Depends: libbz2-1.0, libc6 (>= 2.30), libcrypt1 (>= 1:4.1.0), libdb5.3, libexpat1 (>= 2.1~beta3), libffi7 (>= 3.3~20180313), liblzma5 (>= 5.1.1alpha+20120614), libncursesw6 (>= 6), libreadline8 (>= 7.0~beta), libsqlite3-0 (>= 3.7.15), libssl1.1 (>= 1.1.1), libtinfo6 (>= 6), libuuid1 (>= 2.20.1), zlib1g (>= 1:1.2.0)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py39/isp-python39_3.9.18-38-ubuntu20_amd64.deb
+Size: 15976368
+SHA256: 0ebb0e9d58ead2034ea67e031e5da163dca617ab962122ee66636f2c442ac8f3
+SHA1: ebe983b6a6a09eb7040cc5c32695349280d5dd93
+MD5sum: 7b094a40fe12a12c81a47b856bb7239c
+Description: Ispmanager python3.9
+
+Package: isp-python39-test
+Source: py39
+Version: 3.9.18-38-ubuntu20
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 69710
+Depends: libc6 (>= 2.14), isp-python39 (= 3.9.18-38-ubuntu20)
+Homepage: https://ispmanager.com/
+Priority: extra
+Section: libs
+Filename: pool/main/p/py39/isp-python39-test_3.9.18-38-ubuntu20_amd64.deb
+Size: 7199424
+SHA256: 73aed5b5b51cfe2931b6143b20beea77bab946617ab36c10a3578f43ba8d4615
+SHA1: d62bb2ce6d6c31e06de428d6aa5008a88c6d62a7
+MD5sum: 2a6539485f4d7d486b480a8c87aba19d
+Description: Test suite for python3.9
+
+Package: ispmanager-ddos
+Version: 1.0.0-39
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 7156
+Homepage: https://ispmanager.com
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager-ddos/ispmanager-ddos_1.0.0-39_amd64.deb
+Size: 3660336
+SHA256: 18d3b34a4eaf84407a3b0308db5fab895ceb17af7a0142a5afb813e02328adf4
+SHA1: c9bacc3acf7c448812eb48e7e4b643d77555029d
+MD5sum: 0efcfc7af37d1c33df50abcb1e35cad6
+Description: Ispmanager DDoS protection service
+
+Package: ispmanager-notify
+Version: 1.0.0-59
+Architecture: amd64
+Maintainer: Ispmanager <sales@ispmanager.com>
+Installed-Size: 9701
+Depends: coremanager
+Homepage: https://ispmanager.com
+Priority: extra
+Section: libs
+Filename: pool/main/i/ispmanager-notify/ispmanager-notify_1.0.0-59_amd64.deb
+Size: 5577612
+SHA256: f51baa8b4783951df958d9c814f19c2d1ea8170bc39d92ea1de529277b7b9b55
+SHA1: e688f2d003e43857c55511a03ae1014e38a6d06f
+MD5sum: 81d9e8c645a40d4dfbe878ccbf0d616c
+Description: Ispmanager notify center
+
+Package: libetpan-isp
+Source: etpan
+Version: 1.2-3-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 835
+Depends: libc6 (>= 2.15), libsasl2-2 (>= 2.1.27+dfsg)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/e/etpan/libetpan-isp_1.2-3-ubuntu20_amd64.deb
+Size: 242924
+SHA256: 54388f1ea79065aaf27b689a64a82cc6ceb68fb200b493429e761a435a89ede5
+SHA1: 294d5896fcf73a1bd4176f3304c7b02ddf0b8aff
+MD5sum: 039eb023b7a4bc2aedb523dafffeeef7
+Description: libetpan-isp
+
+Package: libetpan-isp-dev
+Source: etpan
+Version: 1.2-3-ubuntu20
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 759
+Depends: libetpan-isp (= 1.2-3-ubuntu20)
+Homepage: http://ispsystem.com/
+Priority: extra
+Section: libs
+Filename: pool/main/e/etpan/libetpan-isp-dev_1.2-3-ubuntu20_amd64.deb
+Size: 70296
+SHA256: 03a644de7f753e7fa0d79aee40f57beaa05b0ade6933fb89cae0045ac61e45e5
+SHA1: bc44cb60978591a8b911dcd165dc5816949ef79f
+MD5sum: 44e84d658166c33054dc02f242d685e2
+Description: libetpan-isp-dev
+
+Package: libssl1.0-isp-dev
+Source: openssl1.0
+Version: 1.0.2n-1ubuntu5.4u20
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 7232
+Depends: libssl1.0.0 (= 1.0.2n-1ubuntu5.4u20)
+Conflicts: libssl-dev, libssl1.0-dev
+Provides: libssl-dev
+Multi-Arch: same
+Homepage: https://www.openssl.org
+Priority: optional
+Section: libdevel
+Filename: pool/main/o/openssl1.0/libssl1.0-isp-dev_1.0.2n-1ubuntu5.4u20_amd64.deb
+Size: 1374092
+SHA256: 544faf0ea388fe19c58f007f645013c4dabd4f70a67492ba0aa8b1f4c28eaf4b
+SHA1: 6807d3cfc9fb0c8358fc1f6747e171071a21666d
+MD5sum: 91599987efc082b92b4567e3371b703d
+Description: Secure Sockets Layer toolkit - development files
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It contains development libraries, header files, and manpages for libssl
+ and libcrypto.
+Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+
+Package: libssl1.0.0
+Source: openssl1.0
+Version: 1.0.2n-1ubuntu5.4u20
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 3532
+Depends: libc6 (>= 2.14), debconf (>= 0.5) | debconf-2.0
+Multi-Arch: same
+Homepage: https://www.openssl.org
+Priority: important
+Section: libs
+Filename: pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.4u20_amd64.deb
+Size: 1296868
+SHA256: ba4954af1591442e2369472842eff9e94e8ad05f948527851945639dd1a08084
+SHA1: e06b4620a2d5ee7234d11cf4f7b0504d91afd4c7
+MD5sum: a46399f3f94d9cd8bf7d3173876fbb3a
+Description: Secure Sockets Layer toolkit - shared libraries
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It provides the libssl and libcrypto shared libraries.
+Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
+
+Package: mod-pagespeed-stable
+Version: 1.13.35.2-r47
+Architecture: amd64
+Maintainer: mod_pagespeed developers <mod-pagespeed-dev@googlegroups.com>
+Installed-Size: 21476
+Pre-Depends: dpkg (>= 1.14.0)
+Depends: libc6 (>= 2.17), apache2
+Conflicts: mod-pagespeed-beta
+Replaces: mod-pagespeed-beta
+Priority: optional
+Section: httpd
+Filename: pool/main/m/mod-pagespeed-stable/mod-pagespeed-stable_1.13.35.2-r47_amd64.deb
+Size: 5915656
+SHA256: a43534d8d81cd8f6391fb116b30894d9d8133e39205d17af29b189d1397166d3
+SHA1: 1f7fa88a5eaef81e68560769facb35bc488e6683
+MD5sum: a61d08221641b2926129e6a652e373e8
+Description: Apache 2 module to optimize web content.
+ mod_pagespeed is an Apache module that aims to speed up load time of pages by applying web performance best practices automatically.
+
+Package: ngx-pagespeed
+Version: 1.13.35.2-224-u20
+Architecture: amd64
+Maintainer: ISPsystem
+Installed-Size: 58623
+Depends: nginx
+Priority: optional
+Section: misc
+Filename: pool/main/n/ngx-pagespeed/ngx-pagespeed_1.13.35.2-224-u20_amd64.deb
+Size: 14840616
+SHA256: ac17b75b0368c612f4d824dfef07aef768e02325f16334e8952650aa97179bea
+SHA1: a554ba5459c26381f5da295e373acc80a99dba0b
+MD5sum: cdce575ba791db3c662045c5b2d58257
+Description: pagespeed module for nginx from ISPsystem
+
+Package: php-ioncube-isp
+Source: ioncube
+Version: 13.0.2-focal300024
+Architecture: amd64
+Maintainer: ISPmanager <sales@ispmanager.com>
+Installed-Size: 39011
+Depends: php5-cli | php7.0-cli | php7.2-cli | php7.3-cli | php7.4-cli | php8.1-cli
+Homepage: http://ioncube.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ioncube/php-ioncube-isp_13.0.2-focal300024_amd64.deb
+Size: 5494644
+SHA256: 5d4af1e44ef3870c8682add950edb48c615193f010ed7b794bd50f87cd46c6cf
+SHA1: cccb42e42462dbf4af757b26b2df56a300a539c3
+MD5sum: 25371910a8d16d21b60e93cc02503994
+Description: Ioncube loader
+
+Package: php5-ioncube-isp
+Source: ioncube
+Version: 11.0.1-focal215390
+Architecture: amd64
+Maintainer: ISPsystem <sales@ispsystem.com>
+Installed-Size: 33595
+Depends: php5-cli | php7.0-cli | php7.2-cli | php7.3-cli | php7.4-cli
+Homepage: http://ioncube.com/
+Priority: extra
+Section: libs
+Filename: pool/main/i/ioncube/php5-ioncube-isp_11.0.1-focal215390_amd64.deb
+Size: 4864824
+SHA256: 15c8316991e20bf7251d8ee0c0685c4df5ad3127de4cf21180486e5468a701bf
+SHA1: 1092388c44248b3720330eac6cd45e42c488c37c
+MD5sum: 433815c808173e3edb599bc7442e35b0
+Description: Ioncube loader
+
+Package: wkhtmltox
+Version: 1:0.12.6-1.focal
+License: LGPLv3
+Vendor: wkhtmltopdf
+Architecture: amd64
+Maintainer: Ashish Kulkarni <ashish@kulkarni.dev>
+Installed-Size: 136694
+Depends: ca-certificates, fontconfig, libc6, libfreetype6, libjpeg-turbo8, libpng16-16, libssl1.1, libstdc++6, libx11-6, libxcb1, libxext6, libxrender1, xfonts-75dpi, xfonts-base, zlib1g
+Conflicts: wkhtmltopdf
+Provides: wkhtmltopdf
+Replaces: wkhtmltopdf
+Homepage: https://wkhtmltopdf.org/
+Priority: extra
+Section: utils
+Filename: pool/main/w/wkhtmltox/wkhtmltox_0.12.6-1.focal_amd64.deb
+Size: 15721382
+SHA256: ad0264869fe40ccfb91c32e9be7318bfabf3864f6a8a15567f7a38afe4a9a932
+SHA1: 4a974456d6271908c46aa38fc177f99d6cd3b39a
+MD5sum: f3a8d069616d33b1a7c984dcdd8714d0
+Description: convert HTML to PDF and various image formats using QtWebkit
+

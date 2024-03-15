@@ -1,0 +1,10 @@
+7a70c117d4818eaf69453c494ecc3027  lib/systemd/system/php7.4-fpm.service
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/php/7.4/sapi/fpm
+6177a4e0975c5be8685eceee007b7b3b  usr/lib/php/php7.4-fpm-reopenlogs
+83495ba911a7f77915fed5a92996e5db  usr/lib/tmpfiles.d/php7.4-fpm.conf
+5a8a6e8111f8db444ec8442078062cd8  usr/sbin/php-fpm7.4
+23378a50f744ba66a0d2533215fcae33  usr/share/bug/php7.4-fpm/control
+c0de420b74b09fe848f74cb764fdbcb0  usr/share/bug/php7.4-fpm/script
+936474079e6f0548539d20d5fa26caab  usr/share/lintian/overrides/php7.4-fpm
+1217fa7a4ad22a3bb0f2cdd9363d9cc8  usr/share/man/man8/php-fpm7.4.8.gz
+b72576b7ba102000e6af9969bec20bf9  usr/share/php/7.4/fpm/status.html

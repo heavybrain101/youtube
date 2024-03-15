@@ -1,0 +1,87 @@
+
+Template: phpmyadmin/reconfigure-webserver
+Type: multiselect
+Choices: apache2, lighttpd
+Description: Web server to reconfigure automatically:
+ Please choose the web server that should be automatically configured
+ to run phpMyAdmin.
+Description-ar.UTF-8: خادم الوب الذي تود إعادة تهيئته تلقائياً:
+ رجاءً اختر خادم الوب الذي يجب تهيئته آلياً لتشغيل phpMyAdmin.
+Description-ast.UTF-8: Sirvidor web a reconfigurar automáticamente:
+ Escueyi'l sirvidor web que tendría de configurase automáticamente pa executar phpMyAdmin.
+Description-az.UTF-8: Avtomatik olaraq yenidən konfiqurasiya ediləcək  web server:
+ Zəhmət olmasa phpMyAdmin işləməsi üçün avtomatik konfiqurasiya olunmuş web serveri seçin.
+Description-bg.UTF-8: Уеб-сървър за автоматично преконфигуриране:
+ Моля, изберете уеб-сървъра, който да бъде автоматично конфигуриран да стартира phpMyAdmin.
+Description-bn.UTF-8: ওয়েব সার্ভারটি স্বয়ংক্রিয়ভাবে পুনরায় কনফিগার করতে:
+ অনুগ্রহ করে ওয়েব সার্ভারটি নির্বাচন করুন যা phpMyAdmin চালানোর জন্য স্বয়ংক্রিয়ভাবে কনফিগার করা উচিত.
+Description-ca.UTF-8: Servidor web que voleu reconfigurar automàticament:
+ Si us plau, trieu el servidor web que s'hauria de configurar automàticament per executar phpMyAdmin.
+Description-cs.UTF-8: Webový server, který se má nastavit automaticky:
+ Vyberte prosím webový server, který se má automaticky nastavit pro běh phpMyAdmin.
+Description-da.UTF-8: Internetserver der skal sættes op automatisk:
+ Vælg venligst den internetserver som skal konfigureres til automatisk at køre phpMyAdmin.
+Description-de.UTF-8: Webserver, die automatisch konfiguriert werden sollen:
+ Bitte wählen Sie den Webserver aus, der automatisch zum Betrieb von phpMyAdmin konfiguriert werden soll.
+Description-eo.UTF-8: Retservilo, kiu devus esti aŭtomate reagordita:
+ Elektu la retservilon, kiu devus esti aŭtomate agordita por lanĉi phpMyAdmin.
+Description-es.UTF-8: Servidor web que desea reconfigurar automáticamente:
+ Por favor, elija el servidor web que se debería configurar automáticamente para que ejecute phpMyAdmin.
+Description-et.UTF-8: Veebiserver, mida automaatselt häälestada:
+ Palun vali veebiserver, mis tuleks automaatselt häälestada phpMyAdmin'i käivitamiseks.
+Description-eu.UTF-8: Automatikoki birkonfiguratu behar den web zerbitzaria:
+ Mesedez hautatu phpMyAdmin exekutatzeko automatikoki konfiguratu behar den web zerbitzaria.
+Description-fi.UTF-8: Verkkopalvelin, jonka asetuksia muutetaan automaattisesti:
+ Valitse verkkopalvelin, jolle tehdään automaattisesti asetukset phpMyAdminin ajamiseksi.
+Description-fr.UTF-8: Serveur Web à reconfigurer automatiquement :
+ Merci de choisir le serveur Web à reconfigurer automatiquement pour exécuter phpMyAdmin.
+Description-gl.UTF-8: Servidor web a reconfigurar automaticamente:
+ Escolla o servidor web que se debería configurar automaticamente para executar phpMyAdmin.
+Description-gu.UTF-8: આપોઆપ પુનઃરૂપરેખાંકિત કરવા માટેનું સર્વર:
+ કૃપા કરીને એ વેબ સર્વર પસંદ કરો જેને phpMyAdmin સાથે કામ કરવા આપોઆપ રૂપરેખાંકિત કરવું છે.
+Description-hu.UTF-8: Webkiszolgáló az automatikus újrabeállításhoz:
+ Válassza ki azt a webkiszolgálót, amelyet automatikusan be kell állítani a phpMyAdmin futtatásához.
+Description-hy.UTF-8: Վեբ սպասարկիչ՝ ինքնավերակազմաձևվման համար՝
+ Ընտրեք վեբ սպասարկիչ, որը պետք է վերակազմաձևվվի՝ phpMyAdmin-ը մեկնարկելու համար։
+Description-id.UTF-8: Peladen web yang akan dikonfigurasi secara otomatis:
+ Harap pilih peladen web yang harus dikonfigurasi secara otomatis untuk menjalankan phpMyAdmin.
+Description-it.UTF-8: Server web da riconfigurare automaticamente:
+ Scegliere il server web da configurare automaticamente per eseguire phpMyAdmin.
+Description-ja.UTF-8: 自動再設定をする web サーバ:
+ phpMyAdmin を動作させるために自動再設定を行う web サーバを選んでください。
+Description-kab.UTF-8: Aqeddac web ara yettwasewlen s wudem awurman :
+ Fren aqeddac web ara tsewleḍ s wudem awurman i uselkem n phpMyAdmin.
+Description-ko.UTF-8: 자동으로 재설정할 웹 서버 :
+ phpMyAdmin이 실행되도록 자동으로 설정할 웹 서버를 선택해주세요.
+Description-nb.UTF-8: Nett-tjener som du vil endre oppsett for, automatisk:
+ Velg den nett-tjeneren som skal settes opp automatisk til å kjøre phpMyAdmin.
+Description-nl.UTF-8: Automatisch te configureren webserver:
+ Gelieve een webserver op te geven die automatisch ingesteld moet worden om phpMyAdmin aan te bieden.
+Description-no.UTF-8: Nett-tjener som du vil endre oppsett for, automatisk:
+ Velg den nett-tjeneren som skal settes opp automatisk til å kjøre phpMyAdmin.
+Description-pl.UTF-8: Serwer WWW do automatycznej rekonfiguracji:
+ Proszę wybrać serwer WWW, który powinien być automatycznie skonfigurowany do współpracy z phpMyAdmin.
+Description-pt.UTF-8: Servidor da Web para reconfigurar automaticamente:
+ Escolha o servidor da Web que deverá ser configurado automaticamente para executar phpMyAdmin.
+Description-pt_BR.UTF-8: Servidor web para reconfigurar automaticamente:
+ Por favor escolha o servidor web que seria automaticamente configurado para executar phpMyAdmin.
+Description-ro.UTF-8: Webserver la configurare automată:
+ Va rugam sa alegeți serverul web care ar trebui să fie configurat automat să ruleze phpMyAdmin.
+Description-ru.UTF-8: Веб-сервер для автоматической перенастройки:
+ Выберите веб-сервер, который будет автоматически настроен для запуска phpMyAdmin.
+Description-sk.UTF-8: Webový server, ktorý bude automaticky nastavený:
+ Vyberte prosím webový server, ktorý bude automaticky nastavený na spustenie phpMyAdmin.
+Description-sq.UTF-8: Ueb serveri për t'u rikonfiguruar automatikisht:
+ Ju lutem, zgjedh ueb serverin, që duhet të konfigurohet automatikisht, për të ekzekutuar phpMyAdmin.
+Description-sv.UTF-8: Webbserver som ska konfigureras automatiskt:
+ Välj den webbserver som ska konfigureras automatiskt för att köra phpMyAdmin.
+Description-tr.UTF-8: Otomatik olarak yeniden yapılandırmak için web sunucusu:
+ Lütfen phpMyAdmin çalıştırmak için otomatik olarak yapılandırılması gereken web sunucusunu seçin.
+Description-uk.UTF-8: Автоматично переналаштувати веб-сервер:
+ Будь ласка, виберіть веб-сервер, який буде автоматично налаштований на запуск phpMyAdmin.
+Description-vi.UTF-8: Trình phục vụ Web cần cấu hình tự động:
+ Hãy chọn trình phục vụ Web nên được cấu hình tự động để chạy phpMyAdmin.
+Description-zh_CN.UTF-8: 要自动重新配置的网络服务器：
+ 请选择要自动配置以运行 phpMyAdmin 的网络服务器。
+Description-zh_TW.UTF-8: 要自動重新設定的網頁伺服器：
+ 請選擇要用來自動設定執行 phpMyAdmin 的網頁伺服器。

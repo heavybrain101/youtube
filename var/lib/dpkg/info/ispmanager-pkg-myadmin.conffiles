@@ -1,0 +1,4 @@
+/usr/local/mgr5/etc/conf.d/myadmin.conf
+/usr/local/mgr5/etc/templates/phpmyadmin-nginx.template
+/usr/local/mgr5/etc/templates/phpmyadmin-apache.template
+/usr/local/mgr5/etc/templates/phpmyadmin-openlitespeed.template

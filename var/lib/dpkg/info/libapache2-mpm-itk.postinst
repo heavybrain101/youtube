@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt 2.4.7-02-1.1~; then
+	if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
+		. /usr/share/apache2/apache2-maintscript-helper
+
+		if [ $(a2query -M) != 'prefork' ] ; then
+			if apache2_switch_mpm prefork ; then
+				apache2_invoke enmod mpm_itk
+			else
+				apache2_msg err "Could not switch to prefork, not enabling mpm_itk"
+			fi
+		else
+			apache2_invoke enmod mpm_itk
+		fi
+
+	fi
+fi
+
+

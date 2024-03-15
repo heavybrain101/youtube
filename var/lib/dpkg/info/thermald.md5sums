@@ -1,0 +1,7 @@
+cdf638b0c8dbaa675f291eec074164d2  lib/systemd/system/thermald.service
+e6be27fb2d46280963c8b27dc2a56c7b  usr/sbin/thermald
+148064844da3faf7fa322f6f88495f3c  usr/share/dbus-1/system-services/org.freedesktop.thermald.service
+2cf5f8a64b716c33235d84c12db3401f  usr/share/doc/thermald/changelog.Debian.gz
+9e3ef626c89caf98687111f23747066d  usr/share/doc/thermald/copyright
+63d4f1c05eeacf622562d8fc7094c6db  usr/share/man/man5/thermal-conf.xml.5.gz
+c7f75b68b8b5ecdb53a24457ef0dcb11  usr/share/man/man8/thermald.8.gz

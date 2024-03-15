@@ -1,0 +1,5 @@
+1e24bab2a3855a18a5573a83b59b2a62  usr/lib/php/20190902/zip.so
+b4358047262260ffb316eb6c9459f16c  usr/share/bug/php7.4-zip/control
+f3c1531cb66a26dc6c7fe821a6e033e8  usr/share/bug/php7.4-zip/script
+c9f876b82d210420c9f88211092cf454  usr/share/lintian/overrides/php7.4-zip
+c46baba51984fb09217d9c7fab433e89  usr/share/php7.4-zip/zip/zip.ini

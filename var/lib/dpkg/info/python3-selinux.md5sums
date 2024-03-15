@@ -1,0 +1,5 @@
+6fe5c79f312aaef760b2a13000f11414  usr/lib/python3/dist-packages/selinux-3.0.egg-info
+660024b86b06516c1a5326ca6cc5aeee  usr/lib/python3/dist-packages/selinux/__init__.py
+8180b723d8354bc4adf5731b09c6fe0b  usr/lib/python3/dist-packages/selinux/_selinux.cpython-38-x86_64-linux-gnu.so
+e45bf06d00416fc3bd8d487bb822a7d9  usr/lib/python3/dist-packages/selinux/audit2why.cpython-38-x86_64-linux-gnu.so
+3f85b5814483a164783defd5a682b44c  usr/share/doc/python3-selinux/copyright
